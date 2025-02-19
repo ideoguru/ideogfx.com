@@ -1,213 +1,161 @@
-.whatWeDo {
-  align-self: stretch;
-  position: relative;
-  letter-spacing: 0.01em;
-  line-height: 48px;
-  font-weight: 600;
-}
-.whatWeDoTitleFrame {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.uiuxDesigningAnd {
-  position: relative;
-  line-height: 30px;
-}
-.intersectIcon {
-  width: 16.5px;
-  position: relative;
-  height: 16.5px;
-}
-.arrow {
-  width: 48px;
-  border-radius: 100px;
-  background-color: #d38ab2;
-  height: 48px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  box-sizing: border-box;
-}
-.uiuxDesigningAndPrototypinParent {
-  align-self: stretch;
-  border-radius: 100px;
-  background-color: #eaebf0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 12px 12px 16px;
-}
-.websitesAndApps {
-  width: 390px;
-  position: relative;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-.arrow1 {
-  width: 48px;
-  border-radius: 100px;
-  height: 48px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  box-sizing: border-box;
-}
-.websitesAndAppsDesigningParent {
-  align-self: stretch;
-  border-radius: 100px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 12px 12px 16px;
-}
-.leftColumnServiceList {
-  width: 532px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 4px;
-}
-.maskGroupIcon {
-  width: 568px;
-  position: absolute;
-  margin: 0 !important;
-  top: 0px;
-  left: 0px;
-  height: 604px;
-  object-fit: cover;
-  z-index: 0;
-}
-.bringYourVision {
-  align-self: stretch;
-  position: relative;
-  line-height: 30px;
-  font-weight: 600;
-}
-.weCraftUserCentric {
-  align-self: stretch;
-  position: relative;
-  font-size: 16px;
-  letter-spacing: 0.25px;
-  line-height: 22px;
-  font-family: "Open Sans";
-}
-.textContent {
-  align-self: stretch;
-  backdrop-filter: blur(40px);
-  border-radius: 12px;
-  background-color: rgba(247, 248, 250, 0.4);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 24px;
-  gap: 8px;
-  z-index: 1;
-}
-.card {
-  width: 568px;
-  height: 604px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 12px;
-  box-sizing: border-box;
-  position: relative;
-  gap: 10px;
-}
-.serviceshomePage {
-  width: 1160px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(100px);
-  border-radius: 24px;
-  background-color: rgba(255, 255, 255, 0.25);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-  gap: 20px;
-  font-size: 24px;
-  color: #151515;
-}
-.whatWeDoContainer {
-  width: 1160px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 24px;
-}
-.getStarted {
-  position: relative;
-  letter-spacing: 0.5px;
-  line-height: 24px;
-  font-weight: 600;
-}
-.solararrowRightUpLinearIcon {
-  width: 24px;
-  position: relative;
-  height: 24px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.btnLearnMore {
-  backdrop-filter: blur(41.85px);
-  border-radius: 2322.58px;
-  background: linear-gradient(
-    99.58deg,
-    rgba(115, 171, 216, 0.75),
-    rgba(187, 186, 225, 0.75)
-  );
-  border: 1px solid #fff;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-}
-.whatWeDoCta {
-  width: 1158px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 18px;
-  color: #151515;
-  font-family: "Open Sans";
-}
+/* Main container */
 .whatWeDoFrame {
   width: 100%;
-  position: relative;
-  height: 862px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 56px 380px;
-  box-sizing: border-box;
-  gap: 40px;
-  background-image: url("../../public/What\ We\ Do\ Frame.png");
+  align-items: center;
+  justify-content: center;
+  padding: 56px 20px;
+  background-image: url('/wht_we_do_outFrame.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  text-align: left;
+}
+
+/* Container for the content */
+.whatWeDoContainer {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Title frame */
+.whatWeDoTitleFrame {
+  width: 100%;
+  text-align: center;
+}
+
+.whatWeDo {
   font-size: 32px;
+  font-weight: 600;
   color: #333;
-  font-family: Poppins;
+}
+
+/* Services and card container */
+.serviceshomePage {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Left column with services */
+.leftColumnServiceList {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Service item */
+.serviceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #eaebf0;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.serviceItem:hover {
+  background-color: #d38ab2;
+  transform: translateX(10px);
+}
+
+.serviceText {
+  font-size: 18px;
+  color: #151515;
+}
+
+.arrow {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d38ab2;
+  border-radius: 100px;
+}
+
+/* Card with image and text */
+.card {
+  width: 60%;
+  position: relative;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 604px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.imageContainer:hover .image {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.textContent {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  backdrop-filter: blur(40px);
+  border-radius: 12px;
+  background-color: rgba(247, 248, 250, 0.4);
+  padding: 24px;
+  color: #151515;
+}
+
+.bringYourVision {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.weCraftUserCentric {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* CTA button */
+.whatWeDoCta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.btnLearnMore {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 24px;
+  background: linear-gradient(99.58deg, rgba(115, 171, 216, 0.75), rgba(187, 186, 225, 0.75));
+  border: 1px solid #fff;
+  border-radius: 2322.58px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btnLearnMore:hover {
+  background: linear-gradient(99.58deg, rgba(115, 171, 216, 1), rgba(187, 186, 225, 1));
+}
+
+.getStarted {
+  font-size: 18px;
+  font-weight: 600;
+  color: #151515;
 }

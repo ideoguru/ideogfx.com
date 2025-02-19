@@ -1,8 +1,30 @@
+"use client"; // Mark this component as a Client Component
+
 import type { NextPage } from "next";
 import Image from "next/image";
+import { useState } from "react"; // useState for state management
 import styles from "./../styles/HomePageWhatWeDo.module.css";
 
+const ArrowIcon: React.FC = () => (
+  <Image width={17} height={17} alt="Arrow icon" src="/Intersect.svg" />
+);
+
 const WhatWeDoFrame: NextPage = () => {
+  // State to track the currently hovered service index
+  const [hoveredService, setHoveredService] = useState<number | null>(null);
+
+  // Array of services and their corresponding images
+  const services = [
+    { text: "UI/UX Designing and Prototyping", image: "/wht_we_do_first.png" },
+    { text: "Websites and Apps Designing", image: "/wht_we_do_2.png" },
+    { text: "Redesigning UI/UX", image: "/wht_we_do_3.png" },
+    { text: "UI/UX Design Audits", image: "/wht_we_do_4.png" },
+    { text: "Usability Testing & Optimization", image: "/wht_we_do_5.png" },
+    { text: "User Research and Behavior Analysis", image: "/wht_we_do_7.png" },
+    { text: "Design Systems and Branding", image: "/wht_we_do_8.png" },
+    { text: "Conversion Rate Optimization (CRO)", image: "/wht_we_do_9.png" },
+  ];
+
   return (
     <div className={styles.whatWeDoFrame}>
       <div className={styles.whatWeDoContainer}>
@@ -11,132 +33,36 @@ const WhatWeDoFrame: NextPage = () => {
         </div>
         <div className={styles.serviceshomePage}>
           <div className={styles.leftColumnServiceList}>
-            <div className={styles.uiuxDesigningAndPrototypinParent}>
-              <div className={styles.uiuxDesigningAnd}>
-                UI/UX Designing and Prototyping
-              </div>
-              <div className={styles.arrow}>
-                <Image
-                  className={styles.intersectIcon}
-                  width={17}
-                  height={17}
-                  alt=""
-                  src="Intersect.svg"
-                />
-              </div>
-            </div>
-            <div className={styles.websitesAndAppsDesigningParent}>
-              <div className={styles.websitesAndApps}>
-                Websites and Apps Designing
-              </div>
-              <div className={styles.arrow1}>
-                <Image
-                  className={styles.intersectIcon}
-                  width={17}
-                  height={17}
-                  alt=""
-                  src="Intersect.svg"
-                />
-              </div>
-            </div>
-            <div className={styles.websitesAndAppsDesigningParent}>
-              <div className={styles.uiuxDesigningAnd}>Redesigning UI/UX</div>
-              <div className={styles.arrow1}>
-                <Image
-                  className={styles.intersectIcon}
-                  width={17}
-                  height={17}
-                  alt=""
-                  src="Intersect.svg"
-                />
-              </div>
-            </div>
-            <div className={styles.websitesAndAppsDesigningParent}>
-              <div className={styles.uiuxDesigningAnd}>UI/UX Design Audits</div>
-              <div className={styles.arrow1}>
-                <Image
-                  className={styles.intersectIcon}
-                  width={17}
-                  height={17}
-                  alt=""
-                  src="Intersect.svg"
-                />
-              </div>
-            </div>
-            <div className={styles.websitesAndAppsDesigningParent}>
+            {services.map((service, index) => (
               <div
-                className={styles.uiuxDesigningAnd}
-              >{`Usability Testing & Optimization`}</div>
-              <div className={styles.arrow1}>
-                <Image
-                  className={styles.intersectIcon}
-                  width={17}
-                  height={17}
-                  alt=""
-                  src="Intersect.svg"
-                />
+                key={index}
+                className={styles.serviceItem}
+                onMouseEnter={() => setHoveredService(index)} // Set hovered service on mouse enter
+                onMouseLeave={() => setHoveredService(null)} // Reset on mouse leave
+              >
+                <div className={styles.serviceText}>{service.text}</div>
+                <div className={styles.arrow}>
+                  <ArrowIcon />
+                </div>
               </div>
-            </div>
-            <div className={styles.websitesAndAppsDesigningParent}>
-              <div className={styles.uiuxDesigningAnd}>
-                User Research and Behavior Analysis
-              </div>
-              <div className={styles.arrow1}>
-                <Image
-                  className={styles.intersectIcon}
-                  width={17}
-                  height={17}
-                  alt=""
-                  src="Intersect.svg"
-                />
-              </div>
-            </div>
-            <div className={styles.websitesAndAppsDesigningParent}>
-              <div className={styles.uiuxDesigningAnd}>
-                Design Systems and Branding
-              </div>
-              <div className={styles.arrow1}>
-                <Image
-                  className={styles.intersectIcon}
-                  width={17}
-                  height={17}
-                  alt=""
-                  src="Intersect.svg"
-                />
-              </div>
-            </div>
-            <div className={styles.websitesAndAppsDesigningParent}>
-              <div className={styles.uiuxDesigningAnd}>
-                Conversion Rate Optimization (CRO)
-              </div>
-              <div className={styles.arrow1}>
-                <Image
-                  className={styles.intersectIcon}
-                  width={17}
-                  height={17}
-                  alt=""
-                  src="Intersect.svg"
-                />
-              </div>
-            </div>
+            ))}
           </div>
           <div className={styles.card}>
-            <Image
-              className={styles.maskGroupIcon}
-              width={568}
-              height={604}
-              alt=""
-              src="Mask group.png"
-            />
+            {/* Display the image based on the hovered service */}
+            <div className={styles.imageContainer}>
+              <Image
+                width={568}
+                height={604}
+                alt="Service Image"
+                src={hoveredService !== null ? services[hoveredService].image : "/wht_we_do_first.png"}
+                className={styles.image}
+                priority // Ensures the image is preloaded
+              />
+            </div>
             <div className={styles.textContent}>
-              <div className={styles.bringYourVision}>
-                Bring Your Vision to Life
-              </div>
+              <div className={styles.bringYourVision}>Bring Your Vision to Life</div>
               <div className={styles.weCraftUserCentric}>
-                We craft user-centric UI/UX designs and interactive prototypes
-                that bring your ideas to life. Our process ensures smooth
-                navigation, engaging aesthetics, and seamless functionality. So
-                users love your product from the first interaction.
+                We craft user-centric UI/UX designs and interactive prototypes that bring your ideas to life. Our process ensures smooth navigation, engaging aesthetics, and seamless functionality. So users love your product from the first interaction.
               </div>
             </div>
           </div>
@@ -146,11 +72,10 @@ const WhatWeDoFrame: NextPage = () => {
         <div className={styles.btnLearnMore}>
           <div className={styles.getStarted}>Learn More</div>
           <Image
-            className={styles.solararrowRightUpLinearIcon}
             width={24}
             height={24}
-            alt=""
-            src="solar:arrow-right-up-linear.svg"
+            alt="Learn More"
+            src="/solar:arrow-right-up-linear.svg"
           />
         </div>
       </div>
