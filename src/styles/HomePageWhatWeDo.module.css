@@ -6,10 +6,23 @@
   align-items: center;
   justify-content: center;
   padding: 56px 20px;
-  background-image: url('/wht_we_do_outFrame.png');
+  background-image: url("/wht_we_do_outFrame.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+}
+
+/* Title frame */
+.whatWeDoTitleFrame {
+  width: 100%;
+  text-align: left; /* Align text to the left */
+  padding-left: 20px; /* Add some padding to align with the services */
+  font-size: 32px;
+  letter-spacing: 0.01em;
+  line-height: 48px;
+  font-weight: 600;
+  font-family: Poppins;
+  color: #333;
 }
 
 /* Container for the content */
@@ -22,24 +35,20 @@
   gap: 24px;
 }
 
-/* Title frame */
-.whatWeDoTitleFrame {
-  width: 100%;
-  text-align: center;
-}
-
-.whatWeDo {
-  font-size: 32px;
-  font-weight: 600;
-  color: #333;
-}
-
 /* Services and card container */
 .serviceshomePage {
   width: 100%;
   display: flex;
   gap: 20px;
   align-items: flex-start;
+  position: relative;
+  background: linear-gradient(
+    99.58deg,
+    rgba(115, 171, 216, 0.75),
+    rgba(187, 186, 225, 0.75)
+  );
+  border-radius: 12px; /* Add rounded corners */
+  padding: 20px; /* Add padding to create space inside the box */
 }
 
 /* Left column with services */
@@ -143,7 +152,11 @@
   align-items: center;
   gap: 10px;
   padding: 16px 24px;
-  background: linear-gradient(99.58deg, rgba(115, 171, 216, 0.75), rgba(187, 186, 225, 0.75));
+  background: linear-gradient(
+    99.58deg,
+    rgba(115, 171, 216, 0.75),
+    rgba(187, 186, 225, 0.75)
+  );
   border: 1px solid #fff;
   border-radius: 2322.58px;
   cursor: pointer;
@@ -151,7 +164,11 @@
 }
 
 .btnLearnMore:hover {
-  background: linear-gradient(99.58deg, rgba(115, 171, 216, 1), rgba(187, 186, 225, 1));
+  background: linear-gradient(
+    99.58deg,
+    rgba(115, 171, 216, 1),
+    rgba(187, 186, 225, 1)
+  );
 }
 
 .getStarted {

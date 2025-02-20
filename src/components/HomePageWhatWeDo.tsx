@@ -1,8 +1,8 @@
-"use client"; // Mark this component as a Client Component
+"use client";
 
 import type { NextPage } from "next";
 import Image from "next/image";
-import { useState } from "react"; // useState for state management
+import { useState } from "react";
 import styles from "./../styles/HomePageWhatWeDo.module.css";
 
 const ArrowIcon: React.FC = () => (
@@ -10,10 +10,8 @@ const ArrowIcon: React.FC = () => (
 );
 
 const WhatWeDoFrame: NextPage = () => {
-  // State to track the currently hovered service index
   const [hoveredService, setHoveredService] = useState<number | null>(null);
 
-  // Array of services and their corresponding images
   const services = [
     { text: "UI/UX Designing and Prototyping", image: "/wht_we_do_first.png" },
     { text: "Websites and Apps Designing", image: "/wht_we_do_2.png" },
@@ -37,8 +35,8 @@ const WhatWeDoFrame: NextPage = () => {
               <div
                 key={index}
                 className={styles.serviceItem}
-                onMouseEnter={() => setHoveredService(index)} // Set hovered service on mouse enter
-                onMouseLeave={() => setHoveredService(null)} // Reset on mouse leave
+                onMouseEnter={() => setHoveredService(index)}
+                onMouseLeave={() => setHoveredService(null)}
               >
                 <div className={styles.serviceText}>{service.text}</div>
                 <div className={styles.arrow}>
@@ -48,21 +46,29 @@ const WhatWeDoFrame: NextPage = () => {
             ))}
           </div>
           <div className={styles.card}>
-            {/* Display the image based on the hovered service */}
             <div className={styles.imageContainer}>
               <Image
                 width={568}
                 height={604}
                 alt="Service Image"
-                src={hoveredService !== null ? services[hoveredService].image : "/wht_we_do_first.png"}
+                src={
+                  hoveredService !== null
+                    ? services[hoveredService].image
+                    : "/wht_we_do_first.png"
+                }
                 className={styles.image}
-                priority // Ensures the image is preloaded
+                priority
               />
             </div>
             <div className={styles.textContent}>
-              <div className={styles.bringYourVision}>Bring Your Vision to Life</div>
+              <div className={styles.bringYourVision}>
+                Bring Your Vision to Life
+              </div>
               <div className={styles.weCraftUserCentric}>
-                We craft user-centric UI/UX designs and interactive prototypes that bring your ideas to life. Our process ensures smooth navigation, engaging aesthetics, and seamless functionality. So users love your product from the first interaction.
+                We craft user-centric UI/UX designs and interactive prototypes
+                that bring your ideas to life. Our process ensures smooth
+                navigation, engaging aesthetics, and seamless functionality. So
+                users love your product from the first interaction.
               </div>
             </div>
           </div>
@@ -75,7 +81,7 @@ const WhatWeDoFrame: NextPage = () => {
             width={24}
             height={24}
             alt="Learn More"
-            src="/solar:arrow-right-up-linear.svg"
+            src="/solar_arrow-right-up-linear.svg"
           />
         </div>
       </div>
