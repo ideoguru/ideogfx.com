@@ -5,6 +5,8 @@ import WhatWeDoSection from "../components/HomePageWhatWeDo";
 import CaseStudies from "../components/HomePageCaseStudy";
 import Footer from "../components/Footer";
 import styles from "../styles/HomePage.module.css";
+import Testmonial from "../components/HomePageTestimonials"
+import Insights from "../components/HomePageInsights"
 
 const HomePage: NextPage = () => {
   return (
@@ -13,6 +15,8 @@ const HomePage: NextPage = () => {
       <HeroSection />
       <WhatWeDoSection />
       <CaseStudies />
+      <Testmonial />
+      <Insights />
       <Footer />
     </div>
   );
