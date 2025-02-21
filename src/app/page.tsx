@@ -2,9 +2,7 @@ import type { NextPage } from "next";
 import Header from "../components/Header";
 import HeroSection from "../components/HomePageHero";
 import WhatWeDoSection from "../components/HomePageWhatWeDo";
-// import Insights from "../components/Insights";
-// import CaseStudies from "../components/CaseStudies";
-// import Testimonials from "../components/Testimonials";
+import CaseStudies from "../components/HomePageCaseStudy";
 import Footer from "../components/Footer";
 import styles from "../styles/HomePage.module.css";
 
@@ -14,9 +12,7 @@ const HomePage: NextPage = () => {
       <Header />
       <HeroSection />
       <WhatWeDoSection />
-      {/* <Insights />
-      // <CaseStudies />
-      // <Testimonials /> */}
+      <CaseStudies />
       <Footer />
     </div>
   );

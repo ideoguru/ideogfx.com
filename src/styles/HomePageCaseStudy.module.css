@@ -1,0 +1,232 @@
+.caseStudies {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.01em;
+  line-height: 48px;
+  font-weight: 600;
+}
+.caseStudiesWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.caseStudiesTitles {
+  width: 1158px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.maskGroupIcon {
+  width: 1160px;
+  position: absolute;
+  margin: 0 !important;
+  top: 339px;
+  left: 0px;
+  height: 338.5px;
+  z-index: 0;
+}
+.orderManagementSystem {
+  align-self: stretch;
+  position: relative;
+  line-height: 28px;
+  font-weight: 600;
+}
+.loremIpsumDolor {
+  align-self: stretch;
+  position: relative;
+  font-size: 16px;
+  letter-spacing: 0.25px;
+  line-height: 22px;
+  font-family: "Open Sans";
+}
+.orderManagementSystemOfflParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.iconamoonarrowRight2Bold {
+  width: 32px;
+  position: relative;
+  border-radius: 100px;
+  height: 32px;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.iconamoonarrowRight2BoldWrapper {
+  background-color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameChild {
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.instanceParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.leftColumnText {
+  width: 566px;
+  height: 487px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 40px;
+  box-sizing: border-box;
+  gap: 24px;
+  z-index: 0;
+}
+.maskGroupIcon1 {
+  width: 273px;
+  position: absolute;
+  margin: 0 !important;
+  top: 204px;
+  left: 0px;
+  height: 203.5px;
+  z-index: 0;
+}
+.personalisedBusinessAccounti {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.25px;
+  line-height: 22px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.card1,
+.card2 {
+  flex: 1;
+  border-radius: 24px;
+  height: 408px; /* Adjust height if needed */
+  width: 300px; /* Increase width to prevent cropping */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 24px;
+  box-sizing: border-box;
+  position: relative;
+  gap: 26px;
+  background-size: cover; /* Ensure the image covers the card */
+  background-repeat: no-repeat;
+  background-position: center; /* Center the image */
+}
+
+.rightColumnCards {
+  width: 100%; /* Adjust width to fit the cards */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between; /* Add space between cards */
+  padding: 40px 0;
+  box-sizing: border-box;
+  gap: 20px; /* Adjust gap between cards */
+  z-index: 1;
+  font-size: 16px;
+  font-family: "Open Sans";
+}
+.caseStudiesContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  gap: 26px;
+  z-index: 1;
+}
+.caseStudiesCard {
+  width: 100%;
+  max-width: 1160px; /* Adjust based on your design */
+  border-radius: 24px;
+  height: 677px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center children horizontally */
+  justify-content: flex-end;
+  position: relative;
+  gap: 26px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  font-size: 22px;
+  color: #f7f8fa;
+}
+.getStarted {
+  position: relative;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.solararrowRightUpLinearIcon {
+  width: 24px;
+  position: relative;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.caseStudiesButton {
+  backdrop-filter: blur(41.85px);
+  border-radius: 2322.58px;
+  background: linear-gradient(
+    99.58deg,
+    rgba(115, 171, 216, 0.75),
+    rgba(187, 186, 225, 0.75)
+  );
+  border: 1px solid #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.caseStudiesCtaFrame {
+  width: 1160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 18px;
+  color: #151515;
+  font-family: "Open Sans";
+}
+.caseStudiesFrame {
+  width: 100%;
+  max-width: 1200px; /* Adjust based on your design */
+  margin: 0 auto; /* Center the component */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center children horizontally */
+  justify-content: flex-start;
+  padding: 56px 20px; /* Adjust padding as needed */
+  box-sizing: border-box;
+  gap: 40px;
+  text-align: left;
+  font-size: 32px;
+  color: #333;
+  font-family: Poppins;
+}

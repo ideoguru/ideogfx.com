@@ -1,0 +1,184 @@
+.footerFrame {
+  width: 100%;
+  background-color: #eaebf0;
+  display: flex;
+  justify-content: center;
+  padding: 24px 380px;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: #151515;
+}
+
+.footerContainer {
+  width: 100%;
+  max-width: 1160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnTop {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.topIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 70.59px;
+  overflow: hidden;
+  object-fit: contain;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.footerBodyContainer {
+  width: 100%;
+  border-top: 1px solid #eaebf0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 24px 0;
+}
+
+.contents {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.leftColumnText {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.companyName {
+  display: flex;
+  justify-content: center;
+}
+
+.ideoGraphics {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+}
+
+.quickLinks {
+  display: flex;
+  gap: 12px;
+}
+
+.footerLink {
+  border-radius: 24px;
+  border: 0.5px solid #151515;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.footerLink .linkText {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  color: #1d1d1d;
+}
+
+.rightTextColumn {
+  width: 264px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 4px;
+  background-color: #f7f8fa;
+  border-radius: 56px;
+  padding: 4px;
+}
+
+.iconWrapper {
+  border-radius: 100px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.address {
+  display: flex;
+  justify-content: center;
+  color: #1d1d1d;
+}
+
+.addressText {
+  font-size: 16px;
+  letter-spacing: 0.25px;
+  line-height: 22px;
+  white-space: pre-wrap;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.phone,
+.email {
+  font-size: 16px;
+  letter-spacing: 0.25px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.copyrightSection {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-size: 12px;
+  color: #1d1d1d;
+}
+
+.copyRight {
+  display: flex;
+  justify-content: center;
+}
+
+.legalFooterSection {
+  display: flex;
+  gap: 16px;
+}
+
+.legalLink {
+  cursor: pointer;
+}
+
+.legalLink .linkText {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  line-height: 14px;
+}
