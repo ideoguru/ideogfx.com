@@ -3,7 +3,7 @@
 import type { NextPage } from 'next';
 import Image from "next/image";
 import { useRef } from "react"; // Import useRef for DOM manipulation
-import styles from "./../styles/HomePageInsights.module.css";
+import styles from "../../styles/HomePageInsights.module.css";
 
 const InsightsFrame: NextPage = () => {
   const cardsWrapperRef = useRef<HTMLDivElement>(null); // Ref for the cards container

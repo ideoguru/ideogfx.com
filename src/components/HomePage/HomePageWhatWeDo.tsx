@@ -3,7 +3,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import { useState } from "react";
-import styles from "./../styles/HomePageWhatWeDo.module.css";
+import styles from "../../styles/HomePageWhatWeDo.module.css";
 
 const ArrowIcon: React.FC = () => (
   <Image width={17} height={17} alt="Arrow icon" src="/Intersect.svg" />
