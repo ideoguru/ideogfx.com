@@ -26,6 +26,7 @@
   margin-left: auto; /* Align to the right */
   margin-right: auto; /* Center the links */
   justify-content: center; /* Center the items horizontally */
+  font-weight: bold;
 }
 
 .getStarted {
