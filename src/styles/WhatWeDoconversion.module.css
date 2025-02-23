@@ -1,0 +1,102 @@
+.scrollDownIcon {
+    position: absolute;
+    top: 785px;
+    left: calc(50% - 24px);
+    width: 48px;
+    height: 55px;
+}
+.fromConceptTo {
+    align-self: stretch;
+    position: relative;
+    line-height: 68px;
+    font-weight: 600;
+}
+.conversion {
+    position: relative;
+    font-size: 150px;
+    letter-spacing: 0.5px;
+    line-height: 180px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #6b00b3, #d8499c 52%, #d8499c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: -40px;
+}
+.fromConceptToParent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.coverTextInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.coverText {
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 580px);
+    width: 1160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.untitled61Icon {
+    position: absolute;
+    top: 75px;
+    left: 182.8px;
+    width: 394.9px;
+    height: 275.4px;
+    object-fit: contain;
+}
+.ipadMiniIcon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 668px;
+    height: 491px;
+    object-fit: cover;
+}
+.untitled51Icon {
+    position: absolute;
+    top: 140.28px;
+    left: 157px;
+    width: 394.9px;
+    height: 275.4px;
+    object-fit: contain;
+}
+.coverImg {
+    position: absolute;
+    top: 135px;
+    left: calc(50% - 334px);
+    width: 668px;
+    height: 491px;
+}
+.heroContainerIn {
+    position: absolute;
+    top: 137px;
+    left: calc(50% - 580px);
+    width: 1160px;
+    height: 626px;
+}
+.heroContainer {
+    position: absolute;
+    top: calc(50% - 450px);
+    left: calc(50% - 580px);
+    width: 1160px;
+    height: 900px;
+}
+.heroFrame {
+    width: 100%;
+    position: relative;
+    height: 900px;
+    text-align: left;
+    font-size: 56px;
+    color: #151515;
+    font-family: Poppins;
+}
+
+
