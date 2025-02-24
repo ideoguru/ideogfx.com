@@ -1,0 +1,243 @@
+/* Base styles */
+.insightsFrame {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 56px 20px; /* Adjusted padding for responsiveness */
+    box-sizing: border-box;
+    gap: 40px;
+    text-align: left;
+    font-size: 32px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .insightsTitle {
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    line-height: 48px;
+    font-weight: 600;
+  }
+  
+  .insightsContainer {
+    width: 100%;
+    max-width: 1200px; /* Limit container width */
+    position: relative;
+    overflow: hidden; /* Hide overflow to prevent scrollbar */
+  }
+  
+  .cardsWrapper {
+    display: flex;
+    gap: 20px; /* Space between cards */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    width: 100%;
+  }
+  
+  .cardVersion1,
+  .cardVersion2,
+  .cardVersion3,
+  .cardVersion4 {
+    flex: 0 0 auto;
+    width: 400px; /* Default width for each card */
+    height: 500px; /* Default height for each card */
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  
+  .cardVersion1 {
+    background-image: url('/Insights-1.png');
+  }
+  
+  .cardVersion2 {
+    background-image: url('/Insights-2.png');
+  }
+  
+  .cardVersion3 {
+    background-image: url('/Insights-3.png');
+  }
+  
+  .cardVersion4 {
+    background-image: url('/Insights-2.png');
+  }
+  
+  .text {
+    align-self: stretch;
+    backdrop-filter: blur(40px);
+    border-radius: 16px;
+    background-color: rgba(247, 248, 250, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .howToConduct {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    font-weight: 600;
+    font-family: 'Open Sans';
+    color: #151515;
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .description {
+    display: none; /* Hide description */
+  }
+  
+  .btnPrev,
+  .btnNext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above the cards */
+  }
+  
+  .btnPrev {
+    left: 10px; /* Position left arrow */
+  }
+  
+  .btnNext {
+    right: 10px; /* Position right arrow */
+  }
+  
+  .iconamoonarrowRight2Bold,
+  .iconamoonarrowRight2Bold1 {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .insightsCta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    color: #151515;
+    font-family: 'Open Sans';
+  }
+  
+  .btn {
+    backdrop-filter: blur(41.85px);
+    border-radius: 2322.58px;
+    background: linear-gradient(99.58deg, rgba(115, 171, 216, 0.75), rgba(187, 186, 225, 0.75));
+    border: 1px solid #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  
+  .getStarted {
+    position: relative;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  
+  .solararrowRightUpLinearIcon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1200px) {
+    .cardVersion1,
+    .cardVersion2,
+    .cardVersion3,
+    .cardVersion4 {
+      width: 350px; /* Adjusted width for smaller screens */
+      height: 450px; /* Adjusted height for smaller screens */
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .cardVersion1,
+    .cardVersion2,
+    .cardVersion3,
+    .cardVersion4 {
+      width: 300px; /* Adjusted width for tablets */
+      height: 400px; /* Adjusted height for tablets */
+    }
+  
+    .insightsTitle {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cardVersion1,
+    .cardVersion2,
+    .cardVersion3,
+    .cardVersion4 {
+      width: 250px; /* Adjusted width for smaller tablets */
+      height: 350px; /* Adjusted height for smaller tablets */
+    }
+  
+    .insightsTitle {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  
+    .btnPrev,
+    .btnNext {
+      width: 36px;
+      height: 36px;
+    }
+  
+    .iconamoonarrowRight2Bold,
+    .iconamoonarrowRight2Bold1 {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cardVersion1,
+    .cardVersion2,
+    .cardVersion3,
+    .cardVersion4 {
+      width: 200px; /* Adjusted width for mobile */
+      height: 300px; /* Adjusted height for mobile */
+    }
+  
+    .insightsTitle {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  
+    .btn {
+      padding: 12px;
+    }
+  
+    .getStarted {
+      font-size: 16px;
+    }
+  
+    .solararrowRightUpLinearIcon {
+      width: 20px;
+      height: 20px;
+    }
+  }

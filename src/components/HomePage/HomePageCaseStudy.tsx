@@ -3,7 +3,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import { useState } from "react";
-import styles from "./../styles/HomePageCaseStudy.module.css";
+import styles from "../../styles/HomePageCaseStudy.module.css";
 
 const caseStudies = [
   {

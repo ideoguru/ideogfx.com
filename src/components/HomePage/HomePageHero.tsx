@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 // import styles from "./index.module.css";
-import styles from "./../styles/HomePageHero.module.css";
+import styles from "../../styles/HomePageHero.module.css";
 
 const HeroSectionFrame: NextPage = () => {
   return (

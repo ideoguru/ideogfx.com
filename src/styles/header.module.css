@@ -56,3 +56,26 @@
   color: #151515;
   font-family: "Open Sans";
 }
+.getStarted {
+  /* Default styles for tabs */
+  color: black;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* Add this to HomePage.module.css */
+.getStarted {
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.getStarted:hover {
+  background-color: rgba(234, 235, 240, 0.8);
+}
+
+.active {
+  color: purple; /* Ensure this is purple or any color you desire */
+  font-weight: bold; /* Optional: Make the active tab bold */
+}
+
