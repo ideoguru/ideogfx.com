@@ -63,10 +63,10 @@ const Header = () => {
         }`}
       >
         <div className={styles.whoWeAreWrapper}>
-          <Link href="/">
+          <Link href="/who-we-are">
             <div
               className={`${styles.getStarted} ${
-                activeLink === "" ? styles.active : ""
+                activeLink === "who-we-are" ? styles.active : ""
               }`}
               onClick={() => handleLinkClick("who-we-are")}
             >
@@ -87,14 +87,14 @@ const Header = () => {
           </Link>
         </div>
         <div className={styles.insightsWrapper}>
-          <Link href="/insights">
+          <Link href="/Resources">
             <div
               className={`${styles.getStarted} ${
-                activeLink === "insights" ? styles.active : ""
+                activeLink === "Resources" ? styles.active : ""
               }`}
-              onClick={() => handleLinkClick("insights")}
+              onClick={() => handleLinkClick("Resources")}
             >
-              Insights
+              Resources
             </div>
           </Link>
         </div>

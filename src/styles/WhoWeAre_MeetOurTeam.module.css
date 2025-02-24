@@ -1,0 +1,163 @@
+.meetOurTeam {
+    width: 100%;
+    position: relative;
+    height: auto; /* Changed to auto for responsiveness */
+    padding: 40px 20px; /* Added padding for spacing */
+    text-align: left;
+    font-size: 16px;
+    color: #151515;
+    font-family: 'Open Sans';
+}
+
+.container {
+    width: 100%;
+    max-width: 1160px; /* Limit container width */
+    margin: 0 auto; /* Center the container */
+    position: relative;
+    height: auto; /* Changed to auto for responsiveness */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Reduced gap between textContents and teamsPhoto */
+}
+
+.textContents {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    font-family: Poppins;
+    margin-bottom: 20px; /* Added margin to reduce gap */
+}
+
+.meetOurTeam1 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0.01em;
+}
+
+.getToKnow {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.25px;
+    font-family: 'Open Sans';
+    margin-top: 16px; /* Add spacing between heading and description */
+}
+
+.teamsPhoto {
+    position: relative;
+    width: 100%;
+    height: auto; /* Changed to auto for responsiveness */
+}
+
+.teamsPhotoChild {
+    width: 100%;
+    height: auto; /* Changed to auto for responsiveness */
+    object-fit: cover;
+}
+
+.employeeDetailsGroup {
+    position: absolute;
+    top: 50%; /* Adjusted for responsiveness */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Adjusted for responsiveness */
+    max-width: 704px;
+    height: auto; /* Changed to auto for responsiveness */
+}
+
+.employeeDetail,
+.employeeDetail1,
+.employeeDetail2,
+.employeeDetail3 {
+    position: absolute;
+    backdrop-filter: blur(40px);
+    border-radius: 12px;
+    background-color: rgba(247, 248, 250, 0.5);
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16px 24px 16px 12px;
+    gap: 8px;
+}
+
+.employeeDetail {
+    top: 30%; /* Adjusted for responsiveness */
+    left: 0;
+}
+
+.employeeDetail1 {
+    top: 20%; /* Adjusted to position Guruprakash a little bit above */
+    left: 25%; /* Adjusted to position Guruprakash a little bit to the right */
+}
+
+.employeeDetail2 {
+    top: 30%; /* Adjusted for responsiveness */
+    left: 50%;
+}
+
+.employeeDetail3 {
+    top: 35%; /* Adjusted to position Aparna a little bit down */
+    left: 70%;
+}
+
+.sandeepVijayParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .employeeDetail1 {
+        top: 18%; /* Adjusted for smaller screens */
+        left: 23%; /* Adjusted for smaller screens */
+    }
+
+    .employeeDetail3 {
+        top: 38%; /* Adjusted for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .employeeDetailsGroup {
+        width: 100%; /* Adjusted for tablets */
+    }
+
+    .employeeDetail,
+    .employeeDetail1,
+    .employeeDetail2,
+    .employeeDetail3 {
+        position: static; /* Stack employee details vertically */
+        margin-bottom: 16px; /* Add spacing between employee details */
+    }
+
+    .textContents {
+        padding: 10px 0; /* Adjusted padding for tablets */
+    }
+
+    .meetOurTeam1 {
+        font-size: 28px; /* Adjusted font size for tablets */
+        line-height: 40px;
+    }
+
+    .getToKnow {
+        font-size: 14px; /* Adjusted font size for tablets */
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .meetOurTeam1 {
+        font-size: 24px; /* Adjusted font size for mobile */
+        line-height: 36px;
+    }
+
+    .getToKnow {
+        font-size: 12px; /* Adjusted font size for mobile */
+        line-height: 18px;
+    }
+}
