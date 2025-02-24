@@ -1,216 +1,219 @@
 /* Base styles */
 .testimonialsFrame {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align to the left */
-    justify-content: flex-start;
-    padding: 56px 20px 56px 380px; /* Adjusted padding to align with Case Studies */
-    box-sizing: border-box;
-    text-align: left; /* Align text to the left */
-    font-size: 32px;
-    color: #333;
-    font-family: 'Poppins', sans-serif;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align horizontally */
+  justify-content: center; /* Center align vertically */
+  padding: 56px 20px; /* Adjusted padding for better spacing */
+  box-sizing: border-box;
+  text-align: left; /* Align text to the left */
+  font-size: 32px;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.testmonialsContainer {
+  width: 100%;
+  max-width: 1160px; /* Added max-width for better responsiveness */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align container content to the left */
+  justify-content: center; /* Center align vertically */
+  gap: 40px; /* Reduced gap for smaller screens */
+}
+
+.testimonials {
+  width: 100%;
+  position: relative;
+  letter-spacing: 0.01em;
+  line-height: 48px;
+  font-weight: 600;
+  text-align: left; /* Align text to the left */
+}
+
+.testimonialTitle {
+  width: 100%; /* Ensure it takes full width */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Align to the left */
+  justify-content: flex-start; /* Align to the left */
+}
+
+.ideoGraphicsHas {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.25px;
+  line-height: 22px;
+  font-size: 16px; /* Adjusted font size for smaller screens */
+  text-align: left; /* Align text to the left */
+}
+
+.clientImgJpg {
+  width: 99px;
+  position: relative;
+  height: 124px;
+  object-fit: cover;
+}
+
+.clientImg {
+  width: 120px;
+  backdrop-filter: blur(24px);
+  border-radius: 100px;
+  background-color: #fff;
+  border: 10px solid rgba(115, 171, 216, 0.5);
+  box-sizing: border-box;
+  height: 120px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align image */
+  justify-content: center;
+  padding: 4px;
+}
+
+.visalSuresh {
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  font-weight: 600;
+  white-space: nowrap; /* Ensures the name stays in one line */
+}
+
+.xspineTech {
+  width: 100%;
+  position: relative;
+  letter-spacing: 0.5px;
+  line-height: 14px;
+  font-size: 14px; /* Adjusted font size for smaller screens */
+  text-align: left; /* Align text to the left */
+}
+
+.kochi {
+  position: relative;
+  letter-spacing: 0.5px;
+  line-height: 14px;
+  font-size: 14px; /* Adjusted font size for smaller screens */
+  text-align: left; /* Align text to the left */
+}
+
+.rightClientDetails {
+  align-self: stretch;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align to the left */
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.clientDetailContainer {
+  display: flex;
+  flex-direction: column; /* Stack items vertically for smaller screens */
+  align-items: flex-start; /* Align to the left */
+  justify-content: center;
+  gap: 16px;
+  font-size: 12px;
+  color: #333;
+}
+
+.container {
+  align-self: stretch;
+  height: auto; /* Adjusted height for responsiveness */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align to the left */
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.btnPrevIcon,
+.btnNextIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.btnPrevBtnNext {
+  width: 100%; /* Ensure it takes full width */
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center align buttons */
+  justify-content: center; /* Center align buttons */
+  gap: 4px;
+  margin-top: 20px; /* Add margin to separate from the content above */
+}
+
+.clientTestimonials {
+  width: 100%;
+  max-width: 704px; /* Added max-width for better responsiveness */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align to the left */
+  justify-content: flex-start;
+  gap: 12px;
+  font-size: 16px;
+  color: #151515;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .testimonialsFrame {
+    padding: 40px 20px; /* Adjusted padding for smaller screens */
   }
-  
+
   .testmonialsContainer {
-    width: 100%;
-    max-width: 1160px; /* Added max-width for better responsiveness */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align to the left */
-    justify-content: flex-start;
-    gap: 40px; /* Reduced gap for smaller screens */
+    gap: 20px; /* Reduced gap for smaller screens */
   }
-  
+
   .testimonials {
-    width: 100%;
-    position: relative;
-    letter-spacing: 0.01em;
-    line-height: 48px;
-    font-weight: 600;
-    text-align: left; /* Align text to the left */
+    font-size: 28px; /* Adjusted font size for smaller screens */
+    line-height: 36px;
   }
-  
-  .testimonialTitle {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start; /* Align to the left */
-    justify-content: flex-start; /* Align to the left */
-  }
-  
+
   .ideoGraphicsHas {
-    align-self: stretch;
-    position: relative;
-    letter-spacing: 0.25px;
-    line-height: 22px;
-    font-size: 16px; /* Adjusted font size for smaller screens */
-    text-align: left; /* Align text to the left */
+    font-size: 14px; /* Adjusted font size for smaller screens */
+    line-height: 20px;
   }
-  
-  .clientImgJpg {
-    width: 99px;
-    position: relative;
-    height: 124px;
-    object-fit: cover;
-  }
-  
+
   .clientImg {
-    width: 120px;
-    backdrop-filter: blur(24px);
-    border-radius: 100px;
-    background-color: #fff;
-    border: 10px solid rgba(115, 171, 216, 0.5);
-    box-sizing: border-box;
-    height: 120px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align image */
-    justify-content: center;
-    padding: 4px;
+    width: 100px; /* Adjusted size for smaller screens */
+    height: 100px;
   }
-  
+
   .visalSuresh {
-    position: relative;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    line-height: 24px;
-    font-weight: 600;
-    white-space: nowrap; /* Ensures the name stays in one line */
+    font-size: 16px; /* Adjusted font size for smaller screens */
   }
-  
-  .xspineTech {
-    width: 100%;
-    position: relative;
-    letter-spacing: 0.5px;
-    line-height: 14px;
-    font-size: 14px; /* Adjusted font size for smaller screens */
-    text-align: left; /* Align text to the left */
-  }
-  
+
+  .xspineTech,
   .kochi {
-    position: relative;
-    letter-spacing: 0.5px;
-    line-height: 14px;
-    font-size: 14px; /* Adjusted font size for smaller screens */
-    text-align: left; /* Align text to the left */
+    font-size: 12px; /* Adjusted font size for smaller screens */
   }
-  
-  .rightClientDetails {
-    align-self: stretch;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align to the left */
-    justify-content: flex-start;
-    gap: 4px;
+}
+
+@media (max-width: 480px) {
+  .testimonialsFrame {
+    padding: 40px 20px; /* Adjusted padding for very small screens */
   }
-  
-  .clientDetailContainer {
-    display: flex;
-    flex-direction: column; /* Stack items vertically for smaller screens */
-    align-items: flex-start; /* Align to the left */
-    justify-content: center;
-    gap: 16px;
-    font-size: 12px;
-    color: #333;
+
+  .testimonials {
+    font-size: 24px; /* Adjusted font size for very small screens */
+    line-height: 32px;
   }
-  
-  .container {
-    align-self: stretch;
-    height: auto; /* Adjusted height for responsiveness */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align to the left */
-    justify-content: flex-start;
-    gap: 24px;
+
+  .clientImg {
+    width: 80px; /* Adjusted size for very small screens */
+    height: 80px;
   }
-  
-  .btnPrevIcon,
-  .btnNextIcon {
-    width: 32px;
-    height: 32px;
-    border-radius: 100px;
-    overflow: hidden;
-    flex-shrink: 0;
-    object-fit: contain;
+
+  .visalSuresh {
+    font-size: 14px; /* Adjusted font size for very small screens */
   }
-  
-  .btnPrevBtnNext {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* Center align buttons */
-    justify-content: flex-start; /* Align to the left */
-    gap: 4px;
-  }
-  
-  .clientTestimonials {
-    width: 100%;
-    max-width: 704px; /* Added max-width for better responsiveness */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align to the left */
-    justify-content: flex-start;
-    gap: 12px;
-    font-size: 16px;
-    color: #151515;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .testimonialsFrame {
-      padding: 40px 20px; /* Adjusted padding for smaller screens */
-    }
-  
-    .testmonialsContainer {
-      gap: 20px; /* Reduced gap for smaller screens */
-    }
-  
-    .testimonials {
-      font-size: 28px; /* Adjusted font size for smaller screens */
-      line-height: 36px;
-    }
-  
-    .ideoGraphicsHas {
-      font-size: 14px; /* Adjusted font size for smaller screens */
-      line-height: 20px;
-    }
-  
-    .clientImg {
-      width: 100px; /* Adjusted size for smaller screens */
-      height: 100px;
-    }
-  
-    .visalSuresh {
-      font-size: 16px; /* Adjusted font size for smaller screens */
-    }
-  
-    .xspineTech,
-    .kochi {
-      font-size: 12px; /* Adjusted font size for smaller screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .testimonialsFrame {
-      padding: 40px 20px; /* Adjusted padding for very small screens */
-    }
-  
-    .testimonials {
-      font-size: 24px; /* Adjusted font size for very small screens */
-      line-height: 32px;
-    }
-  
-    .clientImg {
-      width: 80px; /* Adjusted size for very small screens */
-      height: 80px;
-    }
-  
-    .visalSuresh {
-      font-size: 14px; /* Adjusted font size for very small screens */
-    }
-  }
+}
