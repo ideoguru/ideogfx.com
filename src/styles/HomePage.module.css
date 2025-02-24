@@ -4,11 +4,11 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 56px;
+  height: 4rem; /* Use rem for scalability */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0 1.5rem; /* Use rem for scalability */
   background-color: rgba(234, 235, 240, 0.5);
   backdrop-filter: blur(40px);
   z-index: 1000;
@@ -22,7 +22,7 @@
 .frameParent17 {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem; /* Use rem for scalability */
   margin-left: auto; /* Align to the right */
   margin-right: auto; /* Center the links */
   justify-content: center; /* Center the items horizontally */
@@ -30,7 +30,7 @@
 }
 
 .getStarted {
-  padding: 8px 16px;
+  padding: 0.5rem 1rem; /* Use rem for scalability */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -43,13 +43,14 @@
 .menuIcon {
   display: none; /* Hidden by default */
   flex-direction: column;
-  gap: 4px;
+  gap: 0.25rem; /* Use rem for scalability */
   cursor: pointer;
+  z-index: 1001; /* Ensure it's above other elements */
 }
 
 .menuIcon .bar {
-  width: 24px;
-  height: 2px;
+  width: 1.5rem; /* Use rem for scalability */
+  height: 0.125rem; /* Use rem for scalability */
   background-color: #191919;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -58,14 +59,14 @@
 @media (max-width: 768px) {
   .frameParent17 {
     position: absolute;
-    top: 56px; /* Below the header */
+    top: 4rem; /* Below the header */
     left: 0;
     width: 100%;
     flex-direction: column;
     background-color: rgba(234, 235, 240, 0.95);
     backdrop-filter: blur(40px);
-    padding: 16px 0;
-    gap: 8px;
+    padding: 1rem 0; /* Use rem for scalability */
+    gap: 0.5rem; /* Use rem for scalability */
     transform: translateY(-100%); /* Hide by default */
     transition: transform 0.3s ease;
     z-index: 999;
@@ -79,7 +80,7 @@
   .getStarted {
     width: 100%;
     text-align: center;
-    padding: 12px 0;
+    padding: 0.75rem 0; /* Use rem for scalability */
   }
 
   /* Show hamburger menu icon on mobile */
@@ -88,25 +89,48 @@
     margin-left: auto; /* Push to the right side */
   }
 
-  /* Ensure the bars look better in the hamburger menu */
-  .menuIcon .bar:nth-child(1) {
-    transform-origin: 0 0;
+  /* Hamburger menu animation */
+  .menuIcon.mobileMenuOpen .bar:nth-child(1) {
+    transform: rotate(45deg) translate(0.25rem, 0.25rem);
   }
-  .menuIcon .bar:nth-child(2) {
-    transform-origin: 0 0;
+  .menuIcon.mobileMenuOpen .bar:nth-child(2) {
+    opacity: 0;
   }
-  .menuIcon .bar:nth-child(3) {
-    transform-origin: 0 0;
+  .menuIcon.mobileMenuOpen .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(0.25rem, -0.25rem);
   }
-  /* Active Link Style */
+}
+
+/* Active Link Style */
 .activeLink {
   background-color: #6a4c9c; /* Purple background */
   color: #ffffff; /* White text color */
-  border-radius: 8px; /* Optional: to make it rounded */
-  padding: 8px 16px; /* Optional: to add space around the text */
+  border-radius: 0.5rem; /* Use rem for scalability */
+  padding: 0.5rem 1rem; /* Use rem for scalability */
 }
+
 .active {
   color: purple; /* Style for the active tab */
   font-weight: bold; /* Optional: Add more styles */
 }
+
+/* Additional Breakpoints for Better Responsiveness */
+@media (max-width: 480px) {
+  .frameParent16 {
+    padding: 0 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .getStarted {
+    padding: 0.5rem; /* Reduce padding for smaller screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .frameParent16 {
+    height: 5rem; /* Increase height for tablets */
+  }
+
+  .frameParent17 {
+    gap: 1.5rem; /* Increase gap for tablets */
+  }
 }

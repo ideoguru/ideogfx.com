@@ -7,6 +7,7 @@ import styles from "../styles/HomePage.module.css";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState(""); // Initialize activeLink state
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State for mobile menu toggle
 
   // This effect ensures the active link is set when the page loads
   useEffect(() => {
@@ -24,6 +25,11 @@ const Header = () => {
 
   const handleLinkClick = (link: string) => {
     setActiveLink(link); // Update active link when clicked
+    setIsMobileMenuOpen(false); // Close mobile menu after clicking a link
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen); // Toggle mobile menu visibility
   };
 
   return (
@@ -37,7 +43,25 @@ const Header = () => {
           src="/logo.png"
         />
       </div>
-      <div className={styles.frameParent17}>
+
+      {/* Hamburger Menu Icon (Mobile Only) */}
+      <div
+        className={`${styles.menuIcon} ${
+          isMobileMenuOpen ? styles.mobileMenuOpen : ""
+        }`}
+        onClick={toggleMobileMenu}
+      >
+        <div className={styles.bar}></div>
+        <div className={styles.bar}></div>
+        <div className={styles.bar}></div>
+      </div>
+
+      {/* Navigation Links */}
+      <div
+        className={`${styles.frameParent17} ${
+          isMobileMenuOpen ? styles.mobileMenuOpen : ""
+        }`}
+      >
         <div className={styles.whoWeAreWrapper}>
           <Link href="/">
             <div

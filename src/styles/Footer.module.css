@@ -3,7 +3,7 @@
   background-color: #eaebf0;
   display: flex;
   justify-content: center;
-  padding: 24px 380px;
+  padding: 24px 20px; /* Adjusted padding for mobile */
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   color: #151515;
@@ -45,7 +45,7 @@
 
 .contents {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Stack columns vertically on mobile */
   gap: 40px;
 }
 
@@ -53,6 +53,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  align-items: center; /* Center align for mobile */
 }
 
 .companyName {
@@ -69,7 +70,9 @@
 
 .quickLinks {
   display: flex;
+  flex-wrap: wrap; /* Allow links to wrap on smaller screens */
   gap: 12px;
+  justify-content: center; /* Center align for mobile */
 }
 
 .footerLink {
@@ -90,11 +93,11 @@
 }
 
 .rightTextColumn {
-  width: 264px;
+  width: 100%; /* Full width on mobile */
   display: flex;
   flex-direction: column;
   gap: 8px;
-  align-items: flex-end;
+  align-items: center; /* Center align for mobile */
 }
 
 .heading {
@@ -132,6 +135,7 @@
   display: flex;
   justify-content: center;
   color: #1d1d1d;
+  text-align: center; /* Center align for mobile */
 }
 
 .addressText {
@@ -145,6 +149,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  align-items: center; /* Center align for mobile */
 }
 
 .phone,
@@ -157,7 +162,8 @@
 
 .copyrightSection {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Stack copyright and legal links vertically on mobile */
+  align-items: center; /* Center align for mobile */
   gap: 16px;
   font-size: 12px;
   color: #1d1d1d;
@@ -181,4 +187,42 @@
   font-size: 12px;
   letter-spacing: 0.5px;
   line-height: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+  .footerFrame {
+    padding: 24px 380px; /* Restore original padding for larger screens */
+  }
+
+  .contents {
+    flex-direction: row; /* Restore horizontal layout for larger screens */
+    justify-content: space-between;
+  }
+
+  .leftColumnText {
+    align-items: flex-start; /* Align left for larger screens */
+  }
+
+  .quickLinks {
+    justify-content: flex-start; /* Align left for larger screens */
+  }
+
+  .rightTextColumn {
+    width: 264px; /* Restore original width for larger screens */
+    align-items: flex-end; /* Align right for larger screens */
+  }
+
+  .address {
+    text-align: right; /* Align right for larger screens */
+  }
+
+  .contactInfo {
+    align-items: flex-end; /* Align right for larger screens */
+  }
+
+  .copyrightSection {
+    flex-direction: row; /* Restore horizontal layout for larger screens */
+    justify-content: space-between;
+  }
 }
