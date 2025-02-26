@@ -77,7 +77,7 @@
     padding: 12px 12px 12px 16px;
     gap: 8px;
 }
-.arrow1 {
+/* .arrow1 {
     width: 44px;
     border-radius: 100px;
     background-color: #d38ab2;
@@ -88,7 +88,7 @@
     justify-content: center;
     padding: 12px 8px;
     box-sizing: border-box;
-}
+} */
 .webAndAppDesigning {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
     border-radius: 100px;
@@ -260,3 +260,37 @@
     color: #151515;
     font-family: Poppins;
 }
+/* Add hover styles for the tabs */
+.webAndAppDesigning:hover {
+    background-color: #9e989b; /* Change to your preferred hover color */
+    color: #fff; /* Change to your preferred text color */
+    border: 1px solid #7d797b; /* Adjust border color if needed */
+  }
+  
+  /* Add hover styles for the tabs */
+.designingAndPrototyping:hover {
+    background-color: #d38ab2; /* Change to your preferred hover color */
+    color: #fff; /* Change to your preferred text color */
+    border: 1px solid #d38ab2; /* Adjust border color if needed */
+  }
+  
+  /* Add a class for the hovered tab */
+  .hovered {
+    background-color: #d38ab2; /* Same as hover color */
+    color: #fff; /* Same as hover text color */
+    border: 1px solid #d38ab2; /* Same as hover border color */
+  }
+  
+  /* Arrow styling */
+  .arrow {
+    width: 44px;
+    border-radius: 100px;
+    background-color: #d38ab2;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 8px;
+    box-sizing: border-box;
+  }
