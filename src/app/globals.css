@@ -1,38 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-body {
-  	margin: 0; line-height: normal;
-}
-body {
-margin: 0; line-height: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base styles for body */
 body {
-  color: var(--foreground);
-  background: var(--background);
+  margin: 0;
+  line-height: normal;
+  color: #171717; /* Explicitly set text color */
+  background: #ffffff; /* Explicitly set background color */
   font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+  --background: #ffffff; /* Set background to white */
+  --foreground: #171717; /* Set text color to dark */
+}
+
+/* Gradient text utility */
 .gradient-text {
   background: linear-gradient(
     135deg,
@@ -46,7 +38,58 @@ body {
   text-fill-color: transparent;
 }
 
-body {
-  margin: 0;
-  line-height: normal;
+/* Responsive styles for mobile screens */
+@media (max-width: 767px) {
+  /* Adjust font sizes for mobile */
+  body {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  /* Example: Make headings smaller on mobile */
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  /* Example: Stack elements vertically on mobile */
+  .flex-container {
+    flex-direction: column;
+  }
+
+  /* Example: Add padding for better spacing on mobile */
+  .section {
+    padding: 1rem;
+  }
+
+  /* Example: Hide certain elements on mobile */
+  .desktop-only {
+    display: none;
+  }
+
+  /* Example: Make buttons full width on mobile */
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Responsive styles for tablets (optional) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Example: Adjust font sizes for tablets */
+  body {
+    font-size: 16px;
+  }
+
+  /* Example: Adjust layout for tablets */
+  .flex-container {
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
