@@ -6,7 +6,9 @@ import styles from "../../styles/WhtWeDo_whtWeDo.module.css";
 
 const WhatWeDoFrame: React.FC = () => {
   // State to track the currently hovered service
-  const [hoveredService, setHoveredService] = useState("UI/UX Designing and Prototyping");
+  const [hoveredService, setHoveredService] = useState(
+    "UI/UX Designing and Prototyping"
+  );
   // { text: "UI/UX Designing and Prototyping", image: "/wht_we_do_first.png" },
   // { text: "Websites and Apps Designing", image: "/wht_we_do_2.png" },
   // { text: "Redesigning UI/UX", image: "/wht_we_do_3.png" },
@@ -16,7 +18,7 @@ const WhatWeDoFrame: React.FC = () => {
   // { text: "Design Systems and Branding", image: "/wht_we_do_8.png" },
   // { text: "Conversion Rate Optimization (CRO)", image: "/wht_we_do_9.png" },
   // Data for each service (image and description)
-  const servicesData = {
+  const servicesData: any = {
     "UI/UX Designing and Prototyping": {
       image: "/whtwedo7.png", // Replace with the correct image path
       description: {
@@ -154,7 +156,11 @@ const WhatWeDoFrame: React.FC = () => {
           </div>
           <div className={styles.subheading}>
             <div className={styles.exploreOurRange}>
-              Explore our range of tailored UI/UX design services aimed at helping startups, SMEs, and enterprises create digital products that stand out. From product design to brand identity, we’re your partner in user-centric growth. Here's a breakdown of what we offer:
+              Explore our range of tailored UI/UX design services aimed at
+              helping startups, SMEs, and enterprises create digital products
+              that stand out. From product design to brand identity, we’re your
+              partner in user-centric growth. Here's a breakdown of what we
+              offer:
             </div>
           </div>
         </div>
@@ -166,12 +172,18 @@ const WhatWeDoFrame: React.FC = () => {
                 {/* First Row of Tabs */}
                 <div
                   className={`${styles.designingAndPrototyping} ${
-                    hoveredService === "UI/UX Designing and Prototyping" ? styles.hovered : ""
+                    hoveredService === "UI/UX Designing and Prototyping"
+                      ? styles.hovered
+                      : ""
                   }`}
-                  onMouseEnter={() => handleServiceHover("UI/UX Designing and Prototyping")}
+                  onMouseEnter={() =>
+                    handleServiceHover("UI/UX Designing and Prototyping")
+                  }
                 >
                   <div className={styles.text}>
-                    <div className={styles.uiuxDesigningAnd}>UI/UX Designing and Prototyping</div>
+                    <div className={styles.uiuxDesigningAnd}>
+                      UI/UX Designing and Prototyping
+                    </div>
                   </div>
                   <div className={styles.arrow}>
                     <Image
@@ -185,12 +197,18 @@ const WhatWeDoFrame: React.FC = () => {
                 </div>
                 <div
                   className={`${styles.designingAndPrototyping} ${
-                    hoveredService === "Websites and Apps Designing" ? styles.hovered : ""
+                    hoveredService === "Websites and Apps Designing"
+                      ? styles.hovered
+                      : ""
                   }`}
-                  onMouseEnter={() => handleServiceHover("Websites and Apps Designing")}
+                  onMouseEnter={() =>
+                    handleServiceHover("Websites and Apps Designing")
+                  }
                 >
                   <div className={styles.text}>
-                    <div className={styles.uiuxDesigningAnd}>Websites and Apps Designing</div>
+                    <div className={styles.uiuxDesigningAnd}>
+                      Websites and Apps Designing
+                    </div>
                   </div>
                   <div className={styles.arrow}>
                     <Image
@@ -209,7 +227,9 @@ const WhatWeDoFrame: React.FC = () => {
                   onMouseEnter={() => handleServiceHover("Redesigning UI/UX")}
                 >
                   <div className={styles.text}>
-                    <div className={styles.uiuxDesigningAnd}>Redesigning UI/UX</div>
+                    <div className={styles.uiuxDesigningAnd}>
+                      Redesigning UI/UX
+                    </div>
                   </div>
                   <div className={styles.arrow}>
                     <Image
@@ -226,12 +246,16 @@ const WhatWeDoFrame: React.FC = () => {
                 {/* Second Row of Tabs */}
                 <div
                   className={`${styles.designingAndPrototyping} ${
-                    hoveredService === "UI/UX Design Audits" ? styles.hovered : ""
+                    hoveredService === "UI/UX Design Audits"
+                      ? styles.hovered
+                      : ""
                   }`}
                   onMouseEnter={() => handleServiceHover("UI/UX Design Audits")}
                 >
                   <div className={styles.text}>
-                    <div className={styles.uiuxDesigningAnd}>UI/UX Design Audits</div>
+                    <div className={styles.uiuxDesigningAnd}>
+                      UI/UX Design Audits
+                    </div>
                   </div>
                   <div className={styles.arrow}>
                     <Image
@@ -245,12 +269,18 @@ const WhatWeDoFrame: React.FC = () => {
                 </div>
                 <div
                   className={`${styles.designingAndPrototyping} ${
-                    hoveredService === "Usability Testing & Optimization" ? styles.hovered : ""
+                    hoveredService === "Usability Testing & Optimization"
+                      ? styles.hovered
+                      : ""
                   }`}
-                  onMouseEnter={() => handleServiceHover("Usability Testing & Optimization")}
+                  onMouseEnter={() =>
+                    handleServiceHover("Usability Testing & Optimization")
+                  }
                 >
                   <div className={styles.text}>
-                    <div className={styles.uiuxDesigningAnd}>{`Usability Testing & Optimization`}</div>
+                    <div
+                      className={styles.uiuxDesigningAnd}
+                    >{`Usability Testing & Optimization`}</div>
                   </div>
                   <div className={styles.arrow}>
                     <Image
@@ -264,12 +294,18 @@ const WhatWeDoFrame: React.FC = () => {
                 </div>
                 <div
                   className={`${styles.designingAndPrototyping} ${
-                    hoveredService === "User Research and Behavior Analysis" ? styles.hovered : ""
+                    hoveredService === "User Research and Behavior Analysis"
+                      ? styles.hovered
+                      : ""
                   }`}
-                  onMouseEnter={() => handleServiceHover("User Research and Behavior Analysis")}
+                  onMouseEnter={() =>
+                    handleServiceHover("User Research and Behavior Analysis")
+                  }
                 >
                   <div className={styles.text}>
-                    <div className={styles.uiuxDesigningAnd}>User Research and Behavior Analysis</div>
+                    <div className={styles.uiuxDesigningAnd}>
+                      User Research and Behavior Analysis
+                    </div>
                   </div>
                   <div className={styles.arrow}>
                     <Image
@@ -286,12 +322,18 @@ const WhatWeDoFrame: React.FC = () => {
                 {/* Third Row of Tabs */}
                 <div
                   className={`${styles.designingAndPrototyping} ${
-                    hoveredService === "Design Systems and Branding" ? styles.hovered : ""
+                    hoveredService === "Design Systems and Branding"
+                      ? styles.hovered
+                      : ""
                   }`}
-                  onMouseEnter={() => handleServiceHover("Design Systems and Branding")}
+                  onMouseEnter={() =>
+                    handleServiceHover("Design Systems and Branding")
+                  }
                 >
                   <div className={styles.text}>
-                    <div className={styles.uiuxDesigningAnd}>Design Systems and Branding</div>
+                    <div className={styles.uiuxDesigningAnd}>
+                      Design Systems and Branding
+                    </div>
                   </div>
                   <div className={styles.arrow}>
                     <Image
@@ -305,12 +347,18 @@ const WhatWeDoFrame: React.FC = () => {
                 </div>
                 <div
                   className={`${styles.designingAndPrototyping} ${
-                    hoveredService === "Conversion Rate Optimization (CRO)" ? styles.hovered : ""
+                    hoveredService === "Conversion Rate Optimization (CRO)"
+                      ? styles.hovered
+                      : ""
                   }`}
-                  onMouseEnter={() => handleServiceHover("Conversion Rate Optimization (CRO)")}
+                  onMouseEnter={() =>
+                    handleServiceHover("Conversion Rate Optimization (CRO)")
+                  }
                 >
                   <div className={styles.text}>
-                    <div className={styles.uiuxDesigningAnd}>Conversion Rate Optimization (CRO)</div>
+                    <div className={styles.uiuxDesigningAnd}>
+                      Conversion Rate Optimization (CRO)
+                    </div>
                   </div>
                   <div className={styles.arrow}>
                     <Image
@@ -329,7 +377,9 @@ const WhatWeDoFrame: React.FC = () => {
             <div className={styles.descriptionContainer}>
               <div
                 className={styles.leftColumnCard}
-                style={{ backgroundImage: `url(${servicesData[hoveredService].image})` }}
+                style={{
+                  backgroundImage: `url(${servicesData[hoveredService].image})`,
+                }}
               >
                 <div className={styles.textCard}>
                   <div className={styles.uiuxDesigningAnd1}>
@@ -341,13 +391,17 @@ const WhatWeDoFrame: React.FC = () => {
                 </div>
               </div>
               <div className={styles.rightColumnDescription}>
-                {servicesData[hoveredService].description.details.map((detail, index) => (
-                  <div key={index} className={styles.rightColumnline01}>
-                    <div className={styles.userResearchAnalysisDeepWrapper}>
-                      <div className={styles.informationArchitecture}>{detail}</div>
+                {servicesData[hoveredService].description.details.map(
+                  (detail: any, index: any) => (
+                    <div key={index} className={styles.rightColumnline01}>
+                      <div className={styles.userResearchAnalysisDeepWrapper}>
+                        <div className={styles.informationArchitecture}>
+                          {detail}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  )
+                )}
               </div>
             </div>
           </div>
