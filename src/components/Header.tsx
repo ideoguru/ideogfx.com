@@ -34,15 +34,17 @@ const Header = () => {
 
   return (
     <div className={styles.frameParent16}>
-      <div className={styles.asset18288x81Wrapper}>
-        <Image
-          className={styles.asset18288x81}
-          width={48}
-          height={44}
-          alt="Logo"
-          src="/logo.png"
-        />
-      </div>
+       <Link href="/">
+        <div className={styles.asset18288x81Wrapper}>
+          <Image
+            className={styles.asset18288x81}
+            width={48}
+            height={44}
+            alt="Logo"
+            src="/logo.png"
+          />
+        </div>
+      </Link>
 
       {/* Hamburger Menu Icon (Mobile Only) */}
       <div
