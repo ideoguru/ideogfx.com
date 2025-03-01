@@ -4,6 +4,7 @@ import Header from "../../components/Header";  // Correct path to Header
 import Footer from "../../components/Footer";  // Correct path to Footer
 import styles from "../../styles/HomePage.module.css";
 import Hero from "../../components/Resources/Resourse_hero";
+import CaseStudies from "../../components/Resources/Resource_CaseStudiesSection";
 
 const InsightPage: NextPage = () => {
   return (
@@ -11,6 +12,7 @@ const InsightPage: NextPage = () => {
       <Header />
       <main>
        <Hero />
+       <CaseStudies />
       </main>
       <Footer />
     </div>
