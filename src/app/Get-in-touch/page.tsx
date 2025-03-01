@@ -5,6 +5,7 @@ import Footer from "../../components/Footer"; // Correct path to Footer
 import styles from "../../styles/HomePage.module.css";
 import GetInTouchFrame from "@/components/get-in-touch/GetInTouch_Hero";
 import GetInTouchForm from "@/components/get-in-touch/GetInTouch_Form";
+import FAQSection from "@/components/get-in-touch/GetInTouch_FAQ";
 
 const GetIntouchPage: NextPage = () => {
   return (
@@ -13,6 +14,7 @@ const GetIntouchPage: NextPage = () => {
       <main>
         <GetInTouchFrame />
         <GetInTouchForm />
+        <FAQSection />
         <div>
           <div></div>
         </div>

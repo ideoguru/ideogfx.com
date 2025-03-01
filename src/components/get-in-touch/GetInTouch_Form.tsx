@@ -1,17 +1,103 @@
 "use client";
 import type { NextPage } from "next";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../../styles/GetInTouch_Form.module.css";
 
 const GetInTouchForm: NextPage = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       setSelectedFile(e.target.files[0]);
     }
+  };
+
+  const SuccessNotification = () => {
+    useEffect(() => {
+      if (showSuccess) {
+        const timer = setTimeout(() => setShowSuccess(false), 5000);
+        return () => clearTimeout(timer);
+      }
+    }, [showSuccess]);
+
+    return (
+      <div
+        className={`${styles.successNotification} ${
+          showSuccess ? styles.show : ""
+        }`}
+      >
+        <div className={styles.notificationContent}>
+          <div className={styles.checkmarkContainer}>
+            <svg className={styles.checkmark} viewBox="0 0 52 52">
+              <circle
+                className={styles.checkmarkCircle}
+                cx="26"
+                cy="26"
+                r="25"
+              />
+              <path
+                className={styles.checkmarkCheck}
+                fill="none"
+                d="M14.1 27.2l7.1 7.2 16.7-16.8"
+              />
+            </svg>
+          </div>
+          <div className={styles.notificationText}>
+            <h3 className={styles.notificationTitle}>Message Sent!</h3>
+            <p className={styles.notificationSubtitle}>
+              We'll get back to you within 24 hours
+            </p>
+          </div>
+          <div className={styles.progressBar}></div>
+        </div>
+      </div>
+    );
+  };
+
+  // Validation functions
+  const validateEmail = (email: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  const validatePhone = (phone: string) => /^\d{10}$/.test(phone);
+
+  const sanitizeInput = (input: string) =>
+    input.replace(/[;'"\\<>()&|#\$\*]/g, "");
+
+  const validateForm = (formData: FormData) => {
+    const newErrors: Record<string, string> = {};
+    const fields = ["name", "email", "phone", "purpose", "message"];
+
+    // Basic SQL injection prevention and input sanitization
+    fields.forEach((field) => {
+      const value = formData.get(field) as string;
+      if (/(\b(DROP|DELETE|INSERT|SELECT|UPDATE|EXEC)\b)|[;'"\\]/.test(value)) {
+        newErrors[field] = "Invalid characters detected";
+      }
+    });
+
+    // Email validation
+    const email = formData.get("email") as string;
+    if (!validateEmail(email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    // Phone validation
+    const phone = formData.get("phone") as string;
+    if (!validatePhone(phone)) {
+      newErrors.phone = "Please enter a valid 10-digit phone number";
+    }
+
+    // Required fields check
+    if (!formData.get("name")) newErrors.name = "Name is required";
+    if (!formData.get("purpose")) newErrors.purpose = "Purpose is required";
+    if (!formData.get("message")) newErrors.message = "Message is required";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -20,14 +106,32 @@ const GetInTouchForm: NextPage = () => {
 
     const formData = new FormData(e.currentTarget as HTMLFormElement);
 
+    // Validate form before submission
+    if (!validateForm(formData)) {
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Sanitize inputs
+    const sanitizedData = new FormData();
+    formData.forEach((value, key) => {
+      sanitizedData.append(
+        key,
+        typeof value === "string" ? sanitizeInput(value) : value
+      );
+    });
+
     try {
       const response = await fetch("/api/send-email", {
         method: "POST",
-        body: formData,
+        body: sanitizedData,
       });
 
       if (response.ok) {
-        alert("Message sent successfully!");
+        // alert("Message sent successfully!");
+        // (e.target as HTMLFormElement).reset();
+        // setSelectedFile(null);
+        setShowSuccess(true);
         (e.target as HTMLFormElement).reset();
         setSelectedFile(null);
       } else {
@@ -43,6 +147,7 @@ const GetInTouchForm: NextPage = () => {
 
   return (
     <div className={styles.getInTouchContainer}>
+      <SuccessNotification />
       <div className={styles.contentWrapper}>
         <div className={styles.leftSection}>
           <h1 className={styles.mainHeading}>Get In Touch</h1>
@@ -139,6 +244,9 @@ const GetInTouchForm: NextPage = () => {
                 name="name"
                 required
               />
+              {errors.name && (
+                <span className={styles.errorMessage}>{errors.name}</span>
+              )}
             </div>
 
             <div className={styles.formRow}>
@@ -150,6 +258,9 @@ const GetInTouchForm: NextPage = () => {
                   name="email"
                   required
                 />
+                {errors.email && (
+                  <span className={styles.errorMessage}>{errors.email}</span>
+                )}
               </div>
 
               <div className={styles.formGroup}>
@@ -160,6 +271,9 @@ const GetInTouchForm: NextPage = () => {
                   name="phone"
                   required
                 />
+                {errors.phone && (
+                  <span className={styles.errorMessage}>{errors.phone}</span>
+                )}
               </div>
             </div>
 
@@ -200,6 +314,11 @@ const GetInTouchForm: NextPage = () => {
                   alt="Upload"
                   className={styles.uploadIcon}
                 />
+                {errors.attachment && (
+                  <span className={styles.errorMessage}>
+                    {errors.attachment}
+                  </span>
+                )}
               </label>
               {selectedFile && (
                 <span className={styles.fileName}>{selectedFile.name}</span>
