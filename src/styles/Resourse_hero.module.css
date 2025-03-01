@@ -1,0 +1,209 @@
+/* ResourcesHero.module.css */
+.heroSection {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background: #F7F8FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .contentContainer {
+    width: 90%;
+    max-width: 1160px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+  
+  /* Desktop styles (unchanged) */
+  .headingContainer {
+    text-align: left;
+    margin-bottom: 60px;
+    z-index: 2;
+    width: 745px;
+  }
+  
+  .stayText {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 68px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .updatedGradient {
+    font-size: 150px;
+    line-height: 180px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #6B00B3 0%, #D8499C 52%, #D8499C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    margin-top: -40px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .heroCard {
+    position: relative;
+    width: 745px;
+    height: 396px;
+    border-radius: 16px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+  }
+  
+  /* Mobile responsive adjustments */
+  @media (max-width: 1200px) {
+    .heroSection {
+      height: auto;
+      min-height: 900px;
+    }
+    
+    .contentContainer {
+      width: 95%;
+      padding: 1rem 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .headingContainer {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  
+    .stayText {
+      font-size: 40px;
+      line-height: 48px;
+    }
+  
+    .updatedGradient {
+      font-size: 80px;
+      line-height: 100px;
+      margin-top: -20px;
+    }
+  
+    .heroCard {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 745/396;
+    }
+  
+    .cardContent {
+      padding: 1.5rem;
+    }
+  
+    .cardTitle {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  
+    .cardText {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  
+    .learnMoreButton {
+      padding: 12px 24px;
+      font-size: 14px;
+    }
+  
+    .scrollIndicator {
+      position: relative;
+      bottom: auto;
+      margin-top: 2rem;
+    }
+  }
+  
+  /* Rest of the unchanged styles */
+  .cardBackground {
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .cardContent {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    background: rgba(247, 248, 250, 0.4);
+    backdrop-filter: blur(160px);
+    border-radius: 12px;
+    padding: 24px;
+    z-index: 2;
+  }
+  
+  .cardTitle {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #151515;
+    margin: 0 0 16px 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .cardText {
+    font-size: 16px;
+    line-height: 22px;
+    color: #151515;
+    margin: 0 0 24px 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .learnMoreButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(99.58deg, rgba(115, 171, 216, 0.75), rgba(187, 186, 225, 0.75));
+    border: 1px solid #FFF;
+    border-radius: 40px;
+    padding: 16px 32px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #151515;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .learnMoreButton:hover {
+    transform: translateY(-2px);
+  }
+  
+  .scrollIndicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  .textWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
