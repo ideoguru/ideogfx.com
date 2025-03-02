@@ -4,11 +4,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center align horizontally */
-  justify-content: center; /* Center align vertically */
-  padding: 56px 20px; /* Adjusted padding for better spacing */
+  align-items: center;
+  justify-content: center;
+  padding: 56px 20px;
   box-sizing: border-box;
-  text-align: left; /* Align text to the left */
+  text-align: left;
   font-size: 32px;
   color: #333;
   font-family: "Poppins", sans-serif;
@@ -16,12 +16,12 @@
 
 .testmonialsContainer {
   width: 100%;
-  max-width: 1160px; /* Added max-width for better responsiveness */
+  max-width: 1160px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align container content to the left */
-  justify-content: center; /* Center align vertically */
-  gap: 40px; /* Reduced gap for smaller screens */
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
 }
 
 .testimonials {
@@ -30,32 +30,44 @@
   letter-spacing: 0.01em;
   line-height: 48px;
   font-weight: 600;
-  text-align: left; /* Align text to the left */
 }
 
-.testimonialTitle {
-  width: 100%; /* Ensure it takes full width */
+/* Centered Content Section */
+.clientTestimonials {
+  width: 100%;
+  max-width: 704px;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start; /* Align to the left */
-  justify-content: flex-start; /* Align to the left */
+  flex-direction: column;
+  align-items: center; /* Center container */
+  margin: 0 auto; /* Horizontal centering */
+  gap: 12px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center children */
+  gap: 24px;
 }
 
 .ideoGraphicsHas {
-  align-self: stretch;
+  width: 100%;
   position: relative;
   letter-spacing: 0.25px;
   line-height: 22px;
-  font-size: 16px; /* Adjusted font size for smaller screens */
-  text-align: left; /* Align text to the left */
+  font-size: 16px;
+  text-align: left; /* Maintain text alignment */
 }
 
-.clientImgJpg {
-  width: 99px;
-  position: relative;
-  height: 124px;
-  object-fit: cover;
+.clientDetailContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Vertical alignment */
+  gap: 20px; /* Space between image and text */
+  width: 100%;
 }
+
 
 .clientImg {
   width: 120px;
@@ -66,154 +78,85 @@
   box-sizing: border-box;
   height: 120px;
   overflow: hidden;
-  flex-shrink: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Center align image */
+  align-items: center;
   justify-content: center;
   padding: 4px;
 }
 
+.rightClientDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left-align text content */
+  gap: 4px;
+}
+
 .visalSuresh {
-  position: relative;
   font-size: 18px;
   letter-spacing: 0.5px;
   line-height: 24px;
   font-weight: 600;
-  white-space: nowrap; /* Ensures the name stays in one line */
 }
 
-.xspineTech {
-  width: 100%;
-  position: relative;
-  letter-spacing: 0.5px;
-  line-height: 14px;
-  font-size: 14px; /* Adjusted font size for smaller screens */
-  text-align: left; /* Align text to the left */
-}
-
+.xspineTech,
 .kochi {
-  position: relative;
   letter-spacing: 0.5px;
   line-height: 14px;
-  font-size: 14px; /* Adjusted font size for smaller screens */
-  text-align: left; /* Align text to the left */
-}
-
-.rightClientDetails {
-  align-self: stretch;
+  font-size: 14px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align to the left */
-  justify-content: flex-start;
-  gap: 4px;
-}
-
-.clientDetailContainer {
-  display: flex;
-  flex-direction: column; /* Stack items vertically for smaller screens */
-  align-items: flex-start; /* Align to the left */
-  justify-content: center;
-  gap: 16px;
-  font-size: 12px;
-  color: #333;
-}
-
-.container {
-  align-self: stretch;
-  height: auto; /* Adjusted height for responsiveness */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align to the left */
-  justify-content: flex-start;
-  gap: 24px;
-}
-
-.btnPrevIcon,
-.btnNextIcon {
-  width: 32px;
-  height: 32px;
-  border-radius: 100px;
-  overflow: hidden;
-  flex-shrink: 0;
-  object-fit: contain;
 }
 
 .btnPrevBtnNext {
-  width: 100%; /* Ensure it takes full width */
-  display: flex;
-  flex-direction: row;
-  align-items: center; /* Center align buttons */
-  justify-content: center; /* Center align buttons */
-  gap: 4px;
-  margin-top: 20px; /* Add margin to separate from the content above */
-}
-
-.clientTestimonials {
   width: 100%;
-  max-width: 704px; /* Added max-width for better responsiveness */
   display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align to the left */
-  justify-content: flex-start;
-  gap: 12px;
-  font-size: 16px;
-  color: #151515;
-  font-family: "Open Sans", sans-serif;
+  justify-content: center; /* Center buttons */
+  gap: 4px;
+  margin-top: 20px;
 }
 
-/* Responsive styles */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .testimonialsFrame {
-    padding: 40px 20px; /* Adjusted padding for smaller screens */
+    padding: 40px 20px;
   }
 
   .testmonialsContainer {
-    gap: 20px; /* Reduced gap for smaller screens */
+    gap: 20px;
   }
 
   .testimonials {
-    font-size: 28px; /* Adjusted font size for smaller screens */
+    font-size: 28px;
     line-height: 36px;
   }
 
   .ideoGraphicsHas {
-    font-size: 14px; /* Adjusted font size for smaller screens */
+    font-size: 14px;
     line-height: 20px;
   }
 
   .clientImg {
-    width: 100px; /* Adjusted size for smaller screens */
-    height: 100px;
+    flex-shrink: 0; /* Prevent image from shrinking */
+    /* existing styles remain */
   }
 
   .visalSuresh {
-    font-size: 16px; /* Adjusted font size for smaller screens */
-  }
-
-  .xspineTech,
-  .kochi {
-    font-size: 12px; /* Adjusted font size for smaller screens */
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .testimonialsFrame {
-    padding: 40px 20px; /* Adjusted padding for very small screens */
-  }
-
   .testimonials {
-    font-size: 24px; /* Adjusted font size for very small screens */
+    font-size: 24px;
     line-height: 32px;
   }
 
   .clientImg {
-    width: 80px; /* Adjusted size for very small screens */
+    width: 80px;
     height: 80px;
+    border-width: 6px;
   }
 
   .visalSuresh {
-    font-size: 14px; /* Adjusted font size for very small screens */
+    font-size: 14px;
   }
 }
