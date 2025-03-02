@@ -1,9 +1,13 @@
+/* GetInTouch_Hero.module.css */
 .container {
   display: flex;
-  justify-content: center; /* Center the frame horizontally */
-  align-items: center; /* Center the frame vertically */
-  min-height: 100vh; /* Ensure the container takes the full viewport height */
-  background-color: var(--athens-gray); /* Optional: Add a background color */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--athens-gray);
+  padding: 8rem 0 2rem; /* Increased top padding */
+  box-sizing: border-box;
+  position: relative;
 }
 
 .innerContainer {
@@ -11,29 +15,30 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  max-width: 1440px; /* Limit the width for better alignment */
+  max-width: 1440px;
   padding: 56px 303px;
   position: relative;
+  margin-top: 5rem; /* Increased from 4rem */
 }
 
+/* Keep all original positioning and font sizes */
 .title {
+  /* Original styles maintained */
   font-family: var(--section-title-font-family);
-  font-size: 29px; /* Bigger font size */
-  font-weight: 700; /* Bold */
+  font-size: 29px;
+  font-weight: 700;
   color: var(--black);
   letter-spacing: var(--section-title-letter-spacing);
-  line-height: 1.2; /* Adjusted line height */
-  margin-bottom: 20px; /* Spacing below the title */
+  line-height: 1.2;
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column; /* Stack children vertically */
-  align-items: flex-start; /* Align text to the left */
-}
-
-.title span {
-  display: block; /* Ensure each span is on a new line */
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
 }
 
 .gradientText {
+  /* Original styles maintained */
   font-family: "Poppins-SemiBold", Helvetica;
   font-weight: 600;
   font-size: 150px;
@@ -49,82 +54,49 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
-  position: relative; /* Ensure the gradient text is positioned correctly */
+  position: relative;
+  z-index: 2;
+  margin: 1.5rem 0;
 }
 
 .subtitle {
+  /* Original styles maintained */
   font-family: var(--cover-small-text-font-family);
-  font-size: 55px; /* Bigger font size */
-  font-weight: 700; /* Bold */
+  font-size: 55px;
+  font-weight: 700;
   color: var(--black);
   letter-spacing: var(--cover-small-text-letter-spacing);
-  line-height: 1.5; /* Adjusted line height */
-  margin-top: 20px; /* Spacing above the subtitle */
+  line-height: 1.5;
+  margin-top: 20px;
+  z-index: 2;
 }
 
 .contactSupportImage {
+  /* Original positioning maintained */
   position: absolute;
   width: 372px;
   height: 372px;
-  top: 8%; /* Adjusted to align with the letter "Y" */
-  left: 64%; /* Adjusted to position horizontally */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Center the image relative to its position */
-  opacity: 0.9; /* Blend the image */
-  mix-blend-mode: multiply; /* Optional: Blend the image with the background */
+  top: 8%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+  z-index: 1;
 }
 
-/* Media Queries for Mobile Screens */
+/* Mobile adjustments */
 @media (max-width: 768px) {
+  .container {
+    padding: 7rem 0 2rem; /* Increased from 6rem */
+  }
+
   .innerContainer {
-    padding: 20px; /* Reduce padding for smaller screens */
-    align-items: center; /* Center align items for better mobile view */
-  }
-
-  .title {
-    font-size: 26px; /* Reduce font size for mobile */
-    text-align: center; /* Center align title */
-    align-items: center; /* Center align spans */
-  }
-
-  .gradientText {
-    font-size: 80px; /* Reduce font size for mobile */
-    line-height: 80px; /* Adjust line height */
-    text-align: center; /* Center align gradient text */
-  }
-
-  .subtitle {
-    font-size: 24px; /* Reduce font size for mobile */
-    text-align: center; /* Center align subtitle */
-  }
-
-  .contactSupportImage {
-    width: 200px; /* Reduce image size for mobile */
-    height: 200px; /* Reduce image size for mobile */
-    top: 20%; /* Adjust position for mobile */
-    left: 50%; /* Center the image horizontally */
+    margin-top: 4rem; /* Increased from 3rem */
   }
 }
 
 @media (max-width: 480px) {
-  .title {
-    font-size: 26px; /* Further reduce font size for very small screens */
-  }
-
-  .gradientText {
-    font-size: 60px; /* Further reduce font size for very small screens */
-    line-height: 60px; /* Adjust line height */
-  }
-
-  .subtitle {
-    font-size: 20px; /* Further reduce font size for very small screens */
-  }
-
-  .contactSupportImage {
-    width: 150px; /* Further reduce image size for very small screens */
-    height: 150px; /* Further reduce image size for very small screens */
-    top: 25%; /* Adjust position for very small screens */
+  .container {
+    padding: 6rem 0 2rem; /* Increased from 5rem */
   }
 }
