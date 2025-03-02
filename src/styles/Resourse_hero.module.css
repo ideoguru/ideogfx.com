@@ -1,35 +1,39 @@
 /* ResourcesHero.module.css */
 .heroSection {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    height: auto;
-    background: #F7F8FA;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-  
-  .contentContainer {
-    width: 90%;
-    max-width: 1160px;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 0;
-  }
-  
-  /* Desktop styles (unchanged) */
-  .headingContainer {
-    text-align: left;
-    margin-bottom: 60px;
-    z-index: 2;
-    width: 745px;
-  }
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background: #F7F8FA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 4rem 0; /* Add padding equal to header height */
+}
+
+.contentContainer {
+  width: 90%;
+  max-width: 1160px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Maintain center alignment */
+  padding: 2rem 0;
+  margin-top: -2rem; /* Counteract header height */
+}
+
+.headingContainer {
+  text-align: left;
+  margin-bottom: 60px;
+  z-index: 2;
+  width: 745px;
+  position: relative;
+  top: 2rem; /* Fine-tune vertical position */
+}
+
   
   .stayText {
     font-size: 56px;
@@ -78,53 +82,22 @@
   }
   
   @media (max-width: 768px) {
+    .heroSection {
+        padding: 5rem 0; /* Adjust for mobile header spacing */
+        min-height: calc(100vh - 5rem);
+    }
+    
+    .contentContainer {
+        margin-top: 0;
+        padding: 1rem 0;
+    }
+
     .headingContainer {
-      width: 100%;
-      margin-bottom: 40px;
+        top: 1rem;
+        width: 100%;
+        padding: 0 1rem;
     }
-  
-    .stayText {
-      font-size: 40px;
-      line-height: 48px;
-    }
-  
-    .updatedGradient {
-      font-size: 80px;
-      line-height: 100px;
-      margin-top: -20px;
-    }
-  
-    .heroCard {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 745/396;
-    }
-  
-    .cardContent {
-      padding: 1.5rem;
-    }
-  
-    .cardTitle {
-      font-size: 18px;
-      line-height: 24px;
-    }
-  
-    .cardText {
-      font-size: 14px;
-      line-height: 20px;
-    }
-  
-    .learnMoreButton {
-      padding: 12px 24px;
-      font-size: 14px;
-    }
-  
-    .scrollIndicator {
-      position: relative;
-      bottom: auto;
-      margin-top: 2rem;
-    }
-  }
+}
   
   /* Rest of the unchanged styles */
   .cardBackground {

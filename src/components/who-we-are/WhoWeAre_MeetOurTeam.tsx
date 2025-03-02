@@ -9,8 +9,7 @@ const MeetOurTeam: NextPage = () => {
                 <div className={styles.textContents}>
                     <div className={styles.meetOurTeam1}>Meet Our Team</div>
                     <div className={styles.getToKnow}>
-                        Get to know the minds behind the magic! Our team is a diverse group of passionate creatives, 
-                        strategic thinkers, and problem solvers, all dedicated to building meaningful digital experiences.
+                    Get to know the minds behind the magic! Our team is a diverse group of passionate creatives, strategic thinkers, and problem solvers, all dedicated to building meaningful digital experiences. From our visionary director and insightful business analyst to our innovative designers and resourceful marketing and HR leaders, each member plays a crucial role in shaping the way we create and connect. Together, we bring a blend of expertise, collaboration, and fresh ideas to every project, making sure each client’s vision becomes a powerful, user-centered reality.
                     </div>
                 </div>
                 
