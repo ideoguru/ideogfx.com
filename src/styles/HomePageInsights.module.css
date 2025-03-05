@@ -1,243 +1,252 @@
-/* Base styles */
+/* HomePageInsights.module.css */
 .insightsFrame {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 56px 20px; /* Adjusted padding for responsiveness */
-    box-sizing: border-box;
-    gap: 40px;
-    text-align: left;
-    font-size: 32px;
-    color: #333;
-    font-family: 'Poppins', sans-serif;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 56px 20px;
+  box-sizing: border-box;
+  gap: 40px;
+  text-align: left;
+  font-size: 32px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.insightsTitle {
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.01em;
+  line-height: 48px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.insightsContainer {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardsWrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+/* Card Styles */
+.cardVersion1,
+.cardVersion2,
+.cardVersion3,
+.cardVersion4 {
+  flex: 0 0 auto;
+  width: 400px;
+  height: 500px;
+  border-radius: 24px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.cardVersion1 { background-image: url('/Insights-1.png'); }
+.cardVersion2 { background-image: url('/Insights-2.png'); }
+.cardVersion3 { background-image: url('/Insights-3.png'); }
+.cardVersion4 { background-image: url('/resource7.png'); }
+
+/* Text Overlay Styles */
+.text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  backdrop-filter: blur(40px);
+  border-radius: 16px;
+  background-color: rgba(247, 248, 250, 0.75);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.textInner {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+}
+
+.howToConductAUxAuditToIWrapper {
+  width: 100%;
+}
+
+.howToConduct {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  font-weight: 600;
+  font-family: 'Open Sans';
+  color: #151515;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Navigation Buttons */
+.btnPrev,
+.btnNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.btnPrev:hover,
+.btnNext:hover {
+  opacity: 0.9;
+}
+
+.btnPrev {
+  left: 20px;
+}
+
+.btnNext {
+  right: 20px;
+}
+
+.arrowIcon {
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* CTA Styles */
+.insightsCta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.btn {
+  backdrop-filter: blur(41.85px);
+  border-radius: 2322.58px;
+  background: linear-gradient(99.58deg, rgba(115, 171, 216, 0.75), rgba(187, 186, 225, 0.75));
+  border: 1px solid #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.getStarted {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .cardVersion1,
+  .cardVersion2,
+  .cardVersion3,
+  .cardVersion4 {
+      width: 350px;
+      height: 450px;
   }
   
-  .insightsTitle {
-    width: 100%;
-    text-align: center;
-    letter-spacing: 0.01em;
-    line-height: 48px;
-    font-weight: 600;
+  .howToConduct {
+      font-size: 16px;
+      -webkit-line-clamp: 3;
+  }
+}
+
+@media (max-width: 992px) {
+  .cardVersion1,
+  .cardVersion2,
+  .cardVersion3,
+  .cardVersion4 {
+      width: 300px;
+      height: 400px;
   }
   
-  .insightsContainer {
-    width: 100%;
-    max-width: 1200px; /* Limit container width */
-    position: relative;
-    overflow: hidden; /* Hide overflow to prevent scrollbar */
+  .text {
+      padding: 20px;
+      bottom: 15px;
+      left: 15px;
+      right: 15px;
   }
-  
-  .cardsWrapper {
-    display: flex;
-    gap: 20px; /* Space between cards */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    scroll-behavior: smooth; /* Smooth scrolling */
-    width: 100%;
+}
+
+@media (max-width: 768px) {
+  .insightsFrame {
+      padding: 40px 20px;
   }
   
   .cardVersion1,
   .cardVersion2,
   .cardVersion3,
   .cardVersion4 {
-    flex: 0 0 auto;
-    width: 400px; /* Default width for each card */
-    height: 500px; /* Default height for each card */
-    border-radius: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 20px;
-    box-sizing: border-box;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-  }
-  
-  .cardVersion1 {
-    background-image: url('/Insights-1.png');
-  }
-  
-  .cardVersion2 {
-    background-image: url('/Insights-2.png');
-  }
-  
-  .cardVersion3 {
-    background-image: url('/Insights-3.png');
-  }
-  
-  .cardVersion4 {
-    background-image: url('/Insights-2.png');
-  }
-  
-  .text {
-    align-self: stretch;
-    backdrop-filter: blur(40px);
-    border-radius: 16px;
-    background-color: rgba(247, 248, 250, 0.75);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+      width: 280px;
+      height: 380px;
   }
   
   .howToConduct {
-    flex: 1;
-    width: 100%;
-    position: relative;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    line-height: 24px;
-    font-weight: 600;
-    font-family: 'Open Sans';
-    color: #151515;
-    text-align: left;
-    display: inline-block;
-  }
-  
-  .description {
-    display: none; /* Hide description */
+      font-size: 15px;
+      line-height: 22px;
   }
   
   .btnPrev,
   .btnNext {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 10; /* Ensure buttons are above the cards */
+      width: 40px;
+      height: 40px;
+      padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardVersion1,
+  .cardVersion2,
+  .cardVersion3,
+  .cardVersion4 {
+      width: 240px;
+      height: 340px;
   }
   
-  .btnPrev {
-    left: 10px; /* Position left arrow */
+  .text {
+      padding: 16px;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
   }
   
-  .btnNext {
-    right: 10px; /* Position right arrow */
-  }
-  
-  .iconamoonarrowRight2Bold,
-  .iconamoonarrowRight2Bold1 {
-    width: 48px;
-    height: 48px;
-  }
-  
-  .insightsCta {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    font-size: 18px;
-    color: #151515;
-    font-family: 'Open Sans';
+  .howToConduct {
+      font-size: 14px;
+      line-height: 20px;
+      -webkit-line-clamp: 4;
   }
   
   .btn {
-    backdrop-filter: blur(41.85px);
-    border-radius: 2322.58px;
-    background: linear-gradient(99.58deg, rgba(115, 171, 216, 0.75), rgba(187, 186, 225, 0.75));
-    border: 1px solid #fff;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
+      padding: 12px 24px;
   }
   
   .getStarted {
-    position: relative;
-    letter-spacing: 0.5px;
-    line-height: 24px;
-    font-weight: 600;
-  }
-  
-  .solararrowRightUpLinearIcon {
-    width: 24px;
-    height: 24px;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 1200px) {
-    .cardVersion1,
-    .cardVersion2,
-    .cardVersion3,
-    .cardVersion4 {
-      width: 350px; /* Adjusted width for smaller screens */
-      height: 450px; /* Adjusted height for smaller screens */
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .cardVersion1,
-    .cardVersion2,
-    .cardVersion3,
-    .cardVersion4 {
-      width: 300px; /* Adjusted width for tablets */
-      height: 400px; /* Adjusted height for tablets */
-    }
-  
-    .insightsTitle {
-      font-size: 28px;
-      line-height: 36px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .cardVersion1,
-    .cardVersion2,
-    .cardVersion3,
-    .cardVersion4 {
-      width: 250px; /* Adjusted width for smaller tablets */
-      height: 350px; /* Adjusted height for smaller tablets */
-    }
-  
-    .insightsTitle {
-      font-size: 24px;
-      line-height: 32px;
-    }
-  
-    .btnPrev,
-    .btnNext {
-      width: 36px;
-      height: 36px;
-    }
-  
-    .iconamoonarrowRight2Bold,
-    .iconamoonarrowRight2Bold1 {
-      width: 36px;
-      height: 36px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .cardVersion1,
-    .cardVersion2,
-    .cardVersion3,
-    .cardVersion4 {
-      width: 200px; /* Adjusted width for mobile */
-      height: 300px; /* Adjusted height for mobile */
-    }
-  
-    .insightsTitle {
-      font-size: 20px;
-      line-height: 28px;
-    }
-  
-    .btn {
-      padding: 12px;
-    }
-  
-    .getStarted {
       font-size: 16px;
-    }
-  
-    .solararrowRightUpLinearIcon {
-      width: 20px;
-      height: 20px;
-    }
   }
+}

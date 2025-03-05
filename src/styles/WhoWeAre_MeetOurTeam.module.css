@@ -1,163 +1,163 @@
+/* WhoWeAre_MeetOurTeam.module.css */
 .meetOurTeam {
-    width: 100%;
-    position: relative;
-    height: auto; /* Changed to auto for responsiveness */
-    padding: 40px 20px; /* Added padding for spacing */
-    text-align: left;
-    font-size: 16px;
-    color: #151515;
-    font-family: 'Open Sans';
+    padding: 40px 20px;
+    background: #fff;
 }
 
 .container {
-    width: 100%;
-    max-width: 1160px; /* Limit container width */
-    margin: 0 auto; /* Center the container */
-    position: relative;
-    height: auto; /* Changed to auto for responsiveness */
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Reduced gap between textContents and teamsPhoto */
+    max-width: 1160px;
+    margin: 0 auto;
 }
 
 .textContents {
-    width: 100%;
     text-align: center;
-    font-size: 32px;
-    font-family: Poppins;
-    margin-bottom: 20px; /* Added margin to reduce gap */
+    margin-bottom: 40px;
 }
 
 .meetOurTeam1 {
     font-size: 32px;
     font-weight: 600;
-    line-height: 48px;
-    letter-spacing: 0.01em;
+    color: #333;
+    margin-bottom: 16px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .getToKnow {
     font-size: 16px;
-    line-height: 22px;
-    letter-spacing: 0.25px;
-    font-family: 'Open Sans';
-    margin-top: 16px; /* Add spacing between heading and description */
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .teamsPhoto {
     position: relative;
-    width: 100%;
-    height: auto; /* Changed to auto for responsiveness */
-}
-
-.teamsPhotoChild {
-    width: 100%;
-    height: auto; /* Changed to auto for responsiveness */
-    object-fit: cover;
-}
-
-.employeeDetailsGroup {
-    position: absolute;
-    top: 50%; /* Adjusted for responsiveness */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%; /* Adjusted for responsiveness */
-    max-width: 704px;
-    height: auto; /* Changed to auto for responsiveness */
-}
-
-.employeeDetail,
-.employeeDetail1,
-.employeeDetail2,
-.employeeDetail3 {
-    position: absolute;
-    backdrop-filter: blur(40px);
     border-radius: 12px;
-    background-color: rgba(247, 248, 250, 0.5);
-    border: 1px solid #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.teamPhoto {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.annotation {
+    position: absolute;
     display: flex;
-    flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-start;
-    padding: 16px 24px 16px 12px;
-    gap: 8px;
+    background: rgba(247, 248, 250, 0.5);
+    padding: 12px 12px; /* Reduced horizontal padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    gap: 10px; /* Reduced gap */
+    backdrop-filter: blur(4px);
+    z-index: 1;
+    min-width: 180px; /* Reduced from 200px */
+    width: fit-content; /* Added for better content fitting */
 }
 
-.employeeDetail {
-    top: 30%; /* Adjusted for responsiveness */
-    left: 0;
+.frameIcon {
+    flex-shrink: 0;
+    margin-top: 3px;
 }
 
-.employeeDetail1 {
-    top: 20%; /* Adjusted to position Guruprakash a little bit above */
-    left: 25%; /* Adjusted to position Guruprakash a little bit to the right */
-}
-
-.employeeDetail2 {
-    top: 30%; /* Adjusted for responsiveness */
-    left: 50%;
-}
-
-.employeeDetail3 {
-    top: 35%; /* Adjusted to position Aparna a little bit down */
-    left: 70%;
-}
-
-.sandeepVijayParent {
+.textContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 4px;
+    min-width: 120px; /* Added to control text container width */
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .employeeDetail1 {
-        top: 18%; /* Adjusted for smaller screens */
-        left: 23%; /* Adjusted for smaller screens */
-    }
-
-    .employeeDetail3 {
-        top: 38%; /* Adjusted for smaller screens */
-    }
+.name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #151515;
+    line-height: 1.2;
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
+.role {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.3;
+    margin-top: 4px;
+    font-family: 'Open Sans', sans-serif;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Positioning */
+.director { /* Guruprakash S */
+    top: 38%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.manager { /* Joppu Kurian */
+    top: 62%;
+    left: 55%;
+}
+
+.analyst { /* Aparna Sudeesan */
+    top: 48%;
+    right: 20%;
+}
+
+.designer { /* Sandeep Vijay */
+    top: 52%;
+    left: 22%;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
-    .employeeDetailsGroup {
-        width: 100%; /* Adjusted for tablets */
+    .meetOurTeam {
+        padding: 30px 15px;
     }
-
-    .employeeDetail,
-    .employeeDetail1,
-    .employeeDetail2,
-    .employeeDetail3 {
-        position: static; /* Stack employee details vertically */
-        margin-bottom: 16px; /* Add spacing between employee details */
-    }
-
-    .textContents {
-        padding: 10px 0; /* Adjusted padding for tablets */
-    }
-
+    
     .meetOurTeam1 {
-        font-size: 28px; /* Adjusted font size for tablets */
-        line-height: 40px;
+        font-size: 28px;
     }
-
+    
     .getToKnow {
-        font-size: 14px; /* Adjusted font size for tablets */
-        line-height: 20px;
+        font-size: 14px;
+    }
+    
+    .annotation {
+        position: relative;
+        width: 100%;
+        max-width: 220px; /* Reduced from 260px */
+        margin: 12px auto;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+    }
+    
+    .teamsPhoto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 }
 
 @media (max-width: 480px) {
-    .meetOurTeam1 {
-        font-size: 24px; /* Adjusted font size for mobile */
-        line-height: 36px;
+    .name {
+        font-size: 14px; /* Slightly reduced */
     }
-
-    .getToKnow {
-        font-size: 12px; /* Adjusted font size for mobile */
-        line-height: 18px;
+    
+    .role {
+        font-size: 12px; /* Slightly reduced */
+    }
+    
+    .annotation {
+        padding: 8px 12px; /* Reduced padding */
+        min-width: auto;
+    }
+    
+    .frameIcon {
+        width: 16px; /* Slightly reduced */
+        height: 16px; /* Slightly reduced */
     }
 }
