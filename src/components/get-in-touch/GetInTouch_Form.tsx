@@ -104,42 +104,85 @@ const GetInTouchForm: NextPage = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget as HTMLFormElement);
+    const form = e.currentTarget as HTMLFormElement;
+    const formData = new FormData(form);
 
-    // Validate form before submission
     if (!validateForm(formData)) {
       setIsSubmitting(false);
       return;
     }
 
-    // Sanitize inputs
-    const sanitizedData = new FormData();
-    formData.forEach((value, key) => {
-      sanitizedData.append(
-        key,
-        typeof value === "string" ? sanitizeInput(value) : value
-      );
-    });
+    // Sanitize inputs and prepare data
+    const name = sanitizeInput(formData.get("name") as string);
+    const email = sanitizeInput(formData.get("email") as string);
+    const phone = sanitizeInput(formData.get("phone") as string);
+    const purpose = sanitizeInput(formData.get("purpose") as string);
+    const message = sanitizeInput(formData.get("message") as string);
+    const attachment = selectedFile;
+
+    // Convert file to base64 if exists
+    let pdfBase64 = "";
+    if (attachment) {
+      try {
+        const base64String = await new Promise<string>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result as string);
+          reader.onerror = reject;
+          reader.readAsDataURL(attachment);
+        });
+        pdfBase64 = base64String.split(",")[1];
+      } catch (error) {
+        console.error("File processing error:", error);
+        alert("Error uploading file");
+        setIsSubmitting(false);
+        return;
+      }
+    }
+
+    // Create payload
+    const payload = {
+      pdfBase64,
+      subject: `New Contact Request: ${purpose}`,
+      body: `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Purpose:</strong> ${purpose}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `,
+      fileName: attachment?.name || "",
+      fromMail: "guru@ideogfx.com",
+    };
 
     try {
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        body: sanitizedData,
-      });
+      const response: any = await fetch(
+        "https://5ugcpdbdr5.execute-api.ap-south-1.amazonaws.com/xspine/sendEmail",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-api-key": "q7dpDIlFvm8pKiUP7eWPT8LOAXcEiVCV7o9XQo9M",
+            // Bypass CORS temporarily for testing
+            "Access-Control-Allow-Origin": "*",
+          },
+          body: JSON.stringify(payload),
+          mode: "no-cors",
+          credentials: "omit",
+        }
+      );
+      // console.log("Response:", response.statusCode);
+      // if (!response.statusCode) {
+      //   const errorData = await response.text();
+      //   throw new Error(`API Error: ${response.status} - ${errorData}`);
+      // }
 
-      if (response.ok) {
-        // alert("Message sent successfully!");
-        // (e.target as HTMLFormElement).reset();
-        // setSelectedFile(null);
-        setShowSuccess(true);
-        (e.target as HTMLFormElement).reset();
-        setSelectedFile(null);
-      } else {
-        throw new Error("Failed to send message");
-      }
-    } catch (error) {
+      setShowSuccess(true);
+      form.reset();
+      setSelectedFile(null);
+    } catch (error: any) {
       console.error("Submission error:", error);
-      alert("Error sending message. Please try again.");
+      alert(`Error: ${error.message}`);
     } finally {
       setIsSubmitting(false);
     }
