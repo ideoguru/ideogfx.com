@@ -1,0 +1,46 @@
+[debug] [2025-03-11T05:14:52.093Z] ----------------------------------------------------------------------
+[debug] [2025-03-11T05:14:52.100Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\rohit\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-03-11T05:14:52.101Z] CLI Version:   13.33.0
+[debug] [2025-03-11T05:14:52.101Z] Platform:      win32
+[debug] [2025-03-11T05:14:52.101Z] Node Version:  v22.13.1
+[debug] [2025-03-11T05:14:52.101Z] Time:          Tue Mar 11 2025 10:44:52 GMT+0530 (India Standard Time)
+[debug] [2025-03-11T05:14:52.101Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-11T05:14:52.104Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-03-11T05:14:52.318Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-11T05:14:52.318Z] > authorizing via signed-in user (rj@ideogfx.com)
+[debug] [2025-03-11T05:14:52.318Z] [iam] checking project ideogfx-com for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-03-11T05:14:52.318Z] Checked if tokens are valid: false, expires at: 1741462224053
+[debug] [2025-03-11T05:14:52.319Z] Checked if tokens are valid: false, expires at: 1741462224053
+[debug] [2025-03-11T05:14:52.319Z] > refreshing access token with scopes: []
+[debug] [2025-03-11T05:14:52.319Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-03-11T05:14:52.319Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-03-11T05:14:52.529Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2025-03-11T05:14:52.529Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[error] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[error] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2025-03-11T05:14:52.530Z] [iam] error while checking permissions, command may fail: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2025-03-11T05:14:52.531Z] Checked if tokens are valid: false, expires at: 1741462224053
+[debug] [2025-03-11T05:14:52.531Z] Checked if tokens are valid: false, expires at: 1741462224053
+[debug] [2025-03-11T05:14:52.531Z] > refreshing access token with scopes: []
+[debug] [2025-03-11T05:14:52.531Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-03-11T05:14:52.531Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-03-11T05:14:52.628Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2025-03-11T05:14:52.628Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[error] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[error] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2025-03-11T05:14:52.628Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier

@@ -1,5 +1,5 @@
 "use client";
-import type { NextPage } from 'next';
+import type { NextPage } from "next";
 import Image from "next/image";
 import { useRef } from "react";
 import styles from "../../styles/HomePageInsights.module.css";
@@ -37,7 +37,8 @@ const InsightsFrame: NextPage = () => {
                 <div className={styles.textInner}>
                   <div className={styles.howToConductAUxAuditToIWrapper}>
                     <div className={styles.howToConduct}>
-                      How to Conduct a UX Audit to Improve Your Product's Usability
+                      How to Conduct a UX Audit to Improve Your Product's
+                      Usability
                     </div>
                   </div>
                 </div>
@@ -50,7 +51,8 @@ const InsightsFrame: NextPage = () => {
                 <div className={styles.textInner}>
                   <div className={styles.howToConductAUxAuditToIWrapper}>
                     <div className={styles.howToConduct}>
-                      Why User Research is the Secret Ingredient for Building Successful Digital Products
+                      Why User Research is the Secret Ingredient for Building
+                      Successful Digital Products
                     </div>
                   </div>
                 </div>
@@ -76,7 +78,7 @@ const InsightsFrame: NextPage = () => {
                 <div className={styles.textInner}>
                   <div className={styles.howToConductAUxAuditToIWrapper}>
                     <div className={styles.howToConduct}>
-                      Measuring the ROI of User Experience Design
+                      Top UI/UX Design Trends Shaping Digital Products in 2025
                     </div>
                   </div>
                 </div>
@@ -85,22 +87,22 @@ const InsightsFrame: NextPage = () => {
           </div>
 
           <div className={styles.btnPrev} onClick={scrollLeft}>
-            <Image 
-              className={styles.arrowIcon} 
-              width={48} 
-              height={48} 
-              alt="Previous" 
+            <Image
+              className={styles.arrowIcon}
+              width={48}
+              height={48}
+              alt="Previous"
               src="/iconamoon_arrow-right-2-bold.png"
-              style={{ transform: 'rotate(180deg)' }}
+              style={{ transform: "rotate(180deg)" }}
             />
           </div>
           <div className={styles.btnNext} onClick={scrollRight}>
-            <Image 
-              className={styles.arrowIcon} 
-              width={48} 
-              height={48} 
-              alt="Next" 
-              src="/iconamoon_arrow-right-2-bold.png" 
+            <Image
+              className={styles.arrowIcon}
+              width={48}
+              height={48}
+              alt="Next"
+              src="/iconamoon_arrow-right-2-bold.png"
             />
           </div>
         </div>
@@ -109,12 +111,12 @@ const InsightsFrame: NextPage = () => {
       <div className={styles.insightsCta}>
         <div className={styles.btn}>
           <div className={styles.getStarted}>Learn More</div>
-          <Image 
-            className={styles.solararrowRightUpLinearIcon} 
-            width={24} 
-            height={24} 
-            alt="" 
-            src="/solar_arrow-right-up-linear.svg" 
+          <Image
+            className={styles.solararrowRightUpLinearIcon}
+            width={24}
+            height={24}
+            alt=""
+            src="/solar_arrow-right-up-linear.svg"
           />
         </div>
       </div>

@@ -27,10 +27,18 @@ const TestimonialsFrame: NextPage = () => {
     },
     {
       quote:
-        "“Another fantastic testimonial here. The team delivered exceptional results that transformed our user experience. Their professionalism and creativity are unmatched!”",
-      name: "John Doe",
-      company: "Tech Corp",
-      location: "New York",
+        "“ I had the pleasure of meeting the team of Ideo Graphics, who exceeded my expectations with genuinely amazing solutions after I outlined my requirements. Every aspect was meticulously captured, and a thoughtful design was created, giving me a clear vision of how the application would look and function.”",
+      name: "Rejith Rajan",
+      company: "Anumod Bakery",
+      location: "Andaman & Nicobar",
+      image: "/testimonial3.png",
+    },
+    {
+      quote:
+        "“With Ideo Graphics, the entire process was impressively quick, without compromising quality. The design is modern and visually appealing, yet the interface remains incredibly simple and easy to understand. From the initial discussions to final delivery, the team was highly professional, receptive to feedback, and committed to building a product that aligns perfectly with my needs.”",
+      name: "Hafis Muhammed",
+      company: "C&P Constructions",
+      location: "Kayamkulam",
       image: "/testimonial2.png",
     },
     // Add more testimonials as needed

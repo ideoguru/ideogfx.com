@@ -14,25 +14,39 @@ const caseStudies = [
     card1: {
       title:
         "Personalised Business Accounting : Offline to Online Transformation",
-      image: "/Rectangle_91.png",
+      image: "/Rectangle_81.png",
     },
     card2: {
       title: "The UX Edge: Transforming User Experience into Business Value",
-      image: "/Rectangle_81.png",
+      image: "/Rectangle-final.png",
     },
   },
   {
     title: "Another Case Study Title",
     description:
       "This is another example description for a case study. It demonstrates how we transformed a business.",
-    mainImage: "/card_version_6.jpg", // Main card image
+    mainImage: "/case_study2.png", // Main card image
     card1: {
       title: "Card 1 Title for Another Case Study",
-      image: "/wht_we_do_7.png",
+      image: "/Rectangle_81.png",
     },
     card2: {
       title: "Card 2 Title for Another Case Study",
-      image: "/wht_we_do_8.png",
+      image: "/Rectangle_1_small.png",
+    },
+  },
+  {
+    title: "Another Case Study Title",
+    description:
+      "This is another example description for a case study. It demonstrates how we transformed a business.",
+    mainImage: "/case_study3.png", // Main card image
+    card1: {
+      title: "Card 1 Title for Another Case Study",
+      image: "/Rectangle_1_small.png",
+    },
+    card2: {
+      title: "Card 2 Title for Another Case Study",
+      image: "/Rectangle_81.png",
     },
   },
 ];
