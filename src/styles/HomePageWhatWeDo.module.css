@@ -176,3 +176,32 @@
   font-weight: 600;
   color: #151515;
 }
+
+@media (max-width: 768px) {
+  .whatWeDoFrame {
+    padding: 40px 10px;
+  }
+
+  .whatWeDoTitleFrame {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .serviceshomePage {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .leftColumnServiceList,
+  .card {
+    width: 100%;
+  }
+
+  .card {
+    margin-top: 20px;
+  }
+
+  .imageContainer {
+    height: auto; /* let the image scale naturally */
+  }
+}
