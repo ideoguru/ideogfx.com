@@ -97,9 +97,42 @@ const HowWeDoFrame: NextPage = () => {
   const [activeTab, setActiveTab] = useState(1);
   const contentRefs = useRef<Array<HTMLDivElement | null>>([]);
   const rightColumnRef = useRef<HTMLDivElement>(null);
+  const isProgrammaticScroll = useRef(false);
+
+  useEffect(() => {
+    const rightColumn = rightColumnRef.current;
+    if (!rightColumn) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !isProgrammaticScroll.current) {
+            const id = Number(entry.target.getAttribute('data-step-id'));
+            setActiveTab(id);
+          }
+        });
+      },
+      {
+        root: rightColumn,
+        rootMargin: '0px',
+        threshold: 0.6
+      }
+    );
+
+    contentRefs.current.forEach(ref => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      contentRefs.current.forEach(ref => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
 
   useEffect(() => {
     if (contentRefs.current[activeTab - 1] && rightColumnRef.current) {
+      isProgrammaticScroll.current = true;
       const element = contentRefs.current[activeTab - 1];
       if (element) {
         const topPos = element.offsetTop - rightColumnRef.current.offsetTop - 32;
@@ -108,6 +141,10 @@ const HowWeDoFrame: NextPage = () => {
           behavior: 'smooth'
         });
       }
+      
+      setTimeout(() => {
+        isProgrammaticScroll.current = false;
+      }, 1000);
     }
   }, [activeTab]);
 
@@ -149,7 +186,10 @@ const HowWeDoFrame: NextPage = () => {
             {steps.map((step, index) => (
               <div 
                 key={step.id}
-                ref={el => contentRefs.current[index] = el}
+                ref={el => {
+                  contentRefs.current[index] = el;
+                  if (el) el.setAttribute('data-step-id', String(step.id));
+                }}
                 className={styles.scrollableListitem01}
               >
                 <div className={styles.wrapper}>
