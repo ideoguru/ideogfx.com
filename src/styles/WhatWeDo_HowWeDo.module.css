@@ -1,209 +1,14 @@
-.howWeDo {
+.howWeDoFrame {
     align-self: stretch;
-    position: relative;
-    letter-spacing: 0.01em;
-    line-height: 48px;
-    font-weight: 600;
-}
-.heading {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.creatingExceptionalDigital {
-    flex: 1;
-    position: relative;
-    letter-spacing: 0.25px;
-    line-height: 22px;
-}
-.subheading {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 16px;
-    font-family: 'Open Sans';
-}
-.headingSubheading {
-    width: 1160px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 12px;
-}
-.discoveryResearch {
-    position: relative;
-    letter-spacing: 0.25px;
-    line-height: 22px;
-}
-.item1 {
-    align-self: stretch;
-    border-radius: 100px;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(115, 171, 216, 0.5), rgba(187, 186, 225, 0.5));
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-}
-.item2 {
-    border-radius: 100px;
-    border: 1px solid #eaebf0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-}
-.item3 {
-    align-self: stretch;
-    border-radius: 100px;
-    border: 1px solid #eaebf0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-}
-.leftColumn {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-.i {
-    position: relative;
-    letter-spacing: 0.5px;
-    line-height: 48px;
-}
-.wrapper {
-    align-self: stretch;
-    width: 56px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.discoveryResearch1 {
-    align-self: stretch;
-    position: relative;
-    line-height: 30px;
-    font-weight: 600;
-}
-.firstWeRoll {
-    align-self: stretch;
-    position: relative;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    line-height: 24px;
-    font-weight: 600;
-    font-family: 'Open Sans';
-}
-.discoveryResearchTheDeepParent {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 4px;
-}
-.clientGoalsWe {
-    align-self: stretch;
-    position: relative;
-    letter-spacing: 0.25px;
-    line-height: 22px;
-}
-.clientGoalsWeChatWithStaParent {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 4px;
-    font-size: 16px;
-    font-family: 'Open Sans';
-}
-.frameParent {
-    align-self: stretch;
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 12px;
-    font-size: 24px;
-    font-family: Poppins;
-}
-.scrollableListitem01 {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 40px 12px;
-    gap: 16px;
-}
-.frameGroup {
-    align-self: stretch;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 16px 0px;
-    gap: 12px;
-    font-size: 24px;
-    font-family: Poppins;
-}
-.scrollableListitem07Inner {
-    align-self: stretch;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 16px 0px;
-    font-size: 24px;
-    font-family: Poppins;
-}
-.scrollspyRightColumn {
-    width: 654px;
-    height: 540px;
-    overflow-y: auto;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 12px;
-    font-size: 32px;
-    color: #333;
-}
-.scrollspy {
-    width: 1160px;
-    border-radius: 16px;
-    border: 1px solid #eaebf0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 32px;
-    gap: 16px;
-    font-size: 16px;
-    font-family: 'Open Sans';
-}
-.howeWeDoContainer {
+    padding: 64px 0px;
+    gap: 24px;
+  }
+  
+  .howeWeDoContainer {
     width: 100%;
     position: relative;
     display: flex;
@@ -215,5 +20,176 @@
     font-size: 32px;
     color: #151515;
     font-family: Poppins;
-}
-
+  }
+  
+  .headingSubheading {
+    width: 1160px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  
+  .howWeDo {
+    align-self: stretch;
+    position: relative;
+    letter-spacing: 0.01em;
+    line-height: 48px;
+    font-weight: 600;
+  }
+  
+  .creatingExceptionalDigital {
+    flex: 1;
+    position: relative;
+    letter-spacing: 0.25px;
+    line-height: 22px;
+  }
+  
+  .subheading {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Open Sans';
+  }
+  
+  .scrollspy {
+    width: 1160px;
+    border-radius: 16px;
+    border: 1px solid #eaebf0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 32px;
+    gap: 16px;
+    font-size: 16px;
+    font-family: 'Open Sans';
+  }
+  
+  .leftColumn {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  
+  .item {
+    align-self: stretch;
+    border-radius: 100px;
+    border: 1px solid #eaebf0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .activeTab {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(115, 171, 216, 0.5), rgba(187, 186, 225, 0.5));
+    border: none;
+  }
+  
+  .scrollspyRightColumn {
+    width: 654px;
+    height: 540px;
+    overflow-y: auto;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    scroll-behavior: smooth;
+  }
+  
+  .wrapper {
+    align-self: stretch;
+    width: 56px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .i {
+    position: relative;
+    letter-spacing: 0.5px;
+    line-height: 48px;
+  }
+  
+  .discoveryResearch1 {
+    align-self: stretch;
+    position: relative;
+    line-height: 30px;
+    font-weight: 600;
+  }
+  
+  .firstWeRoll {
+    align-self: stretch;
+    position: relative;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    font-weight: 600;
+    font-family: 'Open Sans';
+  }
+  
+  .discoveryResearchTheDeepParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+  }
+  
+  .clientGoalsWe {
+    align-self: stretch;
+    position: relative;
+    letter-spacing: 0.25px;
+    line-height: 22px;
+  }
+  
+  .clientGoalsWeChatWithStaParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+    font-size: 16px;
+  }
+  
+  .scrollableListitem01 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 12px;
+    gap: 16px;
+  }
+  
+  .frameParent {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
