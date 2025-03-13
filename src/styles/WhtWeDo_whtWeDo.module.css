@@ -1,296 +1,213 @@
-.whatWeDo {
-    position: relative;
-    letter-spacing: 0.01em;
-    line-height: 48px;
-    font-weight: 600;
-}
-.heading {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-.exploreOurRange {
-    flex: 1;
-    position: relative;
-    letter-spacing: 0.25px;
-    line-height: 22px;
-}
-.subheading {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    font-size: 16px;
-    font-family: 'Open Sans';
-}
-.headingSubheading {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 16px;
-}
-.uiuxDesigningAnd {
-    position: relative;
-    letter-spacing: 0.5px;
-    line-height: 24px;
-    font-weight: 600;
-}
-.text {
-    border-radius: 100px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-.intersectIcon {
-    width: 16.5px;
-    position: relative;
-    height: 16.5px;
-    object-fit: contain;
-}
-.arrow {
-    width: 44px;
-    border-radius: 100px;
-    background-color: #d38ab2;
-    height: 44px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 8px;
-    box-sizing: border-box;
-}
-.designingAndPrototyping {
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
-    border-radius: 100px;
-    background-color: #eaebf0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 12px 12px 12px 16px;
-    gap: 8px;
-}
-/* .arrow1 {
-    width: 44px;
-    border-radius: 100px;
-    background-color: #d38ab2;
-    height: 44px;
-    display: none;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 8px;
-    box-sizing: border-box;
-} */
-.webAndAppDesigning {
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
-    border-radius: 100px;
-    border: 1px solid #c9cad1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 12px 12px 12px 16px;
-    gap: 8px;
-}
-.servicesConatiner1 {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-.servicesContainer3 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-.servicesMenuFrame {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 12px;
-}
-.uiuxDesigningAnd1 {
-    align-self: stretch;
-    position: relative;
-    line-height: 30px;
-    font-weight: 600;
-}
-.transformIdeasInto {
-    align-self: stretch;
-    position: relative;
-    font-size: 16px;
-    letter-spacing: 0.25px;
-    line-height: 22px;
-    font-family: 'Open Sans';
-}
-.textCard {
-    align-self: stretch;
-    backdrop-filter: blur(40px);
-    border-radius: 12px;
-    background-color: rgba(247, 248, 250, 0.4);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 24px;
-    gap: 8px;
-}
-.leftColumnCard {
-    flex: 1;
-    border-radius: 16px;
-    height: 500px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 12px;
-    box-sizing: border-box;
-    background-image: url('../../public/whtwedo7.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-}
-.userResearchAnalysisDeepWrapper {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-.rightColumnline01 {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-.informationArchitecture {
-    flex: 1;
-    position: relative;
-    letter-spacing: 0.25px;
-    line-height: 20px;
-}
-.rightColumnDescription {
-    align-self: stretch;
-    flex: 0.8971;
-    backdrop-filter: blur(40px);
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    gap: 12px;
-    font-size: 16px;
-    font-family: 'Open Sans';
-}
-.descriptionContainer {
-    width: 1160px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(160px);
-    border-radius: 24px;
-    background-color: rgba(234, 235, 240, 0.25);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 8px;
-    box-sizing: border-box;
-    gap: 8px;
-    font-size: 24px;
-    font-family: Poppins;
-}
-.bodyContainer {
-    width: 1166px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-.body {
-    align-self: stretch;
-    border-radius: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-    font-size: 18px;
-    font-family: 'Open Sans';
-}
-.whatWeDoContainer {
-    width: 1160px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-}
+/* WhtWeDo_whtWeDo.module.css */
 .whatWeDoFrame {
     width: 100%;
-    position: relative;
+    padding: 56px 20px;
+    background-image: url('/whtwedo5.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+.whatWeDoContainer {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.headingSubheading {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.heading {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 600;
+    color: #151515;
+    margin-bottom: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.subheading {
+    font-size: 16px;
+    line-height: 22px;
+    color: #151515;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.servicesMenuFrame {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 56px 0px;
-    box-sizing: border-box;
-    background-image: url('../../public/whtwedo5.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    text-align: center;
-    font-size: 32px;
-    color: #151515;
-    font-family: Poppins;
+    gap: 12px;
+    margin-bottom: 32px;
 }
-/* Add hover styles for the tabs */
-.webAndAppDesigning:hover {
-    background-color: #9e989b; /* Change to your preferred hover color */
-    color: #fff; /* Change to your preferred text color */
-    border: 1px solid #7d797b; /* Adjust border color if needed */
-  }
-  
-  /* Add hover styles for the tabs */
-.designingAndPrototyping:hover {
-    background-color: #d38ab2; /* Change to your preferred hover color */
-    color: #fff; /* Change to your preferred text color */
-    border: 1px solid #d38ab2; /* Adjust border color if needed */
-  }
-  
-  /* Add a class for the hovered tab */
-  .hovered {
-    background-color: #d38ab2; /* Same as hover color */
-    color: #fff; /* Same as hover text color */
-    border: 1px solid #d38ab2; /* Same as hover border color */
-  }
-  
-  /* Arrow styling */
-  .arrow {
-    width: 44px;
-    border-radius: 100px;
-    background-color: #d38ab2;
-    height: 44px;
+
+.servicesContainer {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.serviceTab {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 100px;
+    border: 1px solid #EAEBF0;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.serviceTab.active, 
+.serviceTab:hover {
+    background: #EAEBF0;
+    border-color: #EAEBF0;
+}
+
+.serviceText {
+    font-size: 16px;
+    font-weight: 600;
+    color: #151515;
+    white-space: nowrap;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Updated Arrow Styles */
+.arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 100px;
+    background: #FFFFFF;
+    border: 1px solid #EAEBF0;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 8px;
-    box-sizing: border-box;
-  }
+    transition: all 0.3s ease;
+}
+
+.serviceTab.active .arrow {
+    background: #D38AB2;
+    border-color: #D38AB2;
+}
+
+.arrowIcon {
+    filter: none; /* Black arrow by default */
+}
+
+.serviceTab.active .arrowIcon {
+    filter: brightness(0) invert(1); /* White arrow when active */
+}
+
+.descriptionContainer {
+    display: flex;
+    gap: 24px;
+    background: rgba(234, 235, 240, 0.25);
+    backdrop-filter: blur(160px);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.leftColumnCard {
+    flex: 1;
+    min-height: 400px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+}
+
+.textCard {
+    background: rgba(247, 248, 250, 0.4);
+    backdrop-filter: blur(40px);
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+}
+
+.serviceTitle {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+    color: #151515;
+    font-family: 'Poppins', sans-serif;
+}
+
+.serviceContent {
+    font-size: 16px;
+    line-height: 22px;
+    color: #151515;
+    margin-bottom: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.rightColumnDescription {
+    flex: 1;
+    padding: 24px;
+    background: #FFFFFF;
+    border-radius: 16px;
+}
+
+.detailItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.detailBullet {
+    width: 6px;
+    height: 6px;
+    background: #D38AB2;
+    border-radius: 50%;
+    margin-top: 8px;
+    flex-shrink: 0;
+}
+
+.detailText {
+    font-size: 16px;
+    line-height: 22px;
+    color: #151515;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media (max-width: 1024px) {
+    .descriptionContainer {
+        flex-direction: column;
+    }
+    
+    .leftColumnCard {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .serviceTab {
+        padding: 8px 16px;
+    }
+    
+    .serviceText {
+        font-size: 14px;
+    }
+    
+    .arrow {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .serviceTitle {
+        font-size: 20px;
+    }
+    
+    .detailText {
+        font-size: 14px;
+    }
+}
