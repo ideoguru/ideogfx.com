@@ -8,12 +8,13 @@ const WhatWeDoFrame: React.FC = () => {
     "UI/UX Designing and Prototyping"
   );
 
-  const servicesData = {
+  const servicesData: any = {
     "UI/UX Designing and Prototyping": {
       image: "/whtwedo7.png",
       description: {
         title: "UI/UX Designing and Prototyping",
-        content: "Transform ideas into high-impact digital experiences with user-centric design and interactive prototyping. We craft visually stunning, functional interfaces tailored to your audience.",
+        content:
+          "Transform ideas into high-impact digital experiences with user-centric design and interactive prototyping. We craft visually stunning, functional interfaces tailored to your audience.",
         details: [
           "User Research & Analysis: Deep-dive into your audience's behaviors and preferences to build products that resonate.",
           "Information Architecture & Wireframing: Structure your product for easy navigation and optimal user flow.",
@@ -28,7 +29,8 @@ const WhatWeDoFrame: React.FC = () => {
       image: "/wht_we_do_2.png",
       description: {
         title: "Websites and Apps Designing",
-        content: "Create stunning, responsive websites and apps that deliver exceptional user experiences. We focus on intuitive navigation, seamless functionality, and modern design.",
+        content:
+          "Create stunning, responsive websites and apps that deliver exceptional user experiences. We focus on intuitive navigation, seamless functionality, and modern design.",
         details: [
           "Responsive Design: Ensure your website or app looks great on all devices.",
           "User-Centered Design: Focus on user needs and behaviors to create intuitive interfaces.",
@@ -42,7 +44,8 @@ const WhatWeDoFrame: React.FC = () => {
       image: "/wht_we_do_3.png",
       description: {
         title: "Redesigning UI/UX",
-        content: "Revamp outdated designs to improve usability, aesthetics, and overall user satisfaction. We breathe new life into your digital products.",
+        content:
+          "Revamp outdated designs to improve usability, aesthetics, and overall user satisfaction. We breathe new life into your digital products.",
         details: [
           "Audit Existing Designs: Identify pain points and areas for improvement.",
           "Modernize Aesthetics: Update the look and feel to align with current design trends.",
@@ -56,7 +59,8 @@ const WhatWeDoFrame: React.FC = () => {
       image: "/wht_we_do_4.png",
       description: {
         title: "UI/UX Design Audits",
-        content: "Evaluate and improve your existing designs with comprehensive UI/UX audits. We identify usability issues and provide actionable recommendations.",
+        content:
+          "Evaluate and improve your existing designs with comprehensive UI/UX audits. We identify usability issues and provide actionable recommendations.",
         details: [
           "Heuristic Evaluation: Assess your design against usability best practices.",
           "Accessibility Audit: Ensure your product is accessible to all users.",
@@ -70,7 +74,8 @@ const WhatWeDoFrame: React.FC = () => {
       image: "/wht_we_do_5.png",
       description: {
         title: "Usability Testing & Optimization",
-        content: "Test your product with real users to uncover pain points and optimize the user experience for better engagement and satisfaction.",
+        content:
+          "Test your product with real users to uncover pain points and optimize the user experience for better engagement and satisfaction.",
         details: [
           "User Testing Sessions: Conduct tests with real users to gather feedback.",
           "Heatmaps & Analytics: Analyze user behavior to identify issues.",
@@ -84,7 +89,8 @@ const WhatWeDoFrame: React.FC = () => {
       image: "/wht_we_do_7.png",
       description: {
         title: "User Research and Behavior Analysis",
-        content: "Understand your users deeply through research and behavior analysis. We help you create products that truly resonate with your audience.",
+        content:
+          "Understand your users deeply through research and behavior analysis. We help you create products that truly resonate with your audience.",
         details: [
           "User Interviews: Conduct one-on-one interviews to gather insights.",
           "Surveys & Questionnaires: Collect quantitative data from your users.",
@@ -98,7 +104,8 @@ const WhatWeDoFrame: React.FC = () => {
       image: "/wht_we_do_8.png",
       description: {
         title: "Design Systems and Branding",
-        content: "Create cohesive design systems and branding that ensure consistency and strengthen your brand identity across all touchpoints.",
+        content:
+          "Create cohesive design systems and branding that ensure consistency and strengthen your brand identity across all touchpoints.",
         details: [
           "Design Tokens: Define reusable design elements like colors and typography.",
           "Component Libraries: Build a library of reusable UI components.",
@@ -112,7 +119,8 @@ const WhatWeDoFrame: React.FC = () => {
       image: "/wht_we_do_9.png",
       description: {
         title: "Conversion Rate Optimization (CRO)",
-        content: "Optimize your product to drive higher conversions and achieve your business goals. We focus on improving key metrics like sign-ups, purchases, and engagement.",
+        content:
+          "Optimize your product to drive higher conversions and achieve your business goals. We focus on improving key metrics like sign-ups, purchases, and engagement.",
         details: [
           "Funnel Analysis: Identify drop-off points in your conversion funnel.",
           "A/B Testing: Test variations to determine the best-performing design.",
@@ -125,9 +133,17 @@ const WhatWeDoFrame: React.FC = () => {
   };
 
   const serviceGroups = [
-    ["UI/UX Designing and Prototyping", "Websites and Apps Designing", "Redesigning UI/UX"],
-    ["UI/UX Design Audits", "Usability Testing & Optimization", "User Research and Behavior Analysis"],
-    ["Design Systems and Branding", "Conversion Rate Optimization (CRO)"]
+    [
+      "UI/UX Designing and Prototyping",
+      "Websites and Apps Designing",
+      "Redesigning UI/UX",
+    ],
+    [
+      "UI/UX Design Audits",
+      "Usability Testing & Optimization",
+      "User Research and Behavior Analysis",
+    ],
+    ["Design Systems and Branding", "Conversion Rate Optimization (CRO)"],
   ];
 
   return (
@@ -136,7 +152,10 @@ const WhatWeDoFrame: React.FC = () => {
         <div className={styles.headingSubheading}>
           <h1 className={styles.heading}>What We Do?</h1>
           <p className={styles.subheading}>
-            Explore our range of tailored UI/UX design services aimed at helping startups, SMEs, and enterprises create digital products that stand out. From product design to brand identity, we’re your partner in user-centric growth. Here's a breakdown of what we offer:
+            Explore our range of tailored UI/UX design services aimed at helping
+            startups, SMEs, and enterprises create digital products that stand
+            out. From product design to brand identity, we’re your partner in
+            user-centric growth. Here's a breakdown of what we offer:
           </p>
         </div>
 
@@ -148,8 +167,9 @@ const WhatWeDoFrame: React.FC = () => {
                   {group.map((service) => (
                     <button
                       key={service}
-                      className={`${styles.serviceTab} ${hoveredService === service ? styles.active : ""
-                        }`}
+                      className={`${styles.serviceTab} ${
+                        hoveredService === service ? styles.active : ""
+                      }`}
                       onMouseEnter={() => setHoveredService(service)}
                     >
                       <span className={styles.serviceText}>{service}</span>
@@ -159,8 +179,9 @@ const WhatWeDoFrame: React.FC = () => {
                           width={17}
                           height={17}
                           alt=""
-                          className={`${styles.arrowIcon} ${hoveredService === service ? styles.activeArrow : ""
-                            }`}
+                          className={`${styles.arrowIcon} ${
+                            hoveredService === service ? styles.activeArrow : ""
+                          }`}
                         />
                       </div>
                     </button>
@@ -172,21 +193,29 @@ const WhatWeDoFrame: React.FC = () => {
             <div className={styles.descriptionContainer}>
               <div
                 className={styles.leftColumnCard}
-                style={{ backgroundImage: `url(${servicesData[hoveredService].image})` }}
+                style={{
+                  backgroundImage: `url(${servicesData[hoveredService].image})`,
+                }}
               >
                 <div className={styles.textCard}>
-                  <h2 className={styles.serviceTitle}>{servicesData[hoveredService].description.title}</h2>
-                  <p className={styles.serviceContent}>{servicesData[hoveredService].description.content}</p>
+                  <h2 className={styles.serviceTitle}>
+                    {servicesData[hoveredService].description.title}
+                  </h2>
+                  <p className={styles.serviceContent}>
+                    {servicesData[hoveredService].description.content}
+                  </p>
                 </div>
               </div>
 
               <div className={styles.rightColumnDescription}>
-                {servicesData[hoveredService].description.details.map((detail, index) => (
-                  <div key={index} className={styles.detailItem}>
-                    <div className={styles.detailBullet} />
-                    <p className={styles.detailText}>{detail}</p>
-                  </div>
-                ))}
+                {servicesData[hoveredService].description.details.map(
+                  (detail: any, index: any) => (
+                    <div key={index} className={styles.detailItem}>
+                      <div className={styles.detailBullet} />
+                      <p className={styles.detailText}>{detail}</p>
+                    </div>
+                  )
+                )}
               </div>
             </div>
           </div>
