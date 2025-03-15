@@ -1,101 +1,158 @@
 .heroFrame {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh; /* Use min-height to allow content to grow */
-    overflow: auto; /* Allow scrolling */
-    text-align: center;
-    font-size: 56px;
-    font-family: Poppins;
-    position: relative;
-    padding-top: 80px; /* Add padding to avoid header overlap */
-    padding-bottom: 40px; /* Reduced padding to reduce gap */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; /* Use min-height to allow content to grow */
+  overflow: auto; /* Allow scrolling */
+  text-align: center;
+  font-size: 56px;
+  font-family: Poppins;
+  position: relative;
+  padding-top: 80px; /* Add padding to avoid header overlap */
+  padding-bottom: 40px; /* Reduced padding to reduce gap */
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1160px; /* Maximum width for the container */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* Space between elements */
+}
+
+.heroImage {
+  width: 100%;
+  max-width: 500px; /* Reduced image size */
+  height: auto;
+  object-fit: cover;
+  z-index: 1; /* Ensure it's below the text */
+}
+
+.meetTheMindsContainer {
+  text-align: center;
+  line-height: 68px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6b00b3, #d8499c 52%, #d8499c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 100%;
+  z-index: 2; /* Ensure it's above the image */
+}
+
+.meetTheMinds {
+  margin: 0;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
   }
+  50% {
+    transform: translateX(-50%) scale(1.1);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.scrollDownIcon {
+  position: absolute;
+  bottom: 20px; /* Adjust position for mobile */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 55px;
+  animation: breathe 2s infinite; /* Breathing effect for the entire button */
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  justify-content: center;
+  padding: 0px 1px;
+  align-items: center;
+}
+
+.scrollDownIcon img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.scrollDownIcon img:first-child {
+  opacity: 1; /* Group166 is always visible */
+}
+
+.scrollDownIcon img:last-child {
+  opacity: 0; /* Group2 is hidden by default */
+  animation: blink 1s infinite; /* Blinking effect for Group2 */
+}
+
+.scrollDownIcon:hover img:first-child {
+  opacity: 0; /* Hide Group166 on hover */
+}
+
+.scrollDownIcon:hover img:last-child {
+  opacity: 1; /* Show Group2 on hover */
+  animation: none; /* Stop blinking on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
   .container {
-    position: relative;
-    width: 100%;
-    max-width: 1160px; /* Maximum width for the container */
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px; /* Space between elements */
+    padding: 0 20px; /* Add padding on smaller screens */
   }
-  
-  .heroImage {
-    width: 100%;
-    max-width: 500px; /* Reduced image size */
-    height: auto;
-    object-fit: cover;
-    z-index: 1; /* Ensure it's below the text */
-  }
-  
+
   .meetTheMindsContainer {
-    text-align: center;
-    line-height: 68px;
-    font-weight: 600;
-    background: linear-gradient(135deg, #6b00b3, #d8499c 52%, #d8499c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: 100%;
-    z-index: 2; /* Ensure it's above the image */
+    font-size: 48px; /* Reduce font size for smaller screens */
+    line-height: 56px;
   }
-  
-  .meetTheMinds {
-    margin: 0;
+}
+
+@media (max-width: 768px) {
+  .heroFrame {
+    padding-top: 60px; /* Adjust padding for smaller screens */
+    padding-bottom: 80px;
   }
-  
+
+  .meetTheMindsContainer {
+    font-size: 36px; /* Further reduce font size */
+    line-height: 48px;
+  }
+
+  .heroImage {
+    max-width: 400px; /* Further reduce image size */
+  }
+
   .scrollDownIcon {
-    width: 48px;
-    height: 55px;
-    margin-top: 20px; /* Space between text and icon */
+    margin-top: 10px; /* Adjust space for smaller screens */
   }
-  
-  /* Responsive Design */
-  @media (max-width: 1200px) {
-    .container {
-      padding: 0 20px; /* Add padding on smaller screens */
-    }
-  
-    .meetTheMindsContainer {
-      font-size: 48px; /* Reduce font size for smaller screens */
-      line-height: 56px;
-    }
+}
+
+@media (max-width: 480px) {
+  .meetTheMindsContainer {
+    font-size: 28px; /* Adjust font size for mobile */
+    line-height: 40px;
   }
-  
-  @media (max-width: 768px) {
-    .heroFrame {
-      padding-top: 60px; /* Adjust padding for smaller screens */
-      padding-bottom: 80px;
-    }
-  
-    .meetTheMindsContainer {
-      font-size: 36px; /* Further reduce font size */
-      line-height: 48px;
-    }
-  
-    .heroImage {
-      max-width: 400px; /* Further reduce image size */
-    }
-  
-    .scrollDownIcon {
-      margin-top: 10px; /* Adjust space for smaller screens */
-    }
+
+  .heroImage {
+    max-width: 300px; /* Smaller image for mobile */
   }
-  
-  @media (max-width: 480px) {
-    .meetTheMindsContainer {
-      font-size: 28px; /* Adjust font size for mobile */
-      line-height: 40px;
-    }
-  
-    .heroImage {
-      max-width: 300px; /* Smaller image for mobile */
-    }
-  
-    .scrollDownIcon {
-      width: 36px; /* Smaller icon for mobile */
-      height: 42px;
-    }
+
+  .scrollDownIcon {
+    width: 36px; /* Smaller icon for mobile */
+    height: 42px;
   }
+}

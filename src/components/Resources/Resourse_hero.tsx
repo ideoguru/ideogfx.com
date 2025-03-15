@@ -1,18 +1,26 @@
+"use client";
 import type { NextPage } from "next";
 import Image from "next/image";
 import styles from "../../styles/Resourse_hero.module.css";
 
 const ResourcesHero: NextPage = () => {
+  const handleScrollDown = () => {
+    window.scrollBy({
+      top: window.innerHeight, // Scroll down by one viewport height
+      behavior: "smooth", // Smooth scroll
+    });
+  };
+
   return (
     <div className={styles.heroSection}>
       <div className={styles.contentContainer}>
         {/* Main Heading */}
         <div className={styles.headingContainer}>
-  <div className={styles.textWrapper}>
-    <h1 className={styles.stayText}>Stay</h1>
-    <div className={styles.updatedGradient}>Updated</div>
-  </div>
-</div>
+          <div className={styles.textWrapper}>
+            <h1 className={styles.stayText}>Stay</h1>
+            <div className={styles.updatedGradient}>Updated</div>
+          </div>
+        </div>
         {/* Hero Card */}
         <div className={styles.heroCard}>
           <Image
@@ -27,9 +35,14 @@ const ResourcesHero: NextPage = () => {
               The UX Edge: Transforming User Experience into Business
             </h2>
             <p className={styles.cardText}>
-              Lorem ipsum dolor sit amet consectetur. Viverm rivolt commodo ultrices feuribus<br />
-              miscissimo magna. Dipendiam tempor risus sagere egetatis utens vulputate tortor.<br />
-              Sed sed dovet esse emis augue bibendum liberdiam. Nunc eu sapien volut inerte.
+              Lorem ipsum dolor sit amet consectetur. Viverm rivolt commodo
+              ultrices feuribus
+              <br />
+              miscissimo magna. Dipendiam tempor risus sagere egetatis utens
+              vulputate tortor.
+              <br />
+              Sed sed dovet esse emis augue bibendum liberdiam. Nunc eu sapien
+              volut inerte.
             </p>
             <button className={styles.learnMoreButton}>
               Learn More
@@ -43,16 +56,22 @@ const ResourcesHero: NextPage = () => {
             </button>
           </div>
         </div>
-
-        {/* Scroll Indicator */}
+      </div>
+      {/* Scroll Indicator */}
+      <button className={styles.scrollDownIcon} onClick={handleScrollDown}>
         <Image
-          src="/Group166.svg"
           width={48}
           height={55}
           alt="Scroll down"
-          className={styles.scrollIndicator}
+          src="/Group166.svg" // Initial SVG
         />
-      </div>
+        <Image
+          width={48}
+          height={55}
+          alt="Scroll down"
+          src="/Group2.svg" // Arrow SVG
+        />
+      </button>
     </div>
   );
 };

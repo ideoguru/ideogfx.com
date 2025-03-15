@@ -1,18 +1,33 @@
+"use client";
 import type { NextPage } from "next";
 import Image from "next/image";
 import styles from "../../styles/WhatWeDoconversion.module.css";
 
 const HeroFrame: NextPage = () => {
+  const handleScrollDown = () => {
+    window.scrollBy({
+      top: window.innerHeight, // Scroll down by one viewport height
+      behavior: "smooth", // Smooth scroll
+    });
+  };
+
   return (
     <div className={styles.heroFrame}>
       <div className={styles.heroContainer}>
-        <Image
-          className={styles.scrollDownIcon}
-          width={48}
-          height={55}
-          alt="Scroll down"
-          src="/Group166.png"
-        />
+        <button className={styles.scrollDownIcon} onClick={handleScrollDown}>
+          <Image
+            width={48}
+            height={55}
+            alt="Scroll down"
+            src="/Group166.svg" // Initial SVG
+          />
+          <Image
+            width={48}
+            height={55}
+            alt="Scroll down"
+            src="/Group2.svg" // Arrow SVG
+          />
+        </button>
         <div className={styles.heroContainerIn}>
           <div className={styles.coverText}>
             <div className={styles.coverTextInner}>
