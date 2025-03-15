@@ -209,24 +209,19 @@ const GetInTouchForm: NextPage = () => {
           </div>
 
           <div className={styles.contactInfo}>
-            <h2 className={styles.sectionTitle}>Address</h2>
             <p className={styles.contactText}>
-              Ideo Graphics
+              Address: Ideo Graphics
               <br />
-              Third Floor, Cheryl Hill Park,
+              5H1, BCG Residency Towers,
               <br />
               Seaport - Airport Rd, Vallathol Padl,
               <br />
-              Vidya Nagar Colony, Trinkkakara,
+              Opp. CSEZ, Seaport-Airport Road,
               <br />
-              Edappally, Kochi, Kerala 682021
+              Kakkanad, Kochi, Kerala - 682037
             </p>
-
-            <h2 className={styles.sectionTitle}>Phone</h2>
-            <p className={styles.contactText}>+91 8075873153</p>
-
-            <h2 className={styles.sectionTitle}>Email</h2>
-            <p className={styles.contactText}>info@ideogfx.com</p>
+            <h2 className={styles.sectionTitle}>Phone: +91 8075873153</h2>
+            <h2 className={styles.sectionTitle}>Email: info@ideogfx.com</h2>
           </div>
           <div className={styles.socialIcons}>
             <div className={styles.iconWrapper}>
@@ -292,32 +287,30 @@ const GetInTouchForm: NextPage = () => {
               )}
             </div>
 
-            <div className={styles.formRow}>
-              <div className={styles.formGroup}>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className={styles.formInput}
-                  name="email"
-                  required
-                />
-                {errors.email && (
-                  <span className={styles.errorMessage}>{errors.email}</span>
-                )}
-              </div>
+            <div className={styles.formGroup}>
+              <input
+                type="email"
+                placeholder="Email"
+                className={styles.formInput}
+                name="email"
+                required
+              />
+              {errors.email && (
+                <span className={styles.errorMessage}>{errors.email}</span>
+              )}
+            </div>
 
-              <div className={styles.formGroup}>
-                <input
-                  type="tel"
-                  placeholder="Phone No."
-                  className={styles.formInput}
-                  name="phone"
-                  required
-                />
-                {errors.phone && (
-                  <span className={styles.errorMessage}>{errors.phone}</span>
-                )}
-              </div>
+            <div className={styles.formGroup}>
+              <input
+                type="tel"
+                placeholder="Phone No."
+                className={styles.formInput}
+                name="phone"
+                required
+              />
+              {errors.phone && (
+                <span className={styles.errorMessage}>{errors.phone}</span>
+              )}
             </div>
 
             <div className={styles.formGroup}>
@@ -379,7 +372,7 @@ const GetInTouchForm: NextPage = () => {
             >
               {isSubmitting ? "Sending..." : "Let’s Talk"}
               <Image
-                src="/solar_arrow-right-up-linear.svg"
+                src="/black-arrow.svg"
                 width={24}
                 height={24}
                 alt="Submit"
