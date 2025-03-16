@@ -1,62 +1,70 @@
 /* Logo Container */
 .logoContainer {
   position: fixed;
-  top: -3px; /* Adjust as needed */
-  left: 151px; /* Adjust as needed */
-  padding: 1rem; /* Adjust as needed */
-  z-index: 1001; /* Ensure it's above other elements */
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+  padding: 0.5rem;
 }
 
 .asset18288x81Wrapper {
   display: flex;
   align-items: center;
+  width: 40px;
+  height: 37px;
 }
 
 /* Header Container */
 .frameParent16 {
   position: fixed;
-  top: 2%;
+  top: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  width: auto;
-  max-width: 1200px;
-  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px;
-  background-color: rgba(234, 235, 240, 0.7);
-  backdrop-filter: blur(20px);
-  border-radius: 16px;
   z-index: 1000;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
-/* Navigation Links */
+/* Navigation Links Container */
 .frameParent17 {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 0.75rem;
   font-weight: bold;
+  background-color: rgba(234, 235, 240, 0.7);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 8px 16px;
+  min-height: 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .getStarted {
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  font-size: 0.95rem;
 }
 
 .getStarted:hover {
   background-color: rgba(234, 235, 240, 0.8);
 }
 
-/* Hamburger Menu Icon (Mobile Only) */
+/* Hamburger Menu Icon */
 .menuIcon {
   display: none;
   flex-direction: column;
   gap: 0.25rem;
   cursor: pointer;
   z-index: 1001;
+  position: absolute;
+  right: 1rem;
 }
 
 .menuIcon .bar {
@@ -68,77 +76,77 @@
 
 /* Mobile Menu Styles */
 @media (max-width: 768px) {
-  .frameParent17 {
-    position: absolute;
-    top: 4rem;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    background-color: rgba(234, 235, 240, 0.95);
-    backdrop-filter: blur(40px);
-    padding: 1rem 0;
-    gap: 0.5rem;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
-    z-index: 999;
+  .frameParent16 {
+    width: calc(100% - 2rem);
+    left: 1rem;
+    right: 1rem;
+    transform: none;
+    justify-content: space-between;
+    background-color: rgba(234, 235, 240, 0.7);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 8px;
   }
 
-  .frameParent17.mobileMenuOpen {
-    transform: translateY(0);
+  .frameParent17 {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: rgba(234, 235, 240, 0.95);
+    padding: 0.5rem 0;
+    gap: 0.25rem;
+    transform: translateY(-150%);
+    min-height: auto;
   }
 
   .getStarted {
     width: 100%;
     text-align: center;
-    padding: 0.75rem 0;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
   }
 
   .menuIcon {
     display: flex;
-    margin-left: auto;
-  }
-
-  .menuIcon.mobileMenuOpen .bar:nth-child(1) {
-    transform: rotate(45deg) translate(0.25rem, 0.25rem);
-  }
-  .menuIcon.mobileMenuOpen .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .menuIcon.mobileMenuOpen .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(0.25rem, -0.25rem);
+    right: 0.5rem;
   }
 }
 
 /* Active Link Style */
 .active {
-  color: purple;
+  background-color: #6a4c9c;
+  color: #ffffff;
   font-weight: bold;
 }
 
-.activeLink {
-  background-color: #6a4c9c; /* Purple background */
-  color: #ffffff; /* White text color */
-  border-radius: 0.5rem; /* Use rem for scalability */
-  padding: 0.5rem 1rem; /* Use rem for scalability */
-}
-
-/* Additional Breakpoints for Better Responsiveness */
-@media (max-width: 480px) {
-  .frameParent16 {
-    padding: 0 1rem;
-  }
-
-  .getStarted {
-    padding: 0.5rem;
+/* Responsive Adjustments */
+@media (min-width: 480px) {
+  .frameParent17 {
+    gap: 1rem;
+    padding: 8px 24px;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  .frameParent16 {
-    height: 5rem;
+@media (min-width: 769px) {
+  .logoContainer {
+    left: 151px;
+  }
+
+  .asset18288x81Wrapper {
+    width: 48px;
+    height: 44px;
   }
 
   .frameParent17 {
     gap: 1.5rem;
+    padding: 8px 32px;
+    min-height: 3rem;
+  }
+
+  .getStarted {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
   }
 }
