@@ -1,9 +1,16 @@
+"use client";
 import type { NextPage } from "next";
 import Image from "next/image";
 // import styles from "./index.module.css";
 import styles from "../../styles/HomePageHero.module.css";
 
 const HeroSectionFrame: NextPage = () => {
+  const handleScrollDown = () => {
+    window.scrollBy({
+      top: window.innerHeight, // Scroll down by one viewport height
+      behavior: "smooth", // Smooth scroll
+    });
+  };
   return (
     <div className={styles.heroSectionFrame}>
       <div className={styles.heroContainer}>
@@ -47,13 +54,20 @@ const HeroSectionFrame: NextPage = () => {
             src="/solar_arrow-right-up-linear.svg"
           />
         </div>
-        <Image
-          className={styles.scrollDownIcon}
-          width={48}
-          height={55}
-          alt=""
-          src="/Scroll _Vector.svg"
-        />
+        <button className={styles.scrollDownIcon} onClick={handleScrollDown}>
+          <Image
+            width={48}
+            height={55}
+            alt="Scroll down"
+            src="/Group166.svg" // Initial SVG
+          />
+          <Image
+            width={48}
+            height={55}
+            alt="Scroll down"
+            src="/Group2.svg" // Arrow SVG
+          />
+        </button>
       </div>
     </div>
   );

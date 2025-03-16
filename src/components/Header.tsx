@@ -33,87 +33,93 @@ const Header = () => {
   };
 
   return (
-    <div className={styles.frameParent16}>
-       <Link href="/">
-        <div className={styles.asset18288x81Wrapper}>
-          <Image
-            className={styles.asset18288x81}
-            width={48}
-            height={44}
-            alt="Logo"
-            src="/logo.png"
-          />
-        </div>
-      </Link>
-
-      {/* Hamburger Menu Icon (Mobile Only) */}
-      <div
-        className={`${styles.menuIcon} ${
-          isMobileMenuOpen ? styles.mobileMenuOpen : ""
-        }`}
-        onClick={toggleMobileMenu}
-      >
-        <div className={styles.bar}></div>
-        <div className={styles.bar}></div>
-        <div className={styles.bar}></div>
+    <>
+      {/* Logo Container (Outside frameParent16) */}
+      <div className={styles.logoContainer}>
+        <Link href="/">
+          <div className={styles.asset18288x81Wrapper}>
+            <Image
+              className={styles.asset18288x81}
+              width={48}
+              height={44}
+              alt="Logo"
+              src="/logo.png"
+            />
+          </div>
+        </Link>
       </div>
 
-      {/* Navigation Links */}
-      <div
-        className={`${styles.frameParent17} ${
-          isMobileMenuOpen ? styles.mobileMenuOpen : ""
-        }`}
-      >
-        <div className={styles.whoWeAreWrapper}>
-          <Link href="/who-we-are">
-            <div
-              className={`${styles.getStarted} ${
-                activeLink === "who-we-are" ? styles.active : ""
-              }`}
-              onClick={() => handleLinkClick("who-we-are")}
-            >
-              Who We Are
-            </div>
-          </Link>
+      {/* Header Container (frameParent16) */}
+      <div className={styles.frameParent16}>
+        {/* Hamburger Menu Icon (Mobile Only) */}
+        <div
+          className={`${styles.menuIcon} ${
+            isMobileMenuOpen ? styles.mobileMenuOpen : ""
+          }`}
+          onClick={toggleMobileMenu}
+        >
+          <div className={styles.bar}></div>
+          <div className={styles.bar}></div>
+          <div className={styles.bar}></div>
         </div>
-        <div className={styles.whatWeDoContainer}>
-          <Link href="/what-we-do">
-            <div
-              className={`${styles.getStarted} ${
-                activeLink === "what-we-do" ? styles.active : ""
-              }`}
-              onClick={() => handleLinkClick("what-we-do")}
-            >
-              What We Do
-            </div>
-          </Link>
-        </div>
-        <div className={styles.insightsWrapper}>
-          <Link href="/Resources">
-            <div
-              className={`${styles.getStarted} ${
-                activeLink === "Resources" ? styles.active : ""
-              }`}
-              onClick={() => handleLinkClick("Resources")}
-            >
-              Resources
-            </div>
-          </Link>
-        </div>
-        <div className={styles.getInTouchWrapper}>
-          <Link href="/Get-in-touch">
-            <div
-              className={`${styles.getStarted} ${
-                activeLink === "Get-in-touch" ? styles.active : ""
-              }`}
-              onClick={() => handleLinkClick("Get-in-touch")}
-            >
-              Get In Touch
-            </div>
-          </Link>
+
+        {/* Navigation Links */}
+        <div
+          className={`${styles.frameParent17} ${
+            isMobileMenuOpen ? styles.mobileMenuOpen : ""
+          }`}
+        >
+          <div className={styles.whoWeAreWrapper}>
+            <Link href="/who-we-are">
+              <div
+                className={`${styles.getStarted} ${
+                  activeLink === "who-we-are" ? styles.active : ""
+                }`}
+                onClick={() => handleLinkClick("who-we-are")}
+              >
+                Who We Are
+              </div>
+            </Link>
+          </div>
+          <div className={styles.whatWeDoContainer}>
+            <Link href="/what-we-do">
+              <div
+                className={`${styles.getStarted} ${
+                  activeLink === "what-we-do" ? styles.active : ""
+                }`}
+                onClick={() => handleLinkClick("what-we-do")}
+              >
+                What We Do
+              </div>
+            </Link>
+          </div>
+          <div className={styles.insightsWrapper}>
+            <Link href="/Resources">
+              <div
+                className={`${styles.getStarted} ${
+                  activeLink === "Resources" ? styles.active : ""
+                }`}
+                onClick={() => handleLinkClick("Resources")}
+              >
+                Resources
+              </div>
+            </Link>
+          </div>
+          <div className={styles.getInTouchWrapper}>
+            <Link href="/Get-in-touch">
+              <div
+                className={`${styles.getStarted} ${
+                  activeLink === "Get-in-touch" ? styles.active : ""
+                }`}
+                onClick={() => handleLinkClick("Get-in-touch")}
+              >
+                Get In Touch
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,17 +1,10 @@
-/* Base styles for the header */
-.frameParent16 {
+/* Logo Container */
+.logoContainer {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4rem; /* Use rem for scalability */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1.5rem; /* Use rem for scalability */
-  background-color: rgba(234, 235, 240, 0.5);
-  backdrop-filter: blur(40px);
-  z-index: 1000;
+  top: -3px; /* Adjust as needed */
+  left: 151px; /* Adjust as needed */
+  padding: 1rem; /* Adjust as needed */
+  z-index: 1001; /* Ensure it's above other elements */
 }
 
 .asset18288x81Wrapper {
@@ -19,18 +12,36 @@
   align-items: center;
 }
 
+/* Header Container */
+.frameParent16 {
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 1200px;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  background-color: rgba(234, 235, 240, 0.7);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  z-index: 1000;
+  margin: 0 auto;
+}
+
+/* Navigation Links */
 .frameParent17 {
   display: flex;
   align-items: center;
-  gap: 1rem; /* Use rem for scalability */
-  margin-left: auto; /* Align to the right */
-  margin-right: auto; /* Center the links */
-  justify-content: center; /* Center the items horizontally */
+  gap: 1rem;
   font-weight: bold;
 }
 
 .getStarted {
-  padding: 0.5rem 1rem; /* Use rem for scalability */
+  padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -41,16 +52,16 @@
 
 /* Hamburger Menu Icon (Mobile Only) */
 .menuIcon {
-  display: none; /* Hidden by default */
+  display: none;
   flex-direction: column;
-  gap: 0.25rem; /* Use rem for scalability */
+  gap: 0.25rem;
   cursor: pointer;
-  z-index: 1001; /* Ensure it's above other elements */
+  z-index: 1001;
 }
 
 .menuIcon .bar {
-  width: 1.5rem; /* Use rem for scalability */
-  height: 0.125rem; /* Use rem for scalability */
+  width: 1.5rem;
+  height: 0.125rem;
   background-color: #191919;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -59,37 +70,34 @@
 @media (max-width: 768px) {
   .frameParent17 {
     position: absolute;
-    top: 4rem; /* Below the header */
+    top: 4rem;
     left: 0;
     width: 100%;
     flex-direction: column;
     background-color: rgba(234, 235, 240, 0.95);
     backdrop-filter: blur(40px);
-    padding: 1rem 0; /* Use rem for scalability */
-    gap: 0.5rem; /* Use rem for scalability */
-    transform: translateY(-100%); /* Hide by default */
+    padding: 1rem 0;
+    gap: 0.5rem;
+    transform: translateY(-100%);
     transition: transform 0.3s ease;
     z-index: 999;
   }
 
   .frameParent17.mobileMenuOpen {
-    transform: translateY(0); /* Show menu when open */
+    transform: translateY(0);
   }
 
-  /* Center the mobile menu items */
   .getStarted {
     width: 100%;
     text-align: center;
-    padding: 0.75rem 0; /* Use rem for scalability */
+    padding: 0.75rem 0;
   }
 
-  /* Show hamburger menu icon on mobile */
   .menuIcon {
-    display: flex; /* Show hamburger menu on mobile */
-    margin-left: auto; /* Push to the right side */
+    display: flex;
+    margin-left: auto;
   }
 
-  /* Hamburger menu animation */
   .menuIcon.mobileMenuOpen .bar:nth-child(1) {
     transform: rotate(45deg) translate(0.25rem, 0.25rem);
   }
@@ -102,6 +110,11 @@
 }
 
 /* Active Link Style */
+.active {
+  color: purple;
+  font-weight: bold;
+}
+
 .activeLink {
   background-color: #6a4c9c; /* Purple background */
   color: #ffffff; /* White text color */
@@ -109,28 +122,23 @@
   padding: 0.5rem 1rem; /* Use rem for scalability */
 }
 
-.active {
-  color: purple; /* Style for the active tab */
-  font-weight: bold; /* Optional: Add more styles */
-}
-
 /* Additional Breakpoints for Better Responsiveness */
 @media (max-width: 480px) {
   .frameParent16 {
-    padding: 0 1rem; /* Reduce padding for smaller screens */
+    padding: 0 1rem;
   }
 
   .getStarted {
-    padding: 0.5rem; /* Reduce padding for smaller screens */
+    padding: 0.5rem;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .frameParent16 {
-    height: 5rem; /* Increase height for tablets */
+    height: 5rem;
   }
 
   .frameParent17 {
-    gap: 1.5rem; /* Increase gap for tablets */
+    gap: 1.5rem;
   }
 }
