@@ -32,13 +32,13 @@ const CaseStudiesSection: NextPage = () => {
               </p>
               <button className={styles.learnMoreButton}>
                 Learn More
-                <Image
+                {/* <Image
                   src="/solar_arrow-right-up-linear.svg"
                   width={20}
                   height={20}
                   alt="arrow"
                   className={styles.buttonIcon}
-                />
+                /> */}
               </button>
             </div>
           </div>
@@ -63,13 +63,13 @@ const CaseStudiesSection: NextPage = () => {
               </p>
               <button className={styles.learnMoreButton}>
                 Learn More
-                <Image
+                {/* <Image
                   src="/solar_arrow-right-up-linear.svg"
                   width={20}
                   height={20}
                   alt="arrow"
                   className={styles.buttonIcon}
-                />
+                /> */}
               </button>
             </div>
           </div>
