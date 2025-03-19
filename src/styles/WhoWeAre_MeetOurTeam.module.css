@@ -35,7 +35,6 @@
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .teamPhoto {
@@ -44,72 +43,75 @@
     display: block;
 }
 
+/* Updated Annotation Styles */
 .annotation {
-    position: absolute;
-    display: flex;
+    display: inline-flex;
+    padding: 16px 24px 16px 12px;
     align-items: flex-start;
-    background: rgba(247, 248, 250, 0.5);
-    padding: 12px 12px; /* Reduced horizontal padding */
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    gap: 10px; /* Reduced gap */
-    backdrop-filter: blur(4px);
+    gap: 8px;
+    border-radius: 12px;
+    border: 1px solid #FFF;
+    background: rgba(247, 248, 250, 0.50);
+    backdrop-filter: blur(20px);
+    position: absolute;
     z-index: 1;
-    min-width: 180px; /* Reduced from 200px */
-    width: fit-content; /* Added for better content fitting */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); 
+    
 }
+
 
 .frameIcon {
     flex-shrink: 0;
-    margin-top: 3px;
 }
 
 .textContainer {
     display: flex;
     flex-direction: column;
-    min-width: 120px; /* Added to control text container width */
+    gap: 4px;
 }
 
 .name {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
     font-weight: 600;
-    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.25px;
     color: #151515;
-    line-height: 1.2;
-    font-family: 'Poppins', sans-serif;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
 }
 
 .role {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.3;
-    margin-top: 4px;
     font-family: 'Open Sans', sans-serif;
-    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 0.5px;
+    color: #151515;
+    white-space: nowrap;
 }
 
 /* Positioning */
-.director { /* Guruprakash S */
-    top: 38%;
-    left: 50%;
-    transform: translateX(-50%);
+.director {
+    top: 35%;
+    left: 45%;  /* Reduced from 50% */
+    transform: translateX(-45%); /* Adjusted translation */
 }
 
-.manager { /* Joppu Kurian */
+.manager {
     top: 62%;
-    left: 55%;
+    left: 53%;  /* Adjusted from 55% */
 }
 
-.analyst { /* Aparna Sudeesan */
+.analyst {
     top: 48%;
-    right: 20%;
+    right: 23%; /* Increased from 20% */
 }
 
-.designer { /* Sandeep Vijay */
+.designer {
     top: 52%;
-    left: 22%;
+    left: 20%;  /* Reduced from 22% */
 }
-
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .meetOurTeam {
@@ -127,11 +129,12 @@
     .annotation {
         position: relative;
         width: 100%;
-        max-width: 220px; /* Reduced from 260px */
+        max-width: 200px;
         margin: 12px auto;
         left: auto !important;
         top: auto !important;
         transform: none !important;
+        padding: 12px 20px 12px 10px;
     }
     
     .teamsPhoto {
@@ -140,24 +143,30 @@
         align-items: center;
         gap: 15px;
     }
-}
-
-@media (max-width: 480px) {
+    
     .name {
-        font-size: 14px; /* Slightly reduced */
+        font-size: 14px;
+        line-height: 20px;
     }
     
     .role {
-        font-size: 12px; /* Slightly reduced */
+        font-size: 11px;
+        line-height: 13px;
     }
-    
+}
+
+@media (max-width: 480px) {
     .annotation {
-        padding: 8px 12px; /* Reduced padding */
-        min-width: auto;
+        padding: 10px 16px 10px 8px;
     }
     
-    .frameIcon {
-        width: 16px; /* Slightly reduced */
-        height: 16px; /* Slightly reduced */
+    .name {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    
+    .role {
+        font-size: 10px;
+        line-height: 12px;
     }
 }
