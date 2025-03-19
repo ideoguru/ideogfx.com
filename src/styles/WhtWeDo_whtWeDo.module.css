@@ -1,12 +1,19 @@
 /* WhtWeDo_whtWeDo.module.css */
 .whatWeDoFrame {
+    /* Existing styles */
     width: 100%;
     padding: 56px 20px;
-    background-image: url('/whtwedo5.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('../../public/whtwedo5.png');
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
+    background-color: #f7f8fa;
+
+    /* Modified background properties */
+    background-size: auto 90%; /* Maintain image height proportion */
+    background-position: center; /* Anchor image at top center */
+    min-height: 90vh; /* Reduce container height to match image height */
 }
 
 .whatWeDoContainer {
