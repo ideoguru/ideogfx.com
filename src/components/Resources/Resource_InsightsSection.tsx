@@ -29,7 +29,7 @@ const InsightsSection: NextPage = () => {
               </p>
               <button className={styles.readMoreButton}>
                 Read More
-                <Image src="/solar_arrow-right-up-linear.svg" width={20} height={20} alt="arrow" />
+                {/* <Image src="/solar_arrow-right-up-linear.svg" width={20} height={20} alt="arrow" /> */}
               </button>
             </div>
           </div>
@@ -50,7 +50,7 @@ const InsightsSection: NextPage = () => {
               </p>
               <button className={styles.readMoreButton}>
                 Read More
-                <Image src="/solar_arrow-right-up-linear.svg" width={20} height={20} alt="arrow" />
+                {/* <Image src="/solar_arrow-right-up-linear.svg" width={20} height={20} alt="arrow" /> */}
               </button>
             </div>
           </div>
@@ -72,7 +72,7 @@ const InsightsSection: NextPage = () => {
               </p>
               <button className={styles.readMoreButton}>
                 Read More
-                <Image src="/solar_arrow-right-up-linear.svg" width={20} height={20} alt="arrow" />
+                {/* <Image src="/solar_arrow-right-up-linear.svg" width={20} height={20} alt="arrow" /> */}
               </button>
             </div>
           </div>
@@ -93,7 +93,7 @@ const InsightsSection: NextPage = () => {
               </p>
               <button className={styles.readMoreButton}>
                 Read More
-                <Image src="/solar_arrow-right-up-linear.svg" width={20} height={20} alt="arrow" />
+                {/* <Image src="/solar_arrow-right-up-linear.svg" width={20} height={20} alt="arrow" /> */}
               </button>
             </div>
           </div>
