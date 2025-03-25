@@ -12,7 +12,7 @@
   /* Modified background properties */
 
   background-size: 120% 55%; /* Force width to 100%, height to 55% of container */
-  background-position: center top; /* Keep anchored at top */
+  background-position: center 100%;
   min-height: 55vh; /* Match container height to image height percentage */
 }
 
