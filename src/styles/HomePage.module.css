@@ -116,8 +116,9 @@
 
 /* Active Link Style */
 .active {
-  background-color: #6a4c9c;
-  color: #ffffff;
+  background: linear-gradient(135deg, #6b00b3, #d8499c 52%, #d8499c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
 

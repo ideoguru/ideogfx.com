@@ -199,7 +199,7 @@ const GetInTouchForm: NextPage = () => {
           </p>
           <div className={styles.mapContainer}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0360072!2d76.335773!3d10.0360072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080dff2f3082ff%3A0xc54157b9f4614e58!2sCheryl%20Hill%20Park!5e0!3m2!1sen!2sus!4v1718787878787"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.0398447234974!2d76.3449604!3d10.0069306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c9233b909c5%3A0x307924fb759aaada!2sBCG%20Residency%20Towers%2C%20Seaport%20-%20Airport%20Rd%2C%20Kakkanad%2C%20Kerala%20682030!5e0!3m2!1sen!2sus!4v1718787878787"
               className={styles.mapIframe}
               title="Office Location Map"
               allowFullScreen
@@ -225,49 +225,79 @@ const GetInTouchForm: NextPage = () => {
           </div>
           <div className={styles.socialIcons}>
             <div className={styles.iconWrapper}>
-              <Image
-                className={styles.socialIcon}
-                width={24}
-                height={24}
-                alt="Facebook"
-                src="/ic_baseline-facebook.svg" // Ensure this image exists in the public folder
-              />
+              <a
+                href="https://www.facebook.com/share/1DH8EULJHC/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  className={styles.socialIcon}
+                  width={24}
+                  height={24}
+                  alt="Facebook"
+                  src="/ic_baseline-facebook.svg" // Ensure this image exists in the public folder
+                />
+              </a>
             </div>
             <div className={styles.iconWrapper}>
-              <Image
-                className={styles.socialIcon}
-                width={24}
-                height={24}
-                alt="Instagram"
-                src="/mdi_instagram.svg" // Ensure this image exists in the public folder
-              />
+              <a
+                href=" https://www.instagram.com/ideogfx_?igsh=aWFxbGJqbTA3dmF3"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  className={styles.socialIcon}
+                  width={24}
+                  height={24}
+                  alt="Instagram"
+                  src="/mdi_instagram.svg" // Ensure this image exists in the public folder
+                />
+              </a>
             </div>
             <div className={styles.iconWrapper}>
-              <Image
-                className={styles.socialIcon}
-                width={24}
-                height={24}
-                alt="Dribbble"
-                src="/icon-park-solid_dribble.svg" // Ensure this image exists in the public folder
-              />
+              <a
+                href="https://dribbble.com/ideogfx_"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  className={styles.socialIcon}
+                  width={24}
+                  height={24}
+                  alt="Dribbble"
+                  src="/icon-park-solid_dribble.svg" // Ensure this image exists in the public folder
+                />
+              </a>
             </div>
             <div className={styles.iconWrapper}>
-              <Image
-                className={styles.socialIcon}
-                width={24}
-                height={24}
-                alt="Behance"
-                src="/ant-design_behance-circle-filled.svg" // Ensure this image exists in the public folder
-              />
+              <a
+                href="https://www.behance.net/ideographics"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  className={styles.socialIcon}
+                  width={24}
+                  height={24}
+                  alt="Behance"
+                  src="/ant-design_behance-circle-filled.svg" // Ensure this image exists in the public folder
+                />
+              </a>
             </div>
             <div className={styles.iconWrapper}>
-              <Image
-                className={styles.socialIcon}
-                width={24}
-                height={24}
-                alt="LinkedIn"
-                src="/entypo-social_linkedin-with-circle.svg" // Ensure this image exists in the public folder
-              />
+              <a
+                href="https://www.linkedin.com/company/ideogfx/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  className={styles.socialIcon}
+                  width={24}
+                  height={24}
+                  alt="LinkedIn"
+                  src="/entypo-social_linkedin-with-circle.svg" // Ensure this image exists in the public folder
+                />
+              </a>
             </div>
           </div>
         </div>
