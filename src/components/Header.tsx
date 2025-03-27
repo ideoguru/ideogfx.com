@@ -16,10 +16,10 @@ const Header = () => {
       setActiveLink("who-we-are");
     } else if (path.includes("what-we-do")) {
       setActiveLink("what-we-do");
-    } else if (path.includes("insights")) {
-      setActiveLink("insights");
-    } else if (path.includes("get-in-touch")) {
-      setActiveLink("get-in-touch");
+    } else if (path.includes("Resources")) {
+      setActiveLink("Resources");
+    } else if (path.includes("Get-in-touch")) {
+      setActiveLink("Get-in-touch");
     }
   }, []);
 
