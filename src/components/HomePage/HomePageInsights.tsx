@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { useRef } from "react";
 import styles from "../../styles/HomePageInsights.module.css";
+import Link from "next/link";
 
 const InsightsFrame: NextPage = () => {
   const cardsWrapperRef = useRef<HTMLDivElement>(null);
@@ -109,16 +110,18 @@ const InsightsFrame: NextPage = () => {
       </div>
 
       <div className={styles.insightsCta}>
-        <div className={styles.btn}>
-          <div className={styles.getStarted}>Learn More</div>
-          <Image
-            className={styles.solararrowRightUpLinearIcon}
-            width={24}
-            height={24}
-            alt=""
-            src="/solar_arrow-right-up-linear.svg"
-          />
-        </div>
+        <Link href="/Resources">
+          <div className={styles.btn}>
+            <div className={styles.getStarted}>Learn More</div>
+            <Image
+              className={styles.solararrowRightUpLinearIcon}
+              width={24}
+              height={24}
+              alt=""
+              src="/solar_arrow-right-up-linear.svg"
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );

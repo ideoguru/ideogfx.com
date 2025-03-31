@@ -1,172 +1,212 @@
 /* WhoWeAre_MeetOurTeam.module.css */
 .meetOurTeam {
-    padding: 40px 20px;
-    background: #fff;
+  padding: 40px 20px;
+  background: #fff;
 }
 
 .container {
-    max-width: 1160px;
-    margin: 0 auto;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 .textContents {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .meetOurTeam1 {
-    font-size: 32px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 16px;
-    font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+  font-family: "Poppins", sans-serif;
 }
 
 .getToKnow {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
 }
 
 .teamsPhoto {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .teamPhoto {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Updated Annotation Styles */
 .annotation {
-    display: inline-flex;
-    padding: 16px 24px 16px 12px;
-    align-items: flex-start;
-    gap: 8px;
-    border-radius: 12px;
-    border: 1px solid #FFF;
-    background: rgba(247, 248, 250, 0.50);
-    backdrop-filter: blur(20px);
-    position: absolute;
-    z-index: 1;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px); 
-    
+  display: inline-flex;
+  padding: 12px;
+  gap: 8px;
+  border-radius: 12px;
+  border: 1px solid #fff;
+  background: rgba(247, 248, 250, 0.5);
+  backdrop-filter: blur(20px);
+  position: absolute;
+  z-index: 1;
+  transition: all 0.3s ease;
+  max-width: 220px;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-
 .frameIcon {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .textContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
 }
 
 .name {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-    letter-spacing: 0.25px;
-    color: #151515;
-    white-space: nowrap;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+  color: #151515;
+  white-space: nowrap;
 }
 
 .role {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 14px;
-    letter-spacing: 0.5px;
-    color: #151515;
-    white-space: nowrap;
+  position: relative;
+  max-height: 25px;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  line-height: 14px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  color: #151515;
+  text-align: left;
+  display: inline-block;
+}
+
+.roleDescription {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #666;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 /* Positioning */
 .director {
-    top: 35%;
-    left: 45%;  /* Reduced from 50% */
-    transform: translateX(-45%); /* Adjusted translation */
+  top: 35%;
+  left: 45%; /* Reduced from 50% */
+  transform: translateX(-45%); /* Adjusted translation */
 }
 
 .manager {
-    top: 62%;
-    left: 53%;  /* Adjusted from 55% */
+  top: 62%;
+  left: 53%; /* Adjusted from 55% */
 }
 
 .analyst {
-    top: 48%;
-    right: 23%; /* Increased from 20% */
+  top: 38%;
+  right: 15%; /* Increased from 20% */
 }
 
 .designer {
-    top: 52%;
-    left: 20%;  /* Reduced from 22% */
+  top: 52%;
+  left: 20%; /* Reduced from 22% */
 }
+
+/* Hover States */
+.annotation:hover {
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.annotation:hover .role {
+  max-height: 200px; /* Adjust based on content */
+}
+
+.annotation:hover .roleDescription {
+  max-height: 100px; /* Adjust based on content length */
+  opacity: 1;
+  margin-top: 8px;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .meetOurTeam {
-        padding: 30px 15px;
-    }
-    
-    .meetOurTeam1 {
-        font-size: 28px;
-    }
-    
-    .getToKnow {
-        font-size: 14px;
-    }
-    
-    .annotation {
-        position: relative;
-        width: 100%;
-        max-width: 200px;
-        margin: 12px auto;
-        left: auto !important;
-        top: auto !important;
-        transform: none !important;
-        padding: 12px 20px 12px 10px;
-    }
-    
-    .teamsPhoto {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    
-    .name {
-        font-size: 14px;
-        line-height: 20px;
-    }
-    
-    .role {
-        font-size: 11px;
-        line-height: 13px;
-    }
+  .meetOurTeam {
+    padding: 30px 15px;
+  }
+
+  .meetOurTeam1 {
+    font-size: 28px;
+  }
+
+  .getToKnow {
+    font-size: 14px;
+  }
+
+  .annotation {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    margin: 8px auto;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+  }
+
+  .role,
+  .roleDescription {
+    max-height: none !important;
+    opacity: 1 !important;
+  }
+
+  .roleDescription {
+    margin-top: 8px;
+  }
+
+  .teamsPhoto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .name {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @media (max-width: 480px) {
-    .annotation {
-        padding: 10px 16px 10px 8px;
-    }
-    
-    .name {
-        font-size: 12px;
-        line-height: 18px;
-    }
-    
-    .role {
-        font-size: 10px;
-        line-height: 12px;
-    }
+  .annotation {
+    padding: 10px 16px 10px 8px;
+  }
+
+  .name {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .role {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .roleDescription {
+    font-size: 10px;
+  }
 }

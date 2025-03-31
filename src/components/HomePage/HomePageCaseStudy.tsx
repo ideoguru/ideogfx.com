@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { useState } from "react";
 import styles from "../../styles/HomePageCaseStudy.module.css";
+import Link from "next/link";
 
 const caseStudies = [
   {
@@ -137,16 +138,18 @@ const CaseStudiesFrame: NextPage = () => {
         </div>
       </div>
       <div className={styles.caseStudiesCtaFrame}>
-        <div className={styles.caseStudiesButton}>
-          <div className={styles.getStarted}>Learn More</div>
-          <Image
-            className={styles.solararrowRightUpLinearIcon}
-            width={24}
-            height={24}
-            alt="Learn More"
-            src="/solar_arrow-right-up-linear.svg"
-          />
-        </div>
+        <Link href="/Resources">
+          <div className={styles.caseStudiesButton}>
+            <div className={styles.getStarted}>Learn More</div>
+            <Image
+              className={styles.solararrowRightUpLinearIcon}
+              width={24}
+              height={24}
+              alt="Learn More"
+              src="/solar_arrow-right-up-linear.svg"
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );

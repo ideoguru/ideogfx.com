@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import styles from "./../styles/Footer.module.css";
+import Link from "next/link";
 
 const Footer: NextPage = () => {
   return (
@@ -27,16 +28,24 @@ const Footer: NextPage = () => {
               </div>
               <div className={styles.quickLinks}>
                 <div className={styles.footerLink}>
-                  <div className={styles.linkText}>Who We Are</div>
+                  <Link href="/who-we-are">
+                    <div className={styles.linkText}>Who We Are</div>
+                  </Link>
                 </div>
                 <div className={styles.footerLink}>
-                  <div className={styles.linkText}>What We Do</div>
+                  <Link href="/what-we-do">
+                    <div className={styles.linkText}>What We Do</div>
+                  </Link>
                 </div>
                 <div className={styles.footerLink}>
-                  <div className={styles.linkText}>Resources</div>
+                  <Link href="/Resources">
+                    <div className={styles.linkText}>Resources</div>
+                  </Link>
                 </div>
                 <div className={styles.footerLink}>
-                  <div className={styles.linkText}>Get In Touch</div>
+                  <Link href="/Get-in-touch">
+                    <div className={styles.linkText}>Get In Touch</div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -48,49 +57,79 @@ const Footer: NextPage = () => {
               </div>
               <div className={styles.socialIcons}>
                 <div className={styles.iconWrapper}>
-                  <Image
-                    className={styles.socialIcon}
-                    width={24}
-                    height={24}
-                    alt="Facebook"
-                    src="/ic_baseline-facebook.svg" // Ensure this image exists in the public folder
-                  />
+                  <a
+                    href="https://www.facebook.com/share/1DH8EULJHC/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      className={styles.socialIcon}
+                      width={24}
+                      height={24}
+                      alt="Facebook"
+                      src="/ic_baseline-facebook.svg" // Ensure this image exists in the public folder
+                    />
+                  </a>
                 </div>
                 <div className={styles.iconWrapper}>
-                  <Image
-                    className={styles.socialIcon}
-                    width={24}
-                    height={24}
-                    alt="Instagram"
-                    src="/mdi_instagram.svg" // Ensure this image exists in the public folder
-                  />
+                  <a
+                    href=" https://www.instagram.com/ideogfx_?igsh=aWFxbGJqbTA3dmF3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      className={styles.socialIcon}
+                      width={24}
+                      height={24}
+                      alt="Instagram"
+                      src="/mdi_instagram.svg" // Ensure this image exists in the public folder
+                    />
+                  </a>
                 </div>
                 <div className={styles.iconWrapper}>
-                  <Image
-                    className={styles.socialIcon}
-                    width={24}
-                    height={24}
-                    alt="Dribbble"
-                    src="/icon-park-solid_dribble.svg" // Ensure this image exists in the public folder
-                  />
+                  <a
+                    href="https://dribbble.com/ideogfx_"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      className={styles.socialIcon}
+                      width={24}
+                      height={24}
+                      alt="Dribbble"
+                      src="/icon-park-solid_dribble.svg" // Ensure this image exists in the public folder
+                    />
+                  </a>
                 </div>
                 <div className={styles.iconWrapper}>
-                  <Image
-                    className={styles.socialIcon}
-                    width={24}
-                    height={24}
-                    alt="Behance"
-                    src="/ant-design_behance-circle-filled.svg" // Ensure this image exists in the public folder
-                  />
+                  <a
+                    href="https://www.behance.net/ideographics"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      className={styles.socialIcon}
+                      width={24}
+                      height={24}
+                      alt="Behance"
+                      src="/ant-design_behance-circle-filled.svg" // Ensure this image exists in the public folder
+                    />
+                  </a>
                 </div>
                 <div className={styles.iconWrapper}>
-                  <Image
-                    className={styles.socialIcon}
-                    width={24}
-                    height={24}
-                    alt="LinkedIn"
-                    src="/entypo-social_linkedin-with-circle.svg" // Ensure this image exists in the public folder
-                  />
+                  <a
+                    href="https://www.linkedin.com/company/ideogfx/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      className={styles.socialIcon}
+                      width={24}
+                      height={24}
+                      alt="LinkedIn"
+                      src="/entypo-social_linkedin-with-circle.svg" // Ensure this image exists in the public folder
+                    />
+                  </a>
                 </div>
               </div>
               <div className={styles.address}>

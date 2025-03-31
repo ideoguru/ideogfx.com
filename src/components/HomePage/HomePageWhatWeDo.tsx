@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { useState } from "react";
 import styles from "../../styles/HomePageWhatWeDo.module.css";
+import Link from "next/link";
 
 const ArrowIcon: React.FC = () => (
   <Image width={17} height={17} alt="Arrow icon" src="/Intersect.svg" />
@@ -75,15 +76,17 @@ const WhatWeDoFrame: NextPage = () => {
         </div>
       </div>
       <div className={styles.whatWeDoCta}>
-        <div className={styles.btnLearnMore}>
-          <div className={styles.getStarted}>Learn More</div>
-          <Image
-            width={24}
-            height={24}
-            alt="Learn More"
-            src="/solar_arrow-right-up-linear.svg"
-          />
-        </div>
+        <Link href="/what-we-do">
+          <div className={styles.btnLearnMore}>
+            <div className={styles.getStarted}>Learn More</div>
+            <Image
+              width={24}
+              height={24}
+              alt="Learn More"
+              src="/solar_arrow-right-up-linear.svg"
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );

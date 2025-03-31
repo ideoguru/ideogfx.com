@@ -2,6 +2,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import styles from "../../styles/HomePageHero.module.css";
+import Link from "next/link";
 
 const HeroSectionFrame: NextPage = () => {
   const handleScrollDown = () => {
@@ -36,29 +37,21 @@ const HeroSectionFrame: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className={styles.heroCta}>
-          <div className={styles.getStarted}>Get Started</div>
-          <Image
-            className={styles.solararrowRightUpLinearIcon}
-            width={24}
-            height={24}
-            alt=""
-            src="/solar_arrow-right-up-linear.svg"
-          />
-        </div>
+        <Link href="/Get-in-touch">
+          <div className={styles.heroCta}>
+            <div className={styles.getStarted}>Get Started</div>
+            <Image
+              className={styles.solararrowRightUpLinearIcon}
+              width={24}
+              height={24}
+              alt=""
+              src="/solar_arrow-right-up-linear.svg"
+            />
+          </div>
+        </Link>
         <button className={styles.scrollDownIcon} onClick={handleScrollDown}>
-          <Image
-            width={48}
-            height={55}
-            alt="Scroll down"
-            src="/Group166.svg"
-          />
-          <Image
-            width={48}
-            height={55}
-            alt="Scroll down"
-            src="/Group2.svg"
-          />
+          <Image width={48} height={55} alt="Scroll down" src="/Group166.svg" />
+          <Image width={48} height={55} alt="Scroll down" src="/Group2.svg" />
         </button>
       </div>
     </div>
