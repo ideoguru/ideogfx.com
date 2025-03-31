@@ -6,8 +6,8 @@ import styles from "../../styles/WhatWeDoconversion.module.css";
 const HeroFrame: NextPage = () => {
   const handleScrollDown = () => {
     window.scrollBy({
-      top: window.innerHeight, // Scroll down by one viewport height
-      behavior: "smooth", // Smooth scroll
+      top: window.innerHeight,
+      behavior: "smooth",
     });
   };
 
@@ -19,13 +19,13 @@ const HeroFrame: NextPage = () => {
             width={48}
             height={55}
             alt="Scroll down"
-            src="/Group166.svg" // Initial SVG
+            src="/Group166.svg"
           />
           <Image
             width={48}
             height={55}
             alt="Scroll down"
-            src="/Group2.svg" // Arrow SVG
+            src="/Group2.svg"
           />
         </button>
         <div className={styles.heroContainerIn}>
@@ -39,25 +39,11 @@ const HeroFrame: NextPage = () => {
           </div>
           <div className={styles.coverImg}>
             <Image
-              className={styles.untitled61Icon}
-              width={395}
-              height={275}
-              alt="Left Image"
-              src="/whtwedo3.png"
-            />
-            <Image
-              className={styles.ipadMiniIcon}
+              className={styles.mainImage}
               width={668}
               height={491}
               alt="Main Image"
-              src="/whtwedo1.png"
-            />
-            <Image
-              className={styles.untitled51Icon}
-              width={395}
-              height={275}
-              alt="Right Image"
-              src="/whtwedo2.png"
+              src="/WhatWeDo-Hero Image.png"
             />
           </div>
         </div>
@@ -67,3 +53,4 @@ const HeroFrame: NextPage = () => {
 };
 
 export default HeroFrame;
+         
