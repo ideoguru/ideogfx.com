@@ -220,7 +220,7 @@ const GetInTouchForm: NextPage = () => {
               <br />
               Kakkanad, Kochi, Kerala - 682037
             </p>
-            <h2 className={styles.sectionTitle}>Phone: +91 8075873153</h2>
+            <h2 className={styles.sectionTitle}>Phone: +91 8921700822</h2>
             <h2 className={styles.sectionTitle}>Email: info@ideogfx.com</h2>
           </div>
           <div className={styles.socialIcons}>
