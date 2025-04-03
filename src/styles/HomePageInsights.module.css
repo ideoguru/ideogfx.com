@@ -17,11 +17,13 @@
 
 .insightsTitle {
   width: 100%;
-  text-align: center;
+  max-width: 1200px;
+  text-align: left;
   letter-spacing: 0.01em;
   line-height: 48px;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
 }
 
 .insightsContainer {
@@ -52,9 +54,9 @@
   position: relative;
   background-size: cover;
   background-position: center;
-  display: flex; /* Add flex layout */
+  display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Push text to bottom */
+  justify-content: flex-end;
 }
 
 .cardVersion1 {
@@ -72,50 +74,43 @@
 
 /* Text Overlay Styles */
 .text {
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
   backdrop-filter: blur(40px);
   border-radius: 16px;
   background-color: rgba(247, 248, 250, 0.75);
   padding: 24px;
-  box-sizing: border-box;
-  position: relative; /* Change from absolute */
-  width: calc(100% - 40px); /* Replace left/right positioning */
   margin: 20px;
-  min-height: 110px; /* Set minimum height */
+  width: calc(100% - 40px);
+  min-height: 110px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .textInner {
-  flex-grow: 1; /* Fill available space */
-  display: flex;
-  height: 100%;
+  width: 100%;
 }
 
 .howToConductAUxAuditToIWrapper {
-  height: 100%;
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
 }
 
 .howToConduct {
-  font-size: 18px;
+  font-size: 15px;
   letter-spacing: 0.5px;
   line-height: 24px;
   font-weight: 600;
   font-family: "Open Sans";
   color: #151515;
-  margin: 0;
+  text-align: center;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: flex;
-  align-items: flex-start;
-  height: 100%;
-  -webkit-line-clamp: 5; /* Allow more lines for consistency */
+  -webkit-box-pack: center;
+  width: 100%;
+  margin: 0;
 }
 
 /* Navigation Buttons */
@@ -126,7 +121,7 @@
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.8);
+  /* background: rgba(255, 255, 255, 0.8); */
   border-radius: 50%;
   padding: 8px;
   transition: opacity 0.3s ease;
@@ -213,9 +208,8 @@
 
   .text {
     padding: 20px;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
+    margin: 15px;
+    width: calc(100% - 30px);
   }
 }
 
@@ -256,9 +250,8 @@
 
   .text {
     padding: 16px;
-    bottom: 12px;
-    left: 12px;
-    right: 12px;
+    margin: 12px;
+    width: calc(100% - 24px);
   }
 
   .howToConduct {

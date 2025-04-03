@@ -38,28 +38,29 @@
   max-width: 704px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center container */
-  margin: 0 auto; /* Horizontal centering */
+  align-items: center;
+  margin: 0 auto;
   gap: 12px;
 }
 
 .container {
   width: 100%;
+  height: 315px; /* Fixed height for all testimonials */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center children */
   gap: 24px;
 }
-
 .ideoGraphicsHas {
-  width: 100%;
+  flex: 1; /* Take remaining space */
+  overflow-y: auto; /* Enable scrolling for long quotes */
   position: relative;
   letter-spacing: 0.25px;
   line-height: 22px;
   font-size: 16px;
-  text-align: left; /* Maintain text alignment */
+  /* Hide scrollbar visually */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-
 .clientDetailContainer {
   display: flex;
   flex-direction: row;
@@ -67,7 +68,6 @@
   gap: 20px; /* Space between image and text */
   width: 100%;
 }
-
 
 .clientImg {
   width: 120px;
@@ -112,6 +112,14 @@
   justify-content: center; /* Center buttons */
   gap: 4px;
   margin-top: 20px;
+}
+
+.ideoGraphicsHas::-webkit-scrollbar {
+  display: none;
+}
+
+.clientDetailContainer {
+  margin-top: auto; /* Push client details to bottom */
 }
 
 /* Responsive Styles */

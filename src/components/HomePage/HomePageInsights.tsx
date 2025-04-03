@@ -1,28 +1,38 @@
 "use client";
 import type { NextPage } from "next";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import styles from "../../styles/HomePageInsights.module.css";
 import Link from "next/link";
 
 const InsightsFrame: NextPage = () => {
   const cardsWrapperRef = useRef<HTMLDivElement>(null);
-
-  const scrollLeft = () => {
-    if (cardsWrapperRef.current) {
-      cardsWrapperRef.current.scrollBy({
-        left: -300,
-        behavior: "smooth",
-      });
-    }
-  };
+  const [isScrolling, setIsScrolling] = useState(false);
 
   const scrollRight = () => {
-    if (cardsWrapperRef.current) {
-      cardsWrapperRef.current.scrollBy({
-        left: 300,
-        behavior: "smooth",
-      });
+    if (cardsWrapperRef.current && !isScrolling) {
+      setIsScrolling(true);
+
+      const container = cardsWrapperRef.current;
+      const containerWidth = container.offsetWidth;
+      const scrollWidth = container.scrollWidth;
+      const scrollLeft = container.scrollLeft;
+
+      // If near the end, reset to start (with smooth transition)
+      if (scrollLeft + containerWidth >= scrollWidth - 10) {
+        container.scrollTo({
+          left: 0,
+          behavior: "smooth",
+        });
+      } else {
+        container.scrollBy({
+          left: containerWidth,
+          behavior: "smooth",
+        });
+      }
+
+      // Reset scrolling state after animation
+      setTimeout(() => setIsScrolling(false), 500);
     }
   };
 
@@ -87,23 +97,14 @@ const InsightsFrame: NextPage = () => {
             </div>
           </div>
 
-          <div className={styles.btnPrev} onClick={scrollLeft}>
-            <Image
-              className={styles.arrowIcon}
-              width={48}
-              height={48}
-              alt="Previous"
-              src="/iconamoon_arrow-right-2-bold.png"
-              style={{ transform: "rotate(180deg)" }}
-            />
-          </div>
+          {/* Only the Next button remains */}
           <div className={styles.btnNext} onClick={scrollRight}>
             <Image
               className={styles.arrowIcon}
               width={48}
               height={48}
               alt="Next"
-              src="/iconamoon_arrow-right-2-bold.png"
+              src="/scroll-arrow.svg"
             />
           </div>
         </div>
