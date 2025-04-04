@@ -5,6 +5,7 @@
   line-height: 48px;
   font-weight: 600;
 }
+
 .caseStudiesWrapper {
   align-self: stretch;
   display: flex;
@@ -12,6 +13,7 @@
   align-items: flex-end;
   justify-content: flex-start;
 }
+
 .caseStudiesTitles {
   width: 1158px;
   display: flex;
@@ -19,6 +21,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .maskGroupIcon {
   width: 1160px;
   position: absolute;
@@ -28,20 +31,21 @@
   height: 338.5px;
   z-index: 0;
 }
+
 .orderManagementSystem {
   align-self: stretch;
   position: relative;
   line-height: 28px;
   font-weight: 600;
 }
+
 .loremIpsumDolor {
-  align-self: stretch;
-  position: relative;
   font-size: 16px;
-  letter-spacing: 0.25px;
   line-height: 22px;
-  font-family: "Open Sans";
+  color: var(--Athens-gray, #F9F9F9);
+  font-family: 'Open Sans';
 }
+
 .orderManagementSystemOfflParent {
   align-self: stretch;
   display: flex;
@@ -50,6 +54,7 @@
   justify-content: flex-start;
   gap: 16px;
 }
+
 .iconamoonarrowRight2Bold {
   width: 32px;
   position: relative;
@@ -59,6 +64,7 @@
   flex-shrink: 0;
   object-fit: contain;
 }
+
 .iconamoonarrowRight2BoldWrapper {
   background-color: rgba(255, 255, 255, 0);
   overflow: hidden;
@@ -67,6 +73,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .frameChild {
   width: 32px;
   height: 32px;
@@ -74,26 +81,21 @@
   flex-shrink: 0;
   object-fit: contain;
 }
+
 .instanceParent {
-  align-self: stretch;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   gap: 4px;
+  margin-top: auto;
 }
+
 .leftColumnText {
-  width: 566px;
-  height: 487px;
+  max-width: 566px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 40px;
-  box-sizing: border-box;
   gap: 24px;
-  z-index: 0;
+  z-index: 1;
 }
+
 .maskGroupIcon1 {
   width: 273px;
   position: absolute;
@@ -103,83 +105,146 @@
   height: 203.5px;
   z-index: 0;
 }
+
 .personalisedBusinessAccounti {
   align-self: stretch;
   position: relative;
   letter-spacing: 0.25px;
   line-height: 22px;
   font-weight: 600;
-  z-index: 1;
+  z-index: 2;
 }
 
-.card1,
-.card2 {
-  flex: 1;
-  border-radius: 24px;
-  height: 408px; /* Adjust height if needed */
-  width: 300px; /* Increase width to prevent cropping */
-  overflow: hidden;
+.card1 {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
+  width: 273px;
+  height: 407px;
   padding: 24px;
-  box-sizing: border-box;
-  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
   gap: 26px;
-  background-size: cover; /* Ensure the image covers the card */
-  background-repeat: no-repeat;
-  background-position: center; /* Center the image */
+  flex-shrink: 0;
+  border-radius: 24px;
+  border: 1px solid #C8C8C8;
+  background: url(/Rectangle_81.png) lightgray 50% / cover no-repeat;
+  color: var(--Athens-gray, #F9F9F9);
+  position: relative;
+  overflow: hidden;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  /* 137.5% */
+  letter-spacing: 0.25px;
+
+
 }
+
+/* .card1::after, .card2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  z-index: 1;
+} */
+
+/* Rectangle-final Card */
+.card2 {
+  display: flex;
+  width: 273px;
+  height: 407px;
+  padding: 24px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 26px;
+  flex: 1 0 0;
+  border-radius: 24px;
+  border: 1px solid var(--new-stroke-linear, #C8C8C8);
+  background: url(/Rectangle-final.png) lightgray 50% / cover no-repeat;
+  color: var(--Athens-gray, #F9F9F9);
+  position: relative;
+  overflow: hidden;
+  color: var(--Athens-gray, #F9F9F9);
+  /* Body Default Bold */
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  /* 137.5% */
+  letter-spacing: 0.25px;
+}
+
 
 .rightColumnCards {
-  width: 100%; /* Adjust width to fit the cards */
   display: flex;
-  flex-direction: row;
+  width: 566px;
+  padding: 10px 0;
   align-items: flex-start;
-  justify-content: space-between; /* Add space between cards */
-  padding: 40px 0;
-  box-sizing: border-box;
-  gap: 20px; /* Adjust gap between cards */
-  z-index: 1;
-  font-size: 16px;
-  font-family: "Open Sans";
+  gap: 20px;
+  position: absolute;
+  right: -90px;
 }
+
 .caseStudiesContainer {
-  align-self: stretch;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: relative;
-  gap: 26px;
-  z-index: 1;
-}
-.caseStudiesCard {
   width: 100%;
-  max-width: 1160px; /* Adjust based on your design */
-  border-radius: 24px;
-  height: 677px;
-  overflow: hidden;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center children horizontally */
-  justify-content: flex-end;
-  position: relative;
-  gap: 26px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  font-size: 22px;
-  color: #f7f8fa;
+  height: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: flex-end;
 }
+
+.caseStudiesContainer>* {
+  position: relative;
+  z-index: 2;
+}
+
+.caseStudiesCard {
+  display: flex;
+  gap: 26px;
+  border-radius: 24px;
+  background: url(/Case_Studies_Card.png) lightgray 50% / cover no-repeat;
+  color: var(--Athens-gray, #F9F9F9);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  width: 1160px;
+  height: 677px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* .caseStudiesCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+} */
+
 .getStarted {
   position: relative;
   letter-spacing: 0.5px;
   line-height: 24px;
   font-weight: 600;
 }
+
 .solararrowRightUpLinearIcon {
   width: 24px;
   position: relative;
@@ -187,22 +252,19 @@
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .caseStudiesButton {
   backdrop-filter: blur(41.85px);
   border-radius: 2322.58px;
-  background: linear-gradient(
-    99.58deg,
-    rgba(115, 171, 216, 0.75),
-    rgba(187, 186, 225, 0.75)
-  );
+  background: linear-gradient(99.58deg, rgba(115, 171, 216, 0.75), rgba(187, 186, 225, 0.75));
   border: 1px solid #fff;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
 }
+
 .caseStudiesCtaFrame {
   width: 1160px;
   display: flex;
@@ -213,16 +275,15 @@
   color: #151515;
   font-family: "Open Sans";
 }
+
 .caseStudiesFrame {
   width: 100%;
-  max-width: 1200px; /* Adjust based on your design */
-  margin: 0 auto; /* Center the component */
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center children horizontally */
+  align-items: center;
   justify-content: flex-start;
-  padding: 56px 20px; /* Adjust padding as needed */
+  padding: 56px 20px;
   box-sizing: border-box;
   gap: 40px;
   text-align: left;
