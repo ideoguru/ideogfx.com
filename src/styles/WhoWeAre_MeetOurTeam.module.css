@@ -45,7 +45,8 @@
 
 /* Updated Annotation Styles */
 .annotation {
-  display: inline-flex;
+  display: flex;
+  align-items: flex-start; /* Keep icon at top */
   padding: 12px;
   gap: 8px;
   border-radius: 12px;
@@ -54,11 +55,12 @@
   backdrop-filter: blur(20px);
   position: absolute;
   z-index: 1;
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease; /* Only transition box-shadow */
   max-width: 220px;
   cursor: pointer;
-  overflow: hidden;
+  min-height: 60px; /* Minimum height to prevent shifting */
 }
+
 
 .frameIcon {
   flex-shrink: 0;
