@@ -74,9 +74,9 @@
 .contactSupportImage {
   /* Original positioning maintained */
   position: absolute;
-  width: 372px;
-  height: 372px;
-  top: 8%;
+  width: 295px;
+  height: 329px;
+  top: 14%;
   left: 64%;
   transform: translate(-50%, -50%);
   opacity: 0.9;
