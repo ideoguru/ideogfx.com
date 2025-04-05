@@ -167,22 +167,28 @@ gap: 4px;
 
 .copyrightSection {
   display: flex;
-  flex-direction: column; /* Stack copyright and legal links vertically on mobile */
-  align-items: center; /* Center align for mobile */
-  gap: 16px;
-  font-size: 12px;
-  color: #1d1d1d;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px; /* Adjust this value for spacing between elements */
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 16px 0;
 }
 
 .copyRight {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 .legalFooterSection {
   display: flex;
-  gap: 16px;
+  gap: 24px; /* Spacing between legal links */
+  margin: 0;
 }
+
+
 
 .legalLink {
   cursor: pointer;
@@ -216,10 +222,6 @@ gap: 4px;
   .rightTextColumn {
     width: 264px; /* Restore original width for larger screens */
     align-items: flex-end; /* Align right for larger screens */
-  }
-  .copyrightSection {
-    flex-direction: row; /* Restore horizontal layout for larger screens */
-    justify-content: space-between;
   }
   .rightTextColumn {
     width: 264px;

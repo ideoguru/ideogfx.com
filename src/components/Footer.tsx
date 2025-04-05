@@ -150,7 +150,10 @@ const Footer: NextPage = () => {
           {/* Copyright Section */}
           <div className={styles.copyrightSection}>
             <div className={styles.copyRight}>
-              <div className={styles.copyrightText}>© 2025 Ideo Graphics.</div>
+            <div className={styles.legalLink}>
+                <div className={styles.linkText}>© 2025 Ideo Graphics.</div>
+              </div>
+              {/* <div className={styles.linkText}>© 2025 Ideo Graphics.</div> */}
             </div>
             <div className={styles.legalFooterSection}>
               <div className={styles.legalLink}>
