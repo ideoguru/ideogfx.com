@@ -93,11 +93,11 @@
 }
 
 .rightTextColumn {
-  width: 100%; /* Full width on mobile */
+  width: 100%; 
   display: flex;
   flex-direction: column;
   gap: 8px;
-  align-items: center; /* Center align for mobile */
+  align-items: center; /* Center on mobile */
 }
 
 .heading {
@@ -115,15 +115,20 @@
   background-color: #f7f8fa;
   border-radius: 56px;
   padding: 4px;
+  /* border-radius: 100px; */
+  
 }
 
 .iconWrapper {
-  border-radius: 100px;
-  padding: 12px;
+  border-radius: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  align-self: stretch;
+  display: flex;
+padding: 4px;
+gap: 4px;
 }
 
 .socialIcon {
@@ -212,17 +217,24 @@
     width: 264px; /* Restore original width for larger screens */
     align-items: flex-end; /* Align right for larger screens */
   }
-
-  .address {
-    text-align: right; /* Align right for larger screens */
-  }
-
-  .contactInfo {
-    align-items: flex-end; /* Align right for larger screens */
-  }
-
   .copyrightSection {
     flex-direction: row; /* Restore horizontal layout for larger screens */
     justify-content: space-between;
+  }
+  .rightTextColumn {
+    width: 264px;
+    align-items: flex-start; /* Changed from flex-end to flex-start */
+  }
+
+  .address {
+    text-align: left; /* Changed from right */
+  }
+
+  .contactInfo {
+    align-items: flex-start; /* Changed from flex-end */
+  }
+
+  .socialIcons {
+    justify-content: flex-start; /* Add this to align icons to left */
   }
 }
