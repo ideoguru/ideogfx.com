@@ -53,7 +53,10 @@
 }
 
 .getStarted:hover {
-  background-color: rgba(234, 235, 240, 0.8);
+  background: linear-gradient(135deg, #6b00b3, #d8499c 52%, #d8499c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 /* Hamburger Menu Icon */
@@ -116,6 +119,7 @@
 
 /* Active Link Style */
 .active {
+  background-color: rgba(234, 235, 240, 0.8);
   background: linear-gradient(135deg, #6b00b3, #d8499c 52%, #d8499c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

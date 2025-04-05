@@ -26,7 +26,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Viewport meta tag for responsiveness */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* COMMENTED TEMPORARLY TO FORCE DESKTOP VIEWPORT */}
+        {/* <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
+        <meta name="viewport" content="width=1280, user-scalable=no" />
 
         {/* Add other meta tags for SEO */}
         <meta name="description" content="Your site description here" />
