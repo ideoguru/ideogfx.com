@@ -91,26 +91,21 @@ const CaseStudiesFrame: NextPage = () => {
               </div>
             </div>
             <div className={styles.instanceParent}>
-              <div
-                className={styles.iconamoonarrowRight2BoldWrapper}
-                onClick={handlePrev}
-              >
+              <div className={styles.arrowButton} onClick={handlePrev}>
                 <Image
-                  className={styles.iconamoonarrowRight2Bold}
                   width={32}
                   height={32}
                   alt="Previous"
                   src="/iconamoon_arrow-left-2-bold.svg"
                 />
+              </div><div className={`${styles.arrowButton} ${styles.mirrored}`} onClick={handleNext}>
+                <Image
+                  width={32}
+                  height={32}
+                  alt="Next"
+                  src="/iconamoon_arrow-left-2-bold.svg"
+                />
               </div>
-              <Image
-                className={styles.frameChild}
-                width={32}
-                height={32}
-                alt="Next"
-                src="/iconamoon_arrow-right-2-bold.svg"
-                onClick={handleNext}
-              />
             </div>
           </div>
           <div className={styles.rightColumnCards}>
