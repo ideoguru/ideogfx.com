@@ -111,10 +111,10 @@
 
 .socialIcons {
   display: flex;
-  gap: 4px;
+  gap: 10px;
   background-color: #f7f8fa;
   border-radius: 56px;
-  padding: 4px;
+  padding: 10px;
   /* border-radius: 100px; */
 }
 
