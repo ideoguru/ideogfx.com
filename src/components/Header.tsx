@@ -1,4 +1,4 @@
-"use client"; // Ensuring this is a client-side component
+"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -6,52 +6,50 @@ import Image from "next/image";
 import styles from "../styles/HomePage.module.css";
 
 const Header = () => {
-  const [activeLink, setActiveLink] = useState(""); // Initialize activeLink state
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State for mobile menu toggle
+  const [activeLink, setActiveLink] = useState("");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // This effect ensures the active link is set when the page loads
+  // Get pathname safely
   useEffect(() => {
-    const path = window.location.pathname;
-    if (path.includes("who-we-are")) {
-      setActiveLink("who-we-are");
-    } else if (path.includes("what-we-do")) {
-      setActiveLink("what-we-do");
-    } else if (path.includes("Resources")) {
-      setActiveLink("Resources");
-    } else if (path.includes("Get-in-touch")) {
-      setActiveLink("Get-in-touch");
+    if (typeof window !== "undefined") {
+      const path = window.location.pathname.split('/')[1];
+      setActiveLink(path || "");
     }
   }, []);
 
   const handleLinkClick = (link: string) => {
-    setActiveLink(link); // Update active link when clicked
-    setIsMobileMenuOpen(false); // Close mobile menu after clicking a link
+    setActiveLink(link);
+    setIsMobileMenuOpen(false);
   };
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen); // Toggle mobile menu visibility
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  const navItems = [
+    { path: "who-we-are", label: "Who We Are" },
+    { path: "what-we-do", label: "What We Do" },
+    { path: "Resources", label: "Resources" },
+    { path: "Get-in-touch", label: "Get In Touch" },
+  ];
 
   return (
     <>
-      {/* Logo Container (Outside frameParent16) */}
       <div className={styles.logoContainer}>
-        <Link href="/">
+        <Link href="/" passHref>
           <div className={styles.asset18288x81Wrapper}>
             <Image
-              className={styles.asset18288x81}
+              src="/logo.png"
               width={48}
               height={44}
-              alt="Logo"
-              src="/logo.png"
+              alt="Company Logo"
+              priority
             />
           </div>
         </Link>
       </div>
 
-      {/* Header Container (frameParent16) */}
       <div className={styles.frameParent16}>
-        {/* Hamburger Menu Icon (Mobile Only) */}
         <div
           className={`${styles.menuIcon} ${
             isMobileMenuOpen ? styles.mobileMenuOpen : ""
@@ -63,60 +61,23 @@ const Header = () => {
           <div className={styles.bar}></div>
         </div>
 
-        {/* Navigation Links */}
         <div
           className={`${styles.frameParent17} ${
             isMobileMenuOpen ? styles.mobileMenuOpen : ""
           }`}
         >
-          <div className={styles.whoWeAreWrapper}>
-            <Link href="/who-we-are">
+          {navItems.map((item) => (
+            <Link key={item.path} href={`/${item.path}`} passHref>
               <div
                 className={`${styles.getStarted} ${
-                  activeLink === "who-we-are" ? styles.active : ""
+                  activeLink === item.path ? styles.active : ""
                 }`}
-                onClick={() => handleLinkClick("who-we-are")}
+                onClick={() => handleLinkClick(item.path)}
               >
-                Who We Are
+                <span className={styles.linkText}>{item.label}</span>
               </div>
             </Link>
-          </div>
-          <div className={styles.whatWeDoContainer}>
-            <Link href="/what-we-do">
-              <div
-                className={`${styles.getStarted} ${
-                  activeLink === "what-we-do" ? styles.active : ""
-                }`}
-                onClick={() => handleLinkClick("what-we-do")}
-              >
-                What We Do
-              </div>
-            </Link>
-          </div>
-          <div className={styles.insightsWrapper}>
-            <Link href="/Resources">
-              <div
-                className={`${styles.getStarted} ${
-                  activeLink === "Resources" ? styles.active : ""
-                }`}
-                onClick={() => handleLinkClick("Resources")}
-              >
-                Resources
-              </div>
-            </Link>
-          </div>
-          <div className={styles.getInTouchWrapper}>
-            <Link href="/Get-in-touch">
-              <div
-                className={`${styles.getStarted} ${
-                  activeLink === "Get-in-touch" ? styles.active : ""
-                }`}
-                onClick={() => handleLinkClick("Get-in-touch")}
-              >
-                Get In Touch
-              </div>
-            </Link>
-          </div>
+          ))}
         </div>
       </div>
     </>
