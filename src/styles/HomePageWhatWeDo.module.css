@@ -42,13 +42,12 @@
   gap: 20px;
   align-items: flex-start;
   position: relative;
-  background: linear-gradient(
-    99.58deg,
-    rgba(115, 171, 216, 0.75),
-    rgba(187, 186, 225, 0.75)
-  );
-  border-radius: 12px; /* Add rounded corners */
+  /* border-radius: 12px; Add rounded corners */
   padding: 20px; /* Add padding to create space inside the box */
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
 }
 
 /* Left column with services */
@@ -64,31 +63,38 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 16px;
-  background-color: #eaebf0;
-  border-radius: 100px;
+  height: 72px;
+  padding: 12px 12px 12px 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+  background-color: transparent;
+  align-self: stretch;
 }
 
 .serviceItem:hover {
-  background-color: #d38ab2;
-  transform: translateX(10px);
+  background-color: #f7f8fa;
+  border-radius: 100px;
 }
 
 .serviceText {
   font-size: 18px;
-  color: #151515;
+  color: #151515; /* Black color */
 }
 
 .arrow {
   width: 48px;
   height: 48px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  background-color: #d38ab2;
+  background-color: transparent; /* Default state */
   border-radius: 100px;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.serviceItem:hover .arrow {
+  display: flex;
+  background-color: #d38ab2; /* Visible on hover */
 }
 
 /* Card with image and text */

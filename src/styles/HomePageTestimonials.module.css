@@ -110,8 +110,35 @@
   width: 100%;
   display: flex;
   justify-content: center; /* Center buttons */
-  gap: 4px;
+  gap: 5px;
   margin-top: 20px;
+}
+
+.btnPrevBtnNext button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnPrevBtnNext button:hover {
+  background: #f9f9f9 !important;
+  transform: scale(1.05);
+}
+
+/* Optional: Add hover effect to images */
+.btnPrevBtnNext button:hover img {
+  filter: brightness(0.8); /* Subtle image darkening on hover */
+}
+
+/* If you need to override existing button styles */
+.btnPrevBtnNext button:active,
+.btnPrevBtnNext button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .ideoGraphicsHas::-webkit-scrollbar {
