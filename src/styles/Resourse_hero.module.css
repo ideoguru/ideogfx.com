@@ -89,7 +89,8 @@
   align-items: center;
   flex-shrink: 0;
   position: absolute;
-  bottom: 150px;
+  outline: none;
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
   background: none;
@@ -97,9 +98,16 @@
   cursor: pointer;
   animation: breathe 2s infinite;
 }
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 
+.scrollDownIcon img:last-child {
+  animation: blink 1s infinite; /* Add this line */
+}
 /* Responsive Adjustments */
-@media (max-width: 1600px) {
+/* @media (max-width: 1600px) {
   .heroSection {
     padding: 0 200px;
   }
@@ -126,45 +134,21 @@
   .headingContainer {
     width: 100%;
   }
-}
+} */
 
 @media (max-width: 768px) {
-  .heroSection {
-    padding: 0 20px;
-  }
-  
-  .stayText {
-    font-size: 40px;
-    line-height: 48px;
-  }
-  
-  .updatedGradient {
-    font-size: 80px;
-    line-height: 100px;
-    margin-top: -20px;
+  .scrollDownIcon {
+    bottom: 40px !important; /* Adjust mobile position */
   }
 }
 
 @media (max-width: 480px) {
-  .stayText {
-    font-size: 32px;
-    line-height: 40px;
-  }
-  
-  .updatedGradient {
-    font-size: 60px;
-    line-height: 72px;
-  }
-  
-  .heroCard {
-    height: 300px;
-  }
-  
   .scrollDownIcon {
-    bottom: 20px;
+    bottom: 20px !important;
+    width: 36px;
+    height: 42px;
   }
 }
-
 /* Keep existing animations and other styles */
 @keyframes breathe {
   0%, 100% { transform: translateX(-50%) scale(1); }
