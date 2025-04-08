@@ -15,13 +15,13 @@ body {
   margin: 0;
   line-height: normal;
   color: #171717; /* Explicitly set text color */
-  background: #ffffff; /* Explicitly set background color */
+  background: #f9f9f9; /* Explicitly set background color */
   font-family: Arial, Helvetica, sans-serif;
   zoom: 85%;
 }
 
 :root {
-  --background: #ffffff; /* Set background to white */
+  --background: #f9f9f9; /* Set background to white */
   --foreground: #171717; /* Set text color to dark */
 }
 
