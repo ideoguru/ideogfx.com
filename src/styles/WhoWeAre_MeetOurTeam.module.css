@@ -1,7 +1,7 @@
 /* WhoWeAre_MeetOurTeam.module.css */
 .meetOurTeam {
   padding: 40px 20px;
-  background: #fff;
+  background: #f9f9f9;
 }
 
 .container {
@@ -60,7 +60,6 @@
   cursor: pointer;
   min-height: 60px; /* Minimum height to prevent shifting */
 }
-
 
 .frameIcon {
   flex-shrink: 0;
