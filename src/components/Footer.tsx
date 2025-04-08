@@ -58,7 +58,7 @@ const Footer: NextPage = () => {
               <div className={styles.socialIcons}>
                 <div className={styles.iconWrapper}>
                   <a
-                    href="https://www.facebook.com/share/1DH8EULJHC/"
+                    href="https://www.linkedin.com/company/ideogfx/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -66,8 +66,8 @@ const Footer: NextPage = () => {
                       className={styles.socialIcon}
                       width={24}
                       height={24}
-                      alt="Facebook"
-                      src="/ic_baseline-facebook.svg" // Ensure this image exists in the public folder
+                      alt="LinkedIn"
+                      src="/entypo-social_linkedin-with-circle.svg" // Ensure this image exists in the public folder
                     />
                   </a>
                 </div>
@@ -88,7 +88,7 @@ const Footer: NextPage = () => {
                 </div>
                 <div className={styles.iconWrapper}>
                   <a
-                    href="https://dribbble.com/ideogfx_"
+                    href="https://www.facebook.com/share/1DH8EULJHC/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -96,8 +96,8 @@ const Footer: NextPage = () => {
                       className={styles.socialIcon}
                       width={24}
                       height={24}
-                      alt="Dribbble"
-                      src="/icon-park-solid_dribble.svg" // Ensure this image exists in the public folder
+                      alt="Facebook"
+                      src="/ic_baseline-facebook.svg" // Ensure this image exists in the public folder
                     />
                   </a>
                 </div>
@@ -118,7 +118,7 @@ const Footer: NextPage = () => {
                 </div>
                 <div className={styles.iconWrapper}>
                   <a
-                    href="https://www.linkedin.com/company/ideogfx/"
+                    href="https://dribbble.com/ideogfx_"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -126,8 +126,8 @@ const Footer: NextPage = () => {
                       className={styles.socialIcon}
                       width={24}
                       height={24}
-                      alt="LinkedIn"
-                      src="/entypo-social_linkedin-with-circle.svg" // Ensure this image exists in the public folder
+                      alt="Dribbble"
+                      src="/icon-park-solid_dribble.svg" // Ensure this image exists in the public folder
                     />
                   </a>
                 </div>
@@ -150,7 +150,7 @@ const Footer: NextPage = () => {
           {/* Copyright Section */}
           <div className={styles.copyrightSection}>
             <div className={styles.copyRight}>
-            <div className={styles.legalLink}>
+              <div className={styles.legalLink}>
                 <div className={styles.linkText}>© 2025 Ideo Graphics.</div>
               </div>
               {/* <div className={styles.linkText}>© 2025 Ideo Graphics.</div> */}
