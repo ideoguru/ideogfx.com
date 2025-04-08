@@ -42,8 +42,8 @@
 .loremIpsumDolor {
   font-size: 16px;
   line-height: 22px;
-  color: var(--Athens-gray, #F9F9F9);
-  font-family: 'Open Sans';
+  color: var(--Athens-gray, #f9f9f9);
+  font-family: "Open Sans";
 }
 
 .orderManagementSystemOfflParent {
@@ -88,7 +88,6 @@
   gap: 0; 
 } */
 
-
 .leftColumnText {
   max-width: 566px;
   display: flex;
@@ -127,9 +126,9 @@
   gap: 26px;
   flex-shrink: 0;
   border-radius: 24px;
-  border: 1px solid #C8C8C8;
+  border: 1px solid #c8c8c8;
   background: url(/Rectangle_81.png) lightgray 50% / cover no-repeat;
-  color: var(--Athens-gray, #F9F9F9);
+  color: var(--Athens-gray, #f9f9f9);
   position: relative;
   overflow: hidden;
   font-family: "Open Sans";
@@ -139,8 +138,6 @@
   line-height: 22px;
   /* 137.5% */
   letter-spacing: 0.25px;
-
-
 }
 .instanceParent {
   display: flex;
@@ -150,7 +147,7 @@
   align-self: stretch;
   width: 100%;
   padding: 8px 0;
-  background: rgba(255, 255, 255, 0.00);
+  background: rgba(255, 255, 255, 0);
   border-radius: 24px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -158,7 +155,7 @@
   cursor: pointer;
   padding: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.00);
+  background: rgba(255, 255, 255, 0);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   display: flex;
@@ -167,7 +164,7 @@
   margin: 0 -4px;
 }
 .arrowButton:hover {
-  background: rgba(255, 255, 255, 0.00);
+  background: rgba(255, 255, 255, 0);
   transform: scale(1.05);
 }
 
@@ -208,12 +205,12 @@
   gap: 26px;
   flex: 1 0 0;
   border-radius: 24px;
-  border: 1px solid var(--new-stroke-linear, #C8C8C8);
+  border: 1px solid var(--new-stroke-linear, #c8c8c8);
   background: url(/Rectangle-final.png) lightgray 50% / cover no-repeat;
-  color: var(--Athens-gray, #F9F9F9);
+  color: var(--Athens-gray, #f9f9f9);
   position: relative;
   overflow: hidden;
-  color: var(--Athens-gray, #F9F9F9);
+  color: var(--Athens-gray, #f9f9f9);
   /* Body Default Bold */
   font-family: "Open Sans";
   font-size: 16px;
@@ -223,7 +220,6 @@
   /* 137.5% */
   letter-spacing: 0.25px;
 }
-
 
 .rightColumnCards {
   display: flex;
@@ -245,7 +241,7 @@
   align-items: flex-end;
 }
 
-.caseStudiesContainer>* {
+.caseStudiesContainer > * {
   position: relative;
   z-index: 2;
 }
@@ -255,7 +251,7 @@
   gap: 26px;
   border-radius: 24px;
   background: url(/Case_Studies_Card.png) lightgray 50% / cover no-repeat;
-  color: var(--Athens-gray, #F9F9F9);
+  color: var(--Athens-gray, #f9f9f9);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -295,13 +291,21 @@
 .caseStudiesButton {
   backdrop-filter: blur(41.85px);
   border-radius: 2322.58px;
-  background: linear-gradient(99.58deg, rgba(115, 171, 216, 0.75), rgba(187, 186, 225, 0.75));
+  background: linear-gradient(
+    99.58deg,
+    rgba(115, 171, 216, 0.75),
+    rgba(187, 186, 225, 0.75)
+  );
   border: 1px solid #fff;
   padding: 16px;
   display: flex;
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.caseStudiesButton:hover {
+  transform: translateY(-2px) scale(1.05); /* Combined transforms */
 }
 
 .caseStudiesCtaFrame {

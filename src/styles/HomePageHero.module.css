@@ -105,6 +105,7 @@
 }
 .heroCta {
   position: absolute;
+  transition: all 0.3s ease;
   top: 626px;
   left: 881px;
   backdrop-filter: blur(41.85px);
@@ -125,6 +126,16 @@
   color: #151515;
   font-family: "Open Sans";
 }
+.heroCta:hover {
+  /* background: linear-gradient(
+    99.58deg,
+    rgba(115, 171, 216, 1),
+    rgba(187, 186, 225, 1)
+  ); */
+  /* color: #fff; */
+  transform: translateY(-2px) scale(1.05); /* Combined transforms */
+}
+
 @keyframes breathe {
   0%,
   100% {
