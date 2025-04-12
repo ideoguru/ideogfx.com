@@ -2,6 +2,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import styles from "../../styles/Resourse_hero.module.css";
+import Link from "next/link";
 
 const ResourcesHero: NextPage = () => {
   const handleScrollDown = () => {
@@ -44,16 +45,18 @@ const ResourcesHero: NextPage = () => {
               Sed sed dovet esse emis augue bibendum liberdiam. Nunc eu sapien
               volut inerte.
             </p>
-            <button className={styles.learnMoreButton}>
-              Learn More
-              <Image
-                src="/solar_arrow-right-up-linear.svg"
-                width={20}
-                height={20}
-                alt="arrow"
-                className={styles.buttonIcon}
-              />
-            </button>
+            <Link href="/Get-in-touch">
+              <button className={styles.learnMoreButton}>
+                Learn More
+                <Image
+                  src="/solar_arrow-right-up-linear.svg"
+                  width={20}
+                  height={20}
+                  alt="arrow"
+                  className={styles.buttonIcon}
+                />
+              </button>
+            </Link>
           </div>
         </div>
       </div>

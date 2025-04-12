@@ -35,7 +35,29 @@ const InsightsFrame: NextPage = () => {
       setTimeout(() => setIsScrolling(false), 500);
     }
   };
+  const scrollLeft = () => {
+    if (cardsWrapperRef.current && !isScrolling) {
+      setIsScrolling(true);
+      const container = cardsWrapperRef.current;
+      const containerWidth = container.offsetWidth;
+      const scrollLeft = container.scrollLeft;
 
+      if (scrollLeft <= 10) {
+        // Scroll to end if at the start
+        container.scrollTo({
+          left: container.scrollWidth - container.offsetWidth,
+          behavior: "smooth",
+        });
+      } else {
+        // Scroll left by one container width
+        container.scrollBy({
+          left: -containerWidth,
+          behavior: "smooth",
+        });
+      }
+      setTimeout(() => setIsScrolling(false), 500);
+    }
+  };
   return (
     <div className={styles.insightsFrame}>
       <div className={styles.insightsViewContainer}>
@@ -98,6 +120,15 @@ const InsightsFrame: NextPage = () => {
           </div>
 
           {/* Only the Next button remains */}
+          <div className={styles.btnPrev} onClick={scrollLeft}>
+            <Image
+              className={styles.arrowIcon}
+              width={48}
+              height={48}
+              alt="Next"
+              src="/prev-button.svg"
+            />
+          </div>
           <div className={styles.btnNext} onClick={scrollRight}>
             <Image
               className={styles.arrowIcon}

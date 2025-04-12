@@ -62,12 +62,12 @@
   display: none; /* Chrome/Safari */
 }
 
-
 /* Card Styles */
 .cardVersion1,
 .cardVersion2,
 .cardVersion3,
-.cardVersion4 { /* 3 cards + gap math */
+.cardVersion4 {
+  /* 3 cards + gap math */
   flex: 0 0 calc(33.333% - 13.33px); /* Show 3 cards at a time */
   height: 500px;
   scroll-snap-align: start;
@@ -154,7 +154,7 @@
 }
 
 .btnPrev {
-  left: 20px;
+  left: 50px;
 }
 
 .btnNext {
@@ -208,7 +208,7 @@
     width: calc(100% + 80px);
     padding-right: 100px;
   }
-  
+
   .cardVersion1,
   .cardVersion2,
   .cardVersion3,

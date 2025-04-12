@@ -83,6 +83,12 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footerLink:hover {
+  background: #c8c8c8 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
 }
 
 .footerLink .linkText {
