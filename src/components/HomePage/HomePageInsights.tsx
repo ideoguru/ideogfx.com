@@ -1,63 +1,67 @@
 "use client";
 import type { NextPage } from "next";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import styles from "../../styles/HomePageInsights.module.css";
 import Link from "next/link";
 
 const InsightsFrame: NextPage = () => {
   const cardsWrapperRef = useRef<HTMLDivElement>(null);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  useEffect(() => {
+    const container = cardsWrapperRef.current;
+    if (container) {
+      const checkScroll = () => {
+        const { scrollLeft, scrollWidth, clientWidth } = container;
+        const newCanScrollLeft = scrollLeft > 0;
+        const newCanScrollRight = scrollLeft + clientWidth < scrollWidth;
+        setCanScrollLeft(newCanScrollLeft);
+        setCanScrollRight(newCanScrollRight);
+      };
+
+      checkScroll();
+
+      container.addEventListener("scroll", checkScroll);
+      window.addEventListener("resize", checkScroll);
+
+      return () => {
+        container.removeEventListener("scroll", checkScroll);
+        window.removeEventListener("resize", checkScroll);
+      };
+    }
+  }, []);
 
   const scrollRight = () => {
-    if (cardsWrapperRef.current && !isScrolling) {
-      setIsScrolling(true);
+    if (!canScrollRight || isScrolling || !cardsWrapperRef.current) return;
+    setIsScrolling(true);
+    const container = cardsWrapperRef.current;
+    const containerWidth = container.offsetWidth;
 
-      const container = cardsWrapperRef.current;
-      const containerWidth = container.offsetWidth;
-      const scrollWidth = container.scrollWidth;
-      const scrollLeft = container.scrollLeft;
+    container.scrollBy({
+      left: containerWidth,
+      behavior: "smooth",
+    });
 
-      // If near the end, reset to start (with smooth transition)
-      if (scrollLeft + containerWidth >= scrollWidth - 10) {
-        container.scrollTo({
-          left: 0,
-          behavior: "smooth",
-        });
-      } else {
-        container.scrollBy({
-          left: containerWidth,
-          behavior: "smooth",
-        });
-      }
-
-      // Reset scrolling state after animation
-      setTimeout(() => setIsScrolling(false), 500);
-    }
+    setTimeout(() => setIsScrolling(false), 500);
   };
+
   const scrollLeft = () => {
-    if (cardsWrapperRef.current && !isScrolling) {
-      setIsScrolling(true);
-      const container = cardsWrapperRef.current;
-      const containerWidth = container.offsetWidth;
-      const scrollLeft = container.scrollLeft;
+    if (!canScrollLeft || isScrolling || !cardsWrapperRef.current) return;
+    setIsScrolling(true);
+    const container = cardsWrapperRef.current;
+    const containerWidth = container.offsetWidth;
 
-      if (scrollLeft <= 10) {
-        // Scroll to end if at the start
-        container.scrollTo({
-          left: container.scrollWidth - container.offsetWidth,
-          behavior: "smooth",
-        });
-      } else {
-        // Scroll left by one container width
-        container.scrollBy({
-          left: -containerWidth,
-          behavior: "smooth",
-        });
-      }
-      setTimeout(() => setIsScrolling(false), 500);
-    }
+    container.scrollBy({
+      left: -containerWidth,
+      behavior: "smooth",
+    });
+
+    setTimeout(() => setIsScrolling(false), 500);
   };
+
   return (
     <div className={styles.insightsFrame}>
       <div className={styles.insightsViewContainer}>
@@ -119,8 +123,12 @@ const InsightsFrame: NextPage = () => {
             </div>
           </div>
 
-          {/* Only the Next button remains */}
-          <div className={styles.btnPrev} onClick={scrollLeft}>
+          <div
+            className={`${styles.btnPrev} ${
+              !canScrollLeft ? styles.disabled : ""
+            }`}
+            onClick={scrollLeft}
+          >
             <Image
               className={styles.arrowIcon}
               width={48}
@@ -129,7 +137,12 @@ const InsightsFrame: NextPage = () => {
               src="/prev-button.svg"
             />
           </div>
-          <div className={styles.btnNext} onClick={scrollRight}>
+          <div
+            className={`${styles.btnNext} ${
+              !canScrollRight ? styles.disabled : ""
+            }`}
+            onClick={scrollRight}
+          >
             <Image
               className={styles.arrowIcon}
               width={48}

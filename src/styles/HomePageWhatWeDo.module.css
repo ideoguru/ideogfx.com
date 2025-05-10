@@ -21,7 +21,7 @@
   letter-spacing: 0.01em;
   line-height: 48px;
   font-weight: 600;
-  font-family: Poppins;
+  font-family: Sans-serif;
   color: #333;
 }
 
@@ -153,6 +153,7 @@
   margin-top: 24px;
 }
 
+/* Updated CTA button styles to match CaseStudiesFrame */
 .btnLearnMore {
   display: flex;
   align-items: center;
@@ -166,7 +167,8 @@
   border: 1px solid #fff;
   border-radius: 2322.58px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .btnLearnMore:hover {
@@ -175,12 +177,15 @@
     rgba(115, 171, 216, 1),
     rgba(187, 186, 225, 1)
   );
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .getStarted {
   font-size: 18px;
   font-weight: 600;
   color: #151515;
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 768px) {

@@ -1,99 +1,99 @@
 /* Base styles */
 .container {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: row; /* Keep elements in a row */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    gap: 40px; /* Add spacing between elements */
-    padding: 40px 0; /* Add padding to position it slightly below the previous component */
-    text-align: left; /* Align text to the left */
-    font-size: 24px;
-    color: #151515;
-    font-family: Poppins;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row; /* Keep elements in a row */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  gap: 40px; /* Add spacing between elements */
+  padding: 40px 0; /* Add padding to position it slightly below the previous component */
+  text-align: left; /* Align text to the left */
+  font-size: 24px;
+  color: #151515;
+  font-family: Sans-serif;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column; /* Stack "Why", "Work With", and "Us?" vertically */
+  align-items: flex-start; /* Align text to the left */
+  justify-content: center;
+  gap: 4px; /* Add spacing between lines */
+}
+
+.whyWorkWithContainer {
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  align-items: flex-start; /* Align text to the left */
+  justify-content: center;
+  gap: 4px; /* Add spacing between lines */
+}
+
+.why {
+  margin: 0;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgChild {
+  width: 150px;
+  height: 200px;
+  border-radius: 75px;
+  object-fit: cover;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: left; /* Align text to the left */
+  font-size: 16px;
+  font-family: "Open Sans";
+}
+
+.ourApproachTo {
+  width: 409px; /* Fixed width for the description */
+  letter-spacing: 0.25px;
+  line-height: 22px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .container {
+    gap: 20px; /* Reduce gap for smaller screens */
+    padding: 20px 0; /* Reduce padding for smaller screens */
   }
-  
-  .heading {
-    display: flex;
-    flex-direction: column; /* Stack "Why", "Work With", and "Us?" vertically */
-    align-items: flex-start; /* Align text to the left */
-    justify-content: center;
-    gap: 4px; /* Add spacing between lines */
-  }
-  
-  .whyWorkWithContainer {
-    display: flex;
-    flex-direction: column; /* Stack text vertically */
-    align-items: flex-start; /* Align text to the left */
-    justify-content: center;
-    gap: 4px; /* Add spacing between lines */
-  }
-  
-  .why {
-    margin: 0;
-    line-height: 30px;
-    font-weight: 600;
-  }
-  
-  .img {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .imgChild {
-    width: 150px;
-    height: 200px;
-    border-radius: 75px;
-    object-fit: cover;
-  }
-  
-  .description {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: left; /* Align text to the left */
-    font-size: 16px;
-    font-family: 'Open Sans';
-  }
-  
+
   .ourApproachTo {
-    width: 409px; /* Fixed width for the description */
-    letter-spacing: 0.25px;
-    line-height: 22px;
+    width: 300px; /* Adjust width for smaller screens */
   }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 1200px) {
-    .container {
-      gap: 20px; /* Reduce gap for smaller screens */
-      padding: 20px 0; /* Reduce padding for smaller screens */
-    }
-  
-    .ourApproachTo {
-      width: 300px; /* Adjust width for smaller screens */
-    }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically on mobile */
+    gap: 16px; /* Reduce gap for smaller screens */
   }
-  
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column; /* Stack elements vertically on mobile */
-      gap: 16px; /* Reduce gap for smaller screens */
-    }
-  
-    .heading {
-      align-items: center; /* Center text on mobile */
-    }
-  
-    .whyWorkWithContainer {
-      align-items: center; /* Center text on mobile */
-    }
-  
-    .ourApproachTo {
-      width: 100%; /* Full width for mobile */
-      text-align: center; /* Center text on mobile */
-    }
+
+  .heading {
+    align-items: center; /* Center text on mobile */
   }
+
+  .whyWorkWithContainer {
+    align-items: center; /* Center text on mobile */
+  }
+
+  .ourApproachTo {
+    width: 100%; /* Full width for mobile */
+    text-align: center; /* Center text on mobile */
+  }
+}

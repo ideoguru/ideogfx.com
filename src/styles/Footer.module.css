@@ -137,8 +137,12 @@
 }
 .iconWrapper:hover {
   background: #c8c8c8 !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px; /* Increased padding for bigger circle */
+  border-radius: 100px; /* Ensures a perfect circle */
+  transition: all 0.3s ease;
 }
+
 .socialIcon {
   width: 24px;
   height: 24px;
