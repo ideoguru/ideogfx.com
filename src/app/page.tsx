@@ -16,9 +16,9 @@ const HomePage: NextPage = () => {
       <br></br>
       <br></br>
       <WhatWeDoSection />
-      <CaseStudies />
+      {/* <CaseStudies /> */}
       <Testmonial />
-      <Insights />
+      {/* <Insights /> */}
       <Footer />
     </div>
   );

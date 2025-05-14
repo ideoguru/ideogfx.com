@@ -37,11 +37,11 @@ const Footer: NextPage = () => {
                     <div className={styles.linkText}>What We Do</div>
                   </Link>
                 </div>
-                <div className={styles.footerLink}>
+                {/* <div className={styles.footerLink}>
                   <Link href="/Resources">
                     <div className={styles.linkText}>Resources</div>
                   </Link>
-                </div>
+                </div> */}
                 <div className={styles.footerLink}>
                   <Link href="/Get-in-touch">
                     <div className={styles.linkText}>Get In Touch</div>

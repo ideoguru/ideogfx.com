@@ -12,7 +12,7 @@ const Header = () => {
   // Get pathname safely
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const path = window.location.pathname.split('/')[1];
+      const path = window.location.pathname.split("/")[1];
       setActiveLink(path || "");
     }
   }, []);
@@ -29,7 +29,7 @@ const Header = () => {
   const navItems = [
     { path: "who-we-are", label: "Who We Are" },
     { path: "what-we-do", label: "What We Do" },
-    { path: "Resources", label: "Resources" },
+    // { path: "Resources", label: "Resources" },
     { path: "Get-in-touch", label: "Get In Touch" },
   ];
 
