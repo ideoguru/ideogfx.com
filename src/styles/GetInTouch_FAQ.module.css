@@ -1,6 +1,16 @@
 .faqSection {
   padding: 80px 0;
   background: #fff;
+  justify-content: space-between;
+}
+
+.arrowWrapper {
+  margin-left: auto;
+  padding-left: 16px;
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
 }
 
 .container {

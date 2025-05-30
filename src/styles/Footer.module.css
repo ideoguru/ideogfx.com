@@ -138,8 +138,8 @@
 .iconWrapper:hover {
   background: #c8c8c8 !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 8px; /* Increased padding for bigger circle */
-  border-radius: 100px; /* Ensures a perfect circle */
+  /* padding: 8px;  */
+  border-radius: 100px;
   transition: all 0.3s ease;
 }
 

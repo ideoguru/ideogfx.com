@@ -74,13 +74,22 @@ const FAQSection = () => {
                     src={item.icon}
                     width={24}
                     height={24}
+                    alt="Category"
+                    className={styles.faqIcon}
+                  />
+                </div>
+                <span className={styles.questionText}>{item.question}</span>
+                <div className={styles.arrowWrapper}>
+                  <Image
+                    src="/dw_arrow.png"
+                    width={24}
+                    height={24}
                     alt="Toggle"
-                    className={`${styles.faqIcon} ${
+                    className={`${styles.arrowIcon} ${
                       openFaq === item.id ? styles.rotated : ""
                     }`}
                   />
                 </div>
-                <span className={styles.questionText}>{item.question}</span>
               </button>
 
               <div

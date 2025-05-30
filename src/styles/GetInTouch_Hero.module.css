@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: var(--athens-gray);
+  background-color: #fff !important;
   padding: 8rem 0 2rem; /* Increased top padding */
   box-sizing: border-box;
   position: relative;

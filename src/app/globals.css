@@ -2,21 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
-/* Base styles for body */
+/* Ensure Open Sans is used everywhere */
+* {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+/* Additional global styles */
 body {
   margin: 0;
   line-height: normal;
-  color: #171717; /* Explicitly set text color */
-  background: #f9f9f9; /* Explicitly set background color */
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--foreground); /* Using the custom variable */
+  background: var(--background); /* Using the custom variable */
+  font-family: "Open Sans", sans-serif; /* Ensure Open Sans as fallback */
   zoom: 85%;
 }
 

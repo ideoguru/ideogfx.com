@@ -27,6 +27,7 @@ const Header = () => {
   };
 
   const navItems = [
+    { path: "", label: "Home" },
     { path: "who-we-are", label: "Who We Are" },
     { path: "what-we-do", label: "What We Do" },
     // { path: "Resources", label: "Resources" },

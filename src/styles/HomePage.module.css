@@ -120,8 +120,8 @@
 /* Active Link Style */
 /* Active Link Style */
 .active {
-  border-radius: 16px;
-  background: var(--Athens-gray, #F9F9F9) !important;
+  border-radius: 9px;
+  background: var(--Athens-gray, #f9f9f9) !important;
   backdrop-filter: blur(20px);
   padding: 4px;
   display: flex;
@@ -131,7 +131,10 @@
 }
 
 .active .linkText {
-  background: var(--primary-gradient-color, linear-gradient(135deg, #6B00B3 0%, #D8499C 74.71%, #D8499C 143.67%));
+  background: var(
+    --primary-gradient-color,
+    linear-gradient(135deg, #6b00b3 0%, #d8499c 74.71%, #d8499c 143.67%)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -139,7 +142,7 @@
 }
 
 .active::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
