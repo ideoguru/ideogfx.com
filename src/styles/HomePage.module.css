@@ -55,6 +55,7 @@
 .getStarted:hover {
   background: linear-gradient(135deg, #6b00b3, #d8499c 52%, #d8499c);
   -webkit-background-clip: text;
+  background-clip: text; /* Added standard property */
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
@@ -102,6 +103,12 @@
     gap: 0.25rem;
     transform: translateY(-150%);
     min-height: auto;
+    transition: transform 0.3s ease-in-out; /* Added for smooth animation */
+  }
+
+  /* Class to show the mobile menu, toggled by styles.mobileMenuOpen in Header.tsx */
+  .mobileMenuOpen {
+    transform: translateY(0); /* Slides the menu into view */
   }
 
   .getStarted {
