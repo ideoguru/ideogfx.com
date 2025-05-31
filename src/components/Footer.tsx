@@ -157,10 +157,14 @@ const Footer: NextPage = () => {
             </div>
             <div className={styles.legalFooterSection}>
               <div className={styles.legalLink}>
-                <div className={styles.linkText}>Privacy Policy</div>
+                <Link href="/privacy-policy" passHref>
+                  <div className={styles.linkText}>Privacy Policy</div>
+                </Link>
               </div>
               <div className={styles.legalLink}>
-                <div className={styles.linkText}>Terms of Use</div>
+                <Link href="/terms-of-use" passHref>
+                  <div className={styles.linkText}>Terms of Use</div>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,0 +1,83 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 70px; /* Adjust based on actual header height */
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem 1rem; 
+  max-width: 900px; 
+  margin: 2rem auto; /* Add some top/bottom margin */
+  width: 100%;
+  background-color: #fff; /* Optional: if page background is different from body */
+  border-radius: 8px; /* Optional: for a card-like effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Optional: subtle shadow */
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #191919; /* Darker color for titles */
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 0.5rem;
+}
+
+.subSectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #444;
+}
+
+.mainContent p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.list {
+  list-style-position: outside;
+  margin-left: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  color: #555;
+  list-style: disc;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .mainContent {
+    padding: 3rem 2rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  .subSectionTitle {
+    font-size: 1.7rem;
+  }
+}
