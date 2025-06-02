@@ -2,25 +2,31 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 70px; /* Adjust based on actual header height */
+  padding-top: 70px; 
+  background-image: url("../../public/whoWeAreBg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .mainContent {
   flex-grow: 1;
-  padding: 2rem 1rem; 
   max-width: 900px; 
-  margin: 2rem auto; /* Add some top/bottom margin */
+  margin: 2rem auto; 
   width: 100%;
-  background-color: #fff; /* Optional: if page background is different from body */
-  border-radius: 8px; /* Optional: for a card-like effect */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Optional: subtle shadow */
+  background: #eaebf040;
+  backdrop-filter: blur(160px);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 0px 20px #0000001a;
 }
 
 .title {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  color: #191919; /* Darker color for titles */
+  color: #191919; 
   text-align: center;
 }
 
@@ -29,11 +35,12 @@
 }
 
 .sectionTitle {
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
   margin-bottom: 1rem;
-  color: #333;
-  border-bottom: 1px solid #eaeaea;
+  color: #000;
+  border-bottom: 1px solid #c0bcbe;
   padding-bottom: 0.5rem;
 }
 
@@ -42,13 +49,13 @@
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
-  color: #444;
+  color: #121212;
 }
 
 .mainContent p {
   line-height: 1.7;
   margin-bottom: 1rem;
-  color: #555;
+  color: #121212;
 }
 
 .list {
@@ -60,23 +67,16 @@
 .list li {
   margin-bottom: 0.75rem;
   line-height: 1.7;
-  color: #555;
+  color: #121212;
   list-style: disc;
 }
 
-/* Responsive adjustments */
+
 @media (min-width: 768px) {
   .mainContent {
     padding: 3rem 2rem;
   }
 
-  .title {
-    font-size: 3rem;
-  }
-
-  .sectionTitle {
-    font-size: 2rem;
-  }
   .subSectionTitle {
     font-size: 1.7rem;
   }
