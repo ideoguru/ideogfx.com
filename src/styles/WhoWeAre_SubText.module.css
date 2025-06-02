@@ -41,7 +41,7 @@
   
     .ourCollaborativeCreative {
       font-size: 14px; /* Adjust font size for tablets */
-      line-height: 18px;
+      line-height: 22px;
     }
   }
   
@@ -50,8 +50,5 @@
       padding: 5px 10px 15px 10px; /* Minimal padding for mobile */
     }
   
-    .ourCollaborativeCreative {
-      font-size: 13px; /* Adjust font size for mobile */
-      line-height: 16px;
-    }
+
   }

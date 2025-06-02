@@ -145,7 +145,13 @@
   opacity: 1;
   margin-top: 8px;
 }
+@media (max-width: 991px) {
+  .annotation {
+    max-width: 100%;
+    left: 0 !important;
 
+  }
+}
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .meetOurTeam {
@@ -163,9 +169,8 @@
   .annotation {
     position: relative;
     width: 100%;
-    max-width: 280px;
+    max-width: 100%;
     margin: 8px auto;
-    left: auto !important;
     top: auto !important;
     transform: none !important;
   }

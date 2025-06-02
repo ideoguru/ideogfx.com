@@ -127,34 +127,16 @@
 
 @media (max-width: 768px) {
   .ourSpecification {
-    height: auto; /* Adjust height for tablets */
+    height: 500px; 
     padding-bottom: 40px; /* Add padding at the bottom */
   }
-
-  .descriptionContent {
-    height: auto; /* Adjust height for tablets */
+  .descriptionContainer{
+    top: 0;
   }
-
   .bgImage {
-    width: 100%; /* Adjust image container width */
-    height: auto;
+    width: auto;
   }
 
-  .freepikEnhance635771Icon {
-    width: 80%; /* Adjust image width */
-    height: auto;
-  }
-
-  .descriptionContainer {
-    width: 90%; /* Adjust width for tablets */
-    padding: 20px 24px; /* Adjust padding for tablets */
-    border-radius: 100px; /* Adjust border radius for tablets */
-  }
-
-  .weSpecializeIn {
-    font-size: 14px; /* Adjust font size for tablets */
-    line-height: 20px;
-  }
 }
 
 @media (max-width: 480px) {

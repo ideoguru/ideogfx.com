@@ -1,7 +1,9 @@
 .heroFrame {
   display: flex;
-  height: 900px; /* Fixed height */
-  padding: 0px 382px 0px 380px; /* Specific horizontal padding */
+  height: 900px;
+  /* Fixed height */
+  padding: 0px 382px 0px 380px;
+  /* Specific horizontal padding */
   justify-content: center;
   align-items: center;
   align-self: stretch;
@@ -24,8 +26,10 @@
 
 .heroImage {
   width: 100%;
-  max-width: 642px; /* Updated size */
-  height: 575px; /* Fixed height */
+  max-width: 642px;
+  /* Updated size */
+  height: 575px;
+  /* Fixed height */
   flex-shrink: 0;
   object-fit: cover;
   aspect-ratio: 642/575;
@@ -33,8 +37,10 @@
 }
 
 .meetTheMindsContainer {
-  width: 1160px; /* Fixed width */
-  height: 218.442px; /* Specific height */
+  width: 1160px;
+  /* Fixed width */
+  height: 218.442px;
+  /* Specific height */
   flex-shrink: 0;
   text-align: center;
   line-height: 68px;
@@ -65,12 +71,15 @@
   border: none;
   outline: none;
 }
+
 .heroImage {
   width: 100%;
-  max-width: 500px; /* Reduced image size */
+  max-width: 500px;
+  /* Reduced image size */
   height: auto;
   object-fit: cover;
-  z-index: 1; /* Ensure it's below the text */
+  z-index: 1;
+  /* Ensure it's below the text */
 }
 
 .meetTheMindsContainer {
@@ -81,7 +90,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: 100%;
-  z-index: 2; /* Ensure it's above the image */
+  z-index: 2;
+  /* Ensure it's above the image */
   margin-top: -53px;
 }
 
@@ -90,20 +100,24 @@
 }
 
 @keyframes breathe {
+
   0%,
   100% {
     transform: translateX(-50%) scale(1);
   }
+
   50% {
     transform: translateX(-50%) scale(1.1);
   }
 }
 
 @keyframes blink {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
@@ -111,12 +125,14 @@
 
 .scrollDownIcon {
   position: absolute;
-  bottom: 20px; /* Adjust position for mobile */
+  bottom: 20px;
+  /* Adjust position for mobile */
   left: 50%;
   transform: translateX(-50%);
   width: 48px;
   height: 55px;
-  animation: breathe 2s infinite; /* Breathing effect for the entire button */
+  animation: breathe 2s infinite;
+  /* Breathing effect for the entire button */
   cursor: pointer;
   background: none;
   border: none;
@@ -135,67 +151,90 @@
 }
 
 .scrollDownIcon img:first-child {
-  opacity: 1; /* Group166 is always visible */
+  opacity: 1;
+  /* Group166 is always visible */
 }
 
 .scrollDownIcon img:last-child {
-  opacity: 0; /* Group2 is hidden by default */
-  animation: blink 1s infinite; /* Blinking effect for Group2 */
+  opacity: 0;
+  /* Group2 is hidden by default */
+  animation: blink 1s infinite;
+  /* Blinking effect for Group2 */
 }
 
 .scrollDownIcon:hover img:first-child {
-  opacity: 0; /* Hide Group166 on hover */
+  opacity: 0;
+  /* Hide Group166 on hover */
 }
 
 .scrollDownIcon:hover img:last-child {
-  opacity: 1; /* Show Group2 on hover */
-  animation: none; /* Stop blinking on hover */
+  opacity: 1;
+  /* Show Group2 on hover */
+  animation: none;
+  /* Stop blinking on hover */
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
   .container {
-    padding: 0 20px; /* Add padding on smaller screens */
+    padding: 0 20px;
+    /* Add padding on smaller screens */
   }
 
   .meetTheMindsContainer {
-    font-size: 48px; /* Reduce font size for smaller screens */
+    font-size: 48px;
+    /* Reduce font size for smaller screens */
     line-height: 56px;
   }
 }
 
 @media (max-width: 768px) {
   .heroFrame {
-    padding-top: 60px; /* Adjust padding for smaller screens */
+    padding-top: 60px;
+    /* Adjust padding for smaller screens */
     padding-bottom: 80px;
   }
 
   .meetTheMindsContainer {
-    font-size: 36px; /* Further reduce font size */
+    font-size: 36px;
+    /* Further reduce font size */
     line-height: 48px;
   }
 
   .heroImage {
-    max-width: 400px; /* Further reduce image size */
+    max-width: 400px;
+    /* Further reduce image size */
   }
 
   .scrollDownIcon {
-    margin-top: 10px; /* Adjust space for smaller screens */
+    margin-top: 10px;
+    /* Adjust space for smaller screens */
+  }
+}
+
+@media (max-width: 991px) {
+  .heroFrame {
+    padding: 0;
+    height: auto;
+    padding-top: 60px;
   }
 }
 
 @media (max-width: 480px) {
   .meetTheMindsContainer {
-    font-size: 28px; /* Adjust font size for mobile */
+    font-size: 28px;
+    /* Adjust font size for mobile */
     line-height: 40px;
   }
 
   .heroImage {
-    max-width: 300px; /* Smaller image for mobile */
+    max-width: 300px;
+    /* Smaller image for mobile */
   }
 
   .scrollDownIcon {
-    width: 36px; /* Smaller icon for mobile */
+    width: 36px;
+    /* Smaller icon for mobile */
     height: 42px;
   }
 }

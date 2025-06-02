@@ -364,3 +364,13 @@
 .formInput {
   transition: border-color 0.3s ease;
 }
+
+@media(max-width: 768px) {
+  .getInTouchContainer {
+    padding: 0;
+  }
+  .contactForm {
+    margin-top: 0px;
+  }
+}
+  

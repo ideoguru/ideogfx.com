@@ -17,6 +17,7 @@
   -webkit-text-fill-color: transparent;
   display: inline-block;
   margin-top: -40px;
+  margin-bottom: 10px;
 }
 .heroTitleContainer {
   display: flex;
@@ -217,15 +218,19 @@
 @media(max-width:991px){
   .heroContainer {
     width: 100%;
-    height: 900px;
+    height: 690px;
     left: 0;
+    top: 0;
   }
   .heroCta {
-    left: 0;
+    right: 70px;
+    left: 70px;
+    top: inherit;
+    bottom: 90px;
       }
   .upgrade {
     width: 100%;
-    font-size: 100px;
+    font-size: 80px;
     line-height: 120px;
   }
   .yourNext {
@@ -247,5 +252,18 @@
   .heroSection {
     left: 0;
     width: 100%;
+    top: 70px;
+  }
+  .craftingSeamlessUser {
+    width: 240px;
+  }
+  .heroImageContainer {
+    height: 268px;
+  }
+  .heroSectionFrame {
+
+    height: auto;
+    min-height: 700px;
+
   }
 }

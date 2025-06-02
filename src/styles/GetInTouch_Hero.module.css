@@ -39,11 +39,11 @@
 
 .gradientText {
   /* Original styles maintained */
-  font-family: "Poppins-SemiBold", Helvetica;
+  font-family: "Poppins-SemiBold", Helvetica !important;
   font-weight: 600;
   font-size: 150px;
   letter-spacing: -1.5px;
-  line-height: 112px;
+  line-height: 162px;
   background: linear-gradient(
     180deg,
     rgb(107, 0, 179) 0%,
@@ -57,6 +57,9 @@
   position: relative;
   z-index: 2;
   margin: 0;
+}
+div.gradientText{
+  margin-top: -50px;
 }
 
 .subtitle {
@@ -83,7 +86,46 @@
   mix-blend-mode: multiply;
   z-index: 1;
 }
+@media (max-width: 991px) {
+  .container {
+    min-height: 75vh;
 
+  }
+  h2.gradientText, div.gradientText {
+    font-size: 70px;
+    line-height: 110px;
+
+  }
+  
+  div.innerContainer {
+    max-width:100%;
+    padding: 0 25px;
+    margin-top: 0;
+  }
+  
+.contactSupportImage {
+  width: 180px;
+  height: auto;
+  top: 0;
+  left: inherit;
+  transform: none;
+  opacity: 1;
+  right: 0;
+}
+.title {
+  font-size: 24px;
+  width: auto;
+  max-width: 190px;
+  margin-bottom: 30px;
+  margin-top: 35px;
+  line-height: normal;
+
+}
+.subtitle {
+  line-height: 1.2;
+  font-size: 36px;
+}
+}
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .container {
