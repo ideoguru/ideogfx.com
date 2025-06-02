@@ -33,7 +33,7 @@ const HeroFrame: NextPage = () => {
             <div className={styles.coverTextInner}>
               <div className={styles.fromConceptToParent}>
                 <div className={styles.fromConceptTo}>From Concept to</div>
-                <div className={styles.conversion}>Conversion</div>
+                <h1 className={styles.conversion}>Conversion</h1>
               </div>
             </div>
           </div>

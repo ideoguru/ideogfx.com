@@ -13,8 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IdeoGFX",
-  description: "Your site description here", // Add a meaningful description
+  title: "Best UI/UX Designers in Kochi | Web & App Experts",
+  description: "Top UI/UX design company in Kochi offering modern web, mobile, and branding solutions. We create user-focused experiences for startups and enterprises.",
+  keywords: [
+    "UI UX", "UI/UX", "ui ux designer", "UI UX design company for startups in Kerala",
+    "Best UI UX company Kochi", "UI/UX design studio Kochi",
+    "Top UI/UX design Kochi", "Affordable UI design services in Kochi",
+    "Best UX design team for SaaS in Kochi"
+  ],
 };
 
 export default function RootLayout({
@@ -31,9 +37,9 @@ export default function RootLayout({
         {/* <meta name="viewport" content="width=1280, user-scalable=no" /> */}
 
         {/* Add other meta tags for SEO */}
-        <meta name="description" content="Your site description here" />
+        {/* <meta name="description" content="Your site description here" />
         <meta name="keywords" content="your, keywords, here" />
-        <meta name="author" content="IdeoGFX" />
+        <meta name="author" content="IdeoGFX" /> */}
 
         {/* Open Graph meta tags for social media sharing */}
         <meta property="og:title" content="IdeoGFX" />
