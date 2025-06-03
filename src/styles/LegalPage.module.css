@@ -15,7 +15,7 @@
   max-width: 900px; 
   margin: 2rem auto; 
   width: 100%;
-  background: #eaebf040;
+  background: #fff;
   backdrop-filter: blur(160px);
   border-radius: 24px;
   padding: 24px;
@@ -70,7 +70,10 @@
   color: #121212;
   list-style: disc;
 }
-
+p.lastupdated {
+  font-size: 14px;
+  color: #777777 !important;
+}
 
 @media (min-width: 768px) {
   .mainContent {
@@ -79,5 +82,13 @@
 
   .subSectionTitle {
     font-size: 1.7rem;
+  }
+}
+@media (max-width: 991px) {
+  .mainContent {
+  max-width: 94%;
+  }
+  .sectionTitle {
+    font-size: 18px;
   }
 }

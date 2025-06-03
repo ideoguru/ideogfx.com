@@ -147,13 +147,7 @@
   opacity: 1; /* Show Group2 on hover */
   animation: none; /* Stop blinking on hover */
 }
-
-/* Media Queries for Responsiveness */
-@media (min-width: 768px) {
-  .heroFrame {
-    height: 900px; /* Fixed height for desktop */
-  }
-
+@media (min-width: 992px) {
   .heroContainer {
     position: absolute;
     top: calc(50% - 450px);
@@ -176,6 +170,24 @@
     left: calc(50% - 580px);
     width: 1160px;
   }
+}
+@media (min-width: 769px) and (max-width:991px){
+  .heroContainer {
+    top: 100px;
+    height: 80vh;
+    min-height: 730px;
+}
+.coverImg {
+  top: 135px;
+}
+}
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+  .heroFrame {
+    height: 900px; /* Fixed height for desktop */
+  }
+
+
 
   .fromConceptTo {
     font-size: 56px; /* Larger font size for desktop */
@@ -222,4 +234,23 @@
     width: 395px;
     height: 275px;
   }
+}
+@media(max-width:768px){
+  .heroContainer {
+    top:60px;
+
+  }
+  .heroFrame {
+    min-height: 600px; 
+
+  }
+  .scrollDownIcon {
+    bottom: -40px; 
+  }
+  .conversion {
+    font-size: 60px; 
+
+  }
+  
+  
 }

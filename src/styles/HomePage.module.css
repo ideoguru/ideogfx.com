@@ -77,7 +77,16 @@
   background-color: #191919;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
+@media (min-width: 769px) and (max-width: 992px) {
+ .frameParent16 {
+    left: inherit;
+    transform: none;
+    right: 25px;
+}
+div.logoContainer {
+  left: 25px;
+}
+}
 /* Mobile Menu Styles */
 @media (max-width: 768px) {
   .frameParent16 {

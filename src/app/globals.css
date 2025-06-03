@@ -42,3 +42,8 @@ body {
   background-clip: text;
   text-fill-color: transparent;
 }
+@media(max-width:768px){
+  body {
+    zoom:100%;
+  }
+}

@@ -87,13 +87,35 @@ div.gradientText{
   z-index: 1;
 }
 @media (max-width: 991px) {
+  div.innerContainer {
+    max-width:100%;
+    padding: 0 25px;
+    margin-top: 0;
+  }
+  .contactSupportImage {
+    width: 180px;
+    height: auto;
+    top: 0;
+    left: inherit;
+    transform: none;
+    opacity: 1;
+    right: 0;
+  }
+}
+@media (min-width: 769px) and (max-width: 991px)  {
   .container {
-    min-height: 75vh;
+    min-height: inherit;
+
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    min-height: 65vh;
 
   }
   h2.gradientText, div.gradientText {
-    font-size: 70px;
-    line-height: 110px;
+    font-size: 40px;
+    line-height: 70px;
 
   }
   
@@ -103,15 +125,7 @@ div.gradientText{
     margin-top: 0;
   }
   
-.contactSupportImage {
-  width: 180px;
-  height: auto;
-  top: 0;
-  left: inherit;
-  transform: none;
-  opacity: 1;
-  right: 0;
-}
+
 .title {
   font-size: 24px;
   width: auto;
@@ -123,7 +137,8 @@ div.gradientText{
 }
 .subtitle {
   line-height: 1.2;
-  font-size: 36px;
+  font-size: 26px;
+  max-width: 90%;
 }
 }
 /* Mobile adjustments */

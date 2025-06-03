@@ -82,6 +82,8 @@
   .container {
     flex-direction: column; /* Stack elements vertically on mobile */
     gap: 16px; /* Reduce gap for smaller screens */
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .heading {
@@ -90,6 +92,8 @@
 
   .whyWorkWithContainer {
     align-items: center; /* Center text on mobile */
+    flex-direction: row;
+
   }
 
   .ourApproachTo {

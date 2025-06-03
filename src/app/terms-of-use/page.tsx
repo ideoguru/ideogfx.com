@@ -8,7 +8,7 @@ const TermsOfUsePage = () => {
       <Header />
       <main className={styles.mainContent}>
         <h1 className={styles.title}>Terms of Use</h1>
-        <p>Last Updated On: 06-06-2025</p>
+        <p className={styles.lastupdated}>Last Updated On: 06-06-2025</p>
         <p>
           By accessing and using this website (ideogfx.com), you agree to the following Terms of Service. Please read them carefully.
         </p>

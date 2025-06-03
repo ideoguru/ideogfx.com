@@ -256,5 +256,10 @@
   .btnTop {
   display: none;
   }
+  .footerLink .linkText {
+    font-size: 14px;
+    line-height: 22px;
+
+  }
   
 }

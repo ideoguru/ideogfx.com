@@ -8,7 +8,7 @@ const PrivacyPolicyPage = () => {
       <Header />
       <main className={styles.mainContent}>
         <h1 className={styles.title}>Privacy Policy</h1>
-        <p>Last Updated On: 06-06-2025</p>
+        <p className={styles.lastupdated}>Last Updated On: 06-06-2025</p>
         <p>
           At Ideo Graphics Private Limited, your privacy is our priority. This Privacy Policy explains how we collect, use, and protect your personal information when you interact with our website or submit inquiries via our contact form.
         </p>

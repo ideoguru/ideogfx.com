@@ -46,7 +46,8 @@
 /* Updated Annotation Styles */
 .annotation {
   display: flex;
-  align-items: flex-start; /* Keep icon at top */
+  align-items: flex-start;
+  /* Keep icon at top */
   padding: 12px;
   gap: 8px;
   border-radius: 12px;
@@ -55,10 +56,12 @@
   backdrop-filter: blur(20px);
   position: absolute;
   z-index: 1;
-  transition: box-shadow 0.3s ease; /* Only transition box-shadow */
+  transition: box-shadow 0.3s ease;
+  /* Only transition box-shadow */
   max-width: 220px;
   cursor: pointer;
-  min-height: 60px; /* Minimum height to prevent shifting */
+  min-height: 60px;
+  /* Minimum height to prevent shifting */
 }
 
 .frameIcon {
@@ -111,23 +114,28 @@
 /* Positioning */
 .director {
   top: 35%;
-  left: 45%; /* Reduced from 50% */
-  transform: translateX(-45%); /* Adjusted translation */
+  left: 45%;
+  /* Reduced from 50% */
+  transform: translateX(-45%);
+  /* Adjusted translation */
 }
 
 .manager {
   top: 62%;
-  left: 53%; /* Adjusted from 55% */
+  left: 53%;
+  /* Adjusted from 55% */
 }
 
 .analyst {
   top: 38%;
-  right: 15%; /* Increased from 20% */
+  right: 15%;
+  /* Increased from 20% */
 }
 
 .designer {
   top: 56%;
-  left: 20%; /* Reduced from 22% */
+  left: 20%;
+  /* Reduced from 22% */
 }
 
 /* Hover States */
@@ -137,14 +145,17 @@
 }
 
 .annotation:hover .role {
-  max-height: 200px; /* Adjust based on content */
+  max-height: 200px;
+  /* Adjust based on content */
 }
 
 .annotation:hover .roleDescription {
-  max-height: 100px; /* Adjust based on content length */
+  max-height: 100px;
+  /* Adjust based on content length */
   opacity: 1;
   margin-top: 8px;
 }
+
 @media (max-width: 991px) {
   .annotation {
     max-width: 100%;
@@ -152,8 +163,9 @@
 
   }
 }
+
 /* Mobile Responsive */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .meetOurTeam {
     padding: 30px 15px;
   }
@@ -166,19 +178,12 @@
     font-size: 14px;
   }
 
-  .annotation {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    margin: 8px auto;
-    top: auto !important;
-    transform: none !important;
-  }
-
   .role,
   .roleDescription {
     max-height: none !important;
     opacity: 1 !important;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .roleDescription {
@@ -189,31 +194,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap:0;
   }
 
-  .name {
-    font-size: 14px;
-    line-height: 20px;
+  .textContents {
+    margin-top: 40px;
+    margin-bottom: 0;
   }
-}
 
-@media (max-width: 480px) {
   .annotation {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 8px auto;
+    top: auto !important;
+    transform: none !important;
+    border-radius: 12px;
+    border: 1px solid #fff;
+    background: rgb(237, 238, 240);
+    backdrop-filter: none;
+    transition: box-shadow 0.3s ease;
     padding: 10px 16px 10px 8px;
+
   }
 
   .name {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
-  .role {
-    font-size: 10px;
-    line-height: 12px;
+  .frameIcon {
+    margin-top: 3px;
   }
 
-  .roleDescription {
-    font-size: 10px;
-  }
+
 }

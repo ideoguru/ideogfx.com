@@ -136,6 +136,18 @@
   .bgImage {
     width: auto;
   }
+  .container {
+    position: inherit;
+    top: 0;
+    left:0;
+    transform:none;
+    margin-top: 40px;
+   
+  }
+  .descriptionContent {
+    height: auto; 
+  }
+  
 
 }
 
@@ -146,12 +158,14 @@
 
   .descriptionContainer {
     width: 100%; /* Adjust width for mobile */
-    padding: 16px 20px; /* Adjust padding for mobile */
+    height: 440px;
+    padding:20 32px;
     border-radius: 50px; /* Adjust border radius for mobile */
   }
 
   .weSpecializeIn {
-    font-size: 12px; /* Adjust font size for mobile */
-    line-height: 18px;
+    font-size: 14px; /* Adjust font size for mobile */
+    line-height: 24px;
   }
+
 }
