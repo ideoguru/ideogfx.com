@@ -214,7 +214,19 @@
   color: #333;
   font-family: Sans-serif;
 }
-
+@media(min-width:769px) and (max-width:991px){
+  .heroContainer {
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  .heroCta {
+    right: 20px;
+    left: inherit;
+    top: inherit;
+    bottom: 150px;
+      }
+}
 @media(max-width:768px){
   .heroContainer {
     width: 100%;
