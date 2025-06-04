@@ -292,3 +292,26 @@
     font-size: 16px;
   }
 }
+.cardsWrapper {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 16px;
+}
+@media (max-width: 991px) {
+.cardsWrapper {
+flex-direction: column;
+  width: 100%; 
+  padding-right:0; 
+}
+.cardVersion1,
+.cardVersion2,
+.cardVersion3,
+.cardVersion4 {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 320px;
+}
+}

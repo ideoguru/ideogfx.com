@@ -13,8 +13,10 @@ const GetInTouchFrame: NextPage = () => {
         </h1>
 
         {/* Gradient Text */}
+        <h2 className={styles.gradientText}>
+          Have Any
+        </h2>
         <div className={styles.gradientText}>
-          Have Any <br />
           Questions?
         </div>
 

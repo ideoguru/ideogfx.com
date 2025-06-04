@@ -95,11 +95,9 @@
 }
 
 .activeTab {
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(115, 171, 216, 0.5),
-    rgba(187, 186, 225, 0.5)
-  );
+  background: radial-gradient(50% 50% at 50% 50%,
+      rgba(115, 171, 216, 0.5),
+      rgba(187, 186, 225, 0.5));
   border: none;
 }
 
@@ -196,4 +194,59 @@
   align-items: center;
   justify-content: flex-start;
   gap: 12px;
+}
+
+@media (max-width:991px) {
+  .headingSubheading {
+    width: 100%;
+    align-items: center;
+  }
+
+  .scrollspy {
+    width: 100%;
+  }
+
+
+
+}
+
+@media (max-width:991px) {
+  .leftColumn {
+    display: none;
+  }
+
+  .howeWeDoContainer {
+    padding: 0 20px;
+  }
+
+  .scrollspyRightColumn {
+    width: 100%;
+
+  }
+
+  .scrollspy {
+    padding: 0;
+  }
+
+  .scrollableListitem01 {
+    flex-direction: column;
+    padding: 15px 12px;
+  
+  }
+
+  .wrapper {
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    background-color: #eaebf0;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+
+  .discoveryResearch1 {
+    color: #444;
+  }
+
+
 }

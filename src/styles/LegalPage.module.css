@@ -1,0 +1,94 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 70px; 
+  background-image: url("../../public/whoWeAreBg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.mainContent {
+  flex-grow: 1;
+  max-width: 900px; 
+  margin: 2rem auto; 
+  width: 100%;
+  background: #fff;
+  backdrop-filter: blur(160px);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 0px 20px #0000001a;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #191919; 
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #000;
+  border-bottom: 1px solid #c0bcbe;
+  padding-bottom: 0.5rem;
+}
+
+.subSectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #121212;
+}
+
+.mainContent p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #121212;
+}
+
+.list {
+  list-style-position: outside;
+  margin-left: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  color: #121212;
+  list-style: disc;
+}
+p.lastupdated {
+  font-size: 14px;
+  color: #777777 !important;
+}
+
+@media (min-width: 768px) {
+  .mainContent {
+    padding: 3rem 2rem;
+  }
+
+  .subSectionTitle {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 991px) {
+  .mainContent {
+  max-width: 94%;
+  }
+  .sectionTitle {
+    font-size: 18px;
+  }
+}

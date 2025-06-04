@@ -1,8 +1,13 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 
 /* Ensure Open Sans is used everywhere */
 * {
@@ -36,4 +41,9 @@ body {
   -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
   background-clip: text;
   text-fill-color: transparent;
+}
+@media(max-width:768px){
+  body {
+    zoom:100%;
+  }
 }

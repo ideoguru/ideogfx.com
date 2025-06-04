@@ -55,6 +55,7 @@
 .getStarted:hover {
   background: linear-gradient(135deg, #6b00b3, #d8499c 52%, #d8499c);
   -webkit-background-clip: text;
+  background-clip: text; /* Added standard property */
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
@@ -76,6 +77,45 @@
   background-color: #191919;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
+@media (min-width: 769px) and (max-width: 992px) {
+ .frameParent16 {
+    left: inherit;
+    transform: none;
+    right: 25px;
+}
+div.logoContainer {
+  left: 25px;
+}
+}
+@media (min-width: 769px) {
+  .logoContainer {
+    left: 151px;
+  }
+
+  .asset18288x81Wrapper {
+    width: 48px;
+    height: 44px;
+  }
+
+  .frameParent17 {
+    gap: 1.5rem;
+    padding: 8px 32px;
+    min-height: 3rem;
+  }
+
+  .getStarted {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+  }
+}
+
+/* Responsive Adjustments */
+@media (min-width: 480px) {
+  .frameParent17 {
+    gap: 1rem;
+    padding: 8px 24px;
+  }
+}
 
 /* Mobile Menu Styles */
 @media (max-width: 768px) {
@@ -88,12 +128,27 @@
     background-color: rgba(234, 235, 240, 0.7);
     backdrop-filter: blur(20px);
     border-radius: 16px;
-    padding: 8px;
+    padding:0;
+  }
+  .frameParent16::after {
+    position: absolute;
+    left: -16px;
+    right:-16px;
+    height: 50px;
+    box-shadow: 10px 10px 20px #0000001a;
+    content: "";
+    top: -16px;
+    background-color: #fff
+}
+  /* Logo Container */
+  .logoContainer {
+    top: 0;
+    left: 0;
   }
 
   .frameParent17 {
     position: absolute;
-    top: calc(100% + 0.5rem);
+    top: calc(100% + 3rem);
     left: 0;
     right: 0;
     flex-direction: column;
@@ -102,6 +157,12 @@
     gap: 0.25rem;
     transform: translateY(-150%);
     min-height: auto;
+    transition: transform 0.3s ease-in-out; /* Added for smooth animation */
+  }
+
+  /* Class to show the mobile menu, toggled by styles.mobileMenuOpen in Header.tsx */
+  .mobileMenuOpen {
+    transform: translateY(0); /* Slides the menu into view */
   }
 
   .getStarted {
@@ -113,7 +174,10 @@
 
   .menuIcon {
     display: flex;
-    right: 0.5rem;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    z-index: 9999;
   }
 }
 
@@ -159,32 +223,3 @@
   z-index: 1;
 }
 
-/* Responsive Adjustments */
-@media (min-width: 480px) {
-  .frameParent17 {
-    gap: 1rem;
-    padding: 8px 24px;
-  }
-}
-
-@media (min-width: 769px) {
-  .logoContainer {
-    left: 151px;
-  }
-
-  .asset18288x81Wrapper {
-    width: 48px;
-    height: 44px;
-  }
-
-  .frameParent17 {
-    gap: 1.5rem;
-    padding: 8px 32px;
-    min-height: 3rem;
-  }
-
-  .getStarted {
-    font-size: 1rem;
-    padding: 0.5rem 1.2rem;
-  }
-}

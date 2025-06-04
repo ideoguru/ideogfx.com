@@ -17,7 +17,7 @@ const HeroSectionFrame: NextPage = () => {
         <div className={styles.heroSection}>
           <div className={styles.heroTitleContainer}>
             <div className={styles.yourNext}>Your next</div>
-            <div className={styles.upgrade}>Upgrade</div>
+            <h1 className={styles.upgrade}>Upgrade</h1>
           </div>
           <div className={styles.heroImageContainer}>
             <div className={styles.heroCoverImage}>

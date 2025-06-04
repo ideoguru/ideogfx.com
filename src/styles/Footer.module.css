@@ -229,10 +229,7 @@
     justify-content: flex-start; /* Align left for larger screens */
   }
 
-  .rightTextColumn {
-    width: 264px; /* Restore original width for larger screens */
-    align-items: flex-end; /* Align right for larger screens */
-  }
+
   .rightTextColumn {
     width: 264px;
     align-items: flex-start; /* Changed from flex-end to flex-start */
@@ -249,4 +246,20 @@
   .socialIcons {
     justify-content: flex-start; /* Add this to align icons to left */
   }
+}
+@media(min-width:768px) and (max-width:991px){
+  .footerFrame {
+    padding: 24px 20px; 
+}
+}
+@media(max-width:768px){
+  .btnTop {
+  display: none;
+  }
+  .footerLink .linkText {
+    font-size: 14px;
+    line-height: 22px;
+
+  }
+  
 }
