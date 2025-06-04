@@ -260,12 +260,12 @@
     width: 100%;
     height: 418px;
     left: 0;
-    img {
-      max-width: 100%;
-      height: 260px;
-      object-fit: cover;
-    }
 
+  }
+  .heroCoverImage img {
+    max-width: 100%;
+    height: 260px;
+    object-fit: cover;
   }
   .heroSection {
     left: 0;
