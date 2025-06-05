@@ -1,0 +1,265 @@
+.footerFrame {
+  width: 100%;
+  background-color: #eaebf0;
+  display: flex;
+  justify-content: center;
+  padding: 24px 20px; /* Adjusted padding for mobile */
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: #151515;
+}
+
+.footerContainer {
+  width: 100%;
+  max-width: 1160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnTop {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.topIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 70.59px;
+  overflow: hidden;
+  object-fit: contain;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.footerBodyContainer {
+  width: 100%;
+  border-top: 1px solid #eaebf0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 24px 0;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column; /* Stack columns vertically on mobile */
+  gap: 40px;
+}
+
+.leftColumnText {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center; /* Center align for mobile */
+}
+
+.companyName {
+  display: flex;
+  justify-content: center;
+}
+
+.ideoGraphics {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+}
+
+.quickLinks {
+  display: flex;
+  flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+  gap: 12px;
+  justify-content: center; /* Center align for mobile */
+}
+
+.footerLink {
+  border-radius: 24px;
+  border: 0.5px solid #151515;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footerLink:hover {
+  background: var(--Athens-gray, #f9f9f9) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+}
+
+.footerLink .linkText {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  color: #1d1d1d;
+}
+
+.rightTextColumn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center; /* Center on mobile */
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+  background-color: #f7f8fa;
+  border-radius: 56px;
+  padding: 10px;
+  /* border-radius: 100px; */
+}
+
+.iconWrapper {
+  border-radius: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+  gap: 4px;
+  background: transparent;
+  transition: all 0.3s ease; /* Add transition here */
+}
+.iconWrapper:hover {
+  background: #c8c8c8 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* padding: 8px;  */
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.address {
+  display: flex;
+  justify-content: center;
+  color: #1d1d1d;
+  text-align: center; /* Center align for mobile */
+}
+
+.addressText {
+  font-size: 16px;
+  letter-spacing: 0.25px;
+  line-height: 22px;
+  white-space: pre-wrap;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center; /* Center align for mobile */
+}
+
+.phone,
+.email {
+  font-size: 16px;
+  letter-spacing: 0.25px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.copyrightSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px; /* Adjust this value for spacing between elements */
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.copyRight {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.legalFooterSection {
+  display: flex;
+  gap: 24px; /* Spacing between legal links */
+  margin: 0;
+}
+
+.legalLink {
+  cursor: pointer;
+}
+
+.legalLink .linkText {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  line-height: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+  .footerFrame {
+    padding: 24px 380px; /* Restore original padding for larger screens */
+  }
+
+  .contents {
+    flex-direction: row; /* Restore horizontal layout for larger screens */
+    justify-content: space-between;
+  }
+
+  .leftColumnText {
+    align-items: flex-start; /* Align left for larger screens */
+  }
+
+  .quickLinks {
+    justify-content: flex-start; /* Align left for larger screens */
+  }
+
+
+  .rightTextColumn {
+    width: 264px;
+    align-items: flex-start; /* Changed from flex-end to flex-start */
+  }
+
+  .address {
+    text-align: left; /* Changed from right */
+  }
+
+  .contactInfo {
+    align-items: flex-start; /* Changed from flex-end */
+  }
+
+  .socialIcons {
+    justify-content: flex-start; /* Add this to align icons to left */
+  }
+}
+@media(min-width:768px) and (max-width:991px){
+  .footerFrame {
+    padding: 24px 20px; 
+}
+}
+@media(max-width:768px){
+  .btnTop {
+  display: none;
+  }
+  .footerLink .linkText {
+    font-size: 14px;
+    line-height: 22px;
+
+  }
+  
+}

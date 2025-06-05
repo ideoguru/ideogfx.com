@@ -1,0 +1,159 @@
+/* GetInTouch_Hero.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff !important;
+  padding: 8rem 0 2rem; /* Increased top padding */
+  box-sizing: border-box;
+  position: relative;
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1440px;
+  padding: 56px 303px;
+  position: relative;
+  margin-top: 5rem; /* Increased from 4rem */
+}
+
+/* Keep all original positioning and font sizes */
+.title {
+  /* Original styles maintained */
+  font-family: var(--section-title-font-family);
+  font-size: 29px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: var(--section-title-letter-spacing);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.gradientText {
+  /* Original styles maintained */
+  font-family: "Poppins-SemiBold", Helvetica !important;
+  font-weight: 600;
+  font-size: 150px;
+  letter-spacing: -1.5px;
+  line-height: 162px;
+  background: linear-gradient(
+    180deg,
+    rgb(107, 0, 179) 0%,
+    rgb(216, 73, 156) 52%,
+    rgb(216, 73, 156) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+div.gradientText{
+  margin-top: -50px;
+}
+
+.subtitle {
+  /* Original styles maintained */
+  font-family: var(--cover-small-text-font-family);
+  font-size: 55px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: var(--cover-small-text-letter-spacing);
+  line-height: 0.8;
+  margin-top: 0px;
+  z-index: 2;
+}
+
+.contactSupportImage {
+  /* Original positioning maintained */
+  position: absolute;
+  width: 295px;
+  height: 329px;
+  top: 14%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+@media (max-width: 991px) {
+  div.innerContainer {
+    max-width:100%;
+    padding: 0 25px;
+    margin-top: 0;
+  }
+  .contactSupportImage {
+    width: 180px;
+    height: auto;
+    top: 0;
+    left: inherit;
+    transform: none;
+    opacity: 1;
+    right: 0;
+  }
+}
+@media (min-width: 769px) and (max-width: 991px)  {
+  .container {
+    min-height: inherit;
+
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    min-height: 65vh;
+
+  }
+  h2.gradientText, div.gradientText {
+    font-size: 40px;
+    line-height: 70px;
+
+  }
+  
+  div.innerContainer {
+    max-width:100%;
+    padding: 0 25px;
+    margin-top: 0;
+  }
+  
+
+.title {
+  font-size: 24px;
+  width: auto;
+  max-width: 190px;
+  margin-bottom: 30px;
+  margin-top: 35px;
+  line-height: normal;
+
+}
+.subtitle {
+  line-height: 1.2;
+  font-size: 26px;
+  max-width: 90%;
+}
+}
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 7rem 0 2rem; /* Increased from 6rem */
+  }
+
+  .innerContainer {
+    margin-top: 4rem; /* Increased from 3rem */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 6rem 0 2rem; /* Increased from 5rem */
+  }
+}

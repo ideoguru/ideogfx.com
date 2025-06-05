@@ -1,29 +1,87 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "../styles/HomePage.module.css";
+
 const Header = () => {
+  const [activeLink, setActiveLink] = useState("");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Get pathname safely
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const path = window.location.pathname.split("/")[1];
+      setActiveLink(path || "");
+    }
+  }, []);
+
+  const handleLinkClick = (link: string) => {
+    setActiveLink(link);
+    setIsMobileMenuOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const navItems = [
+    { path: "", label: "Home" },
+    { path: "who-we-are", label: "Who We Are" },
+    { path: "what-we-do", label: "What We Do" },
+    // { path: "Resources", label: "Resources" },
+    { path: "Get-in-touch", label: "Get In Touch" },
+  ];
+
   return (
-    <header className="fixed top-0 left-0 w-full bg-transparent z-50">
-    <div className="container mx-auto flex items-center justify-between">
-      {/* Logo */}
-      <a href="/">
-        <img src="/logo.png" alt="Ideogfx Logo" className="h-12" />
-      </a>
-  
-      {/* Centered Navigation */}
-      <nav className="hidden md:flex flex-grow items-center justify-center bg-gray-100 px-8 py-2 rounded-full shadow-md space-x-8">
-        <a href="#who-we-are" className="text-gray-800 hover:text-purple-600 font-medium">
-          Who We Are
-        </a>
-        <a href="#what-we-do" className="text-gray-800 hover:text-purple-600 font-medium">
-          What We Do
-        </a>
-        <a href="#insights" className="text-gray-800 hover:text-purple-600 font-medium">
-          Insights
-        </a>
-        <a href="#get-in-touch" className="text-gray-800 hover:text-purple-600 font-medium">
-          Get In Touch
-        </a>
-      </nav>
-    </div>
-  </header>
+    <>
+      <div className={styles.logoContainer}>
+        <Link href="/" passHref>
+          <div className={styles.asset18288x81Wrapper}>
+            <Image
+              src="/logo.png"
+              width={48}
+              height={44}
+              alt="Company Logo"
+              priority
+            />
+          </div>
+        </Link>
+      </div>
+
+      <div className={styles.frameParent16}>
+        <div
+          className={`${styles.menuIcon} ${
+            isMobileMenuOpen ? styles.mobileMenuOpen : ""
+          }`}
+          onClick={toggleMobileMenu}
+        >
+          <div className={styles.bar}></div>
+          <div className={styles.bar}></div>
+          <div className={styles.bar}></div>
+        </div>
+
+        <div
+          className={`${styles.frameParent17} ${
+            isMobileMenuOpen ? styles.mobileMenuOpen : ""
+          }`}
+        >
+          {navItems.map((item) => (
+            <Link key={item.path} href={`/${item.path}`} passHref>
+              <div
+                className={`${styles.getStarted} ${
+                  activeLink === item.path ? styles.active : ""
+                }`}
+                onClick={() => handleLinkClick(item.path)}
+              >
+                <span className={styles.linkText}>{item.label}</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 

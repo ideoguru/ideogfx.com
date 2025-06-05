@@ -1,0 +1,155 @@
+/* Resource_CaseStudiesSection.module.css */
+.caseStudiesSection {
+    position: relative;
+    width: 100%;
+    background: #F7F8FA;
+    padding: 80px 0;
+  }
+  
+  .sectionContainer {
+    width: 90%;
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+  
+  .sectionHeader {
+    margin-bottom: 60px;
+  }
+  
+  .sectionTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #333;
+  }
+  
+  .cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .caseStudyCard {
+    background: #EAEBF0;
+    border-radius: 24px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .cardImageContainer {
+    position: relative;
+    width: 50%;
+    min-height: 294px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle drop shadow */
+  }
+  
+  .cardImage {
+    object-fit: cover;
+  }
+  
+  .cardContent {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cardTitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #151515;
+    margin-bottom: 16px;
+  }
+  .cardDescription {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.25px;
+    color: #151515;
+    margin-bottom: 24px;
+    flex-grow: 1;
+  }
+  .learnMoreButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.25px;
+    color: #151515;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: opacity 0.3s ease;
+    align-self: flex-start;
+  }
+  
+  .learnMoreButton:hover {
+    opacity: 0.8;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1024px) {
+    .caseStudyCard {
+      flex-direction: column;
+    }
+  
+    .cardImageContainer,
+    .cardContent {
+      width: 100%;
+    }
+  
+    .cardImageContainer {
+      border-radius: 16px 16px 0 0; /* Top rounded corners only for mobile */
+    }
+  
+    .cardContent {
+      padding: 32px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .caseStudiesSection {
+      padding: 60px 0;
+    }
+  
+    .sectionTitle {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  
+    .cardTitle {
+      font-size: 20px;
+      line-height: 26px;
+    }
+    
+    .cardDescription {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  
+    .learnMoreButton {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cardImageContainer {
+      height: 250px;
+    }
+    
+    .learnMoreButton {
+      width: auto;
+      justify-content: flex-start;
+    }
+  }

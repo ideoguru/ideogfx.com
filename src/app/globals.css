@@ -1,28 +1,35 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+
+/* Ensure Open Sans is used everywhere */
+* {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+/* Additional global styles */
+body {
+  margin: 0;
+  line-height: normal;
+  color: var(--foreground); /* Using the custom variable */
+  background: var(--background); /* Using the custom variable */
+  font-family: "Open Sans", sans-serif; /* Ensure Open Sans as fallback */
+  zoom: 85%;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9f9f9; /* Set background to white */
+  --foreground: #171717; /* Set text color to dark */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+/* Gradient text utility */
 .gradient-text {
   background: linear-gradient(
     135deg,
@@ -35,8 +42,8 @@ body {
   background-clip: text;
   text-fill-color: transparent;
 }
-
-body {
-  margin: 0;
-  line-height: normal;
+@media(max-width:768px){
+  body {
+    zoom:100%;
+  }
 }

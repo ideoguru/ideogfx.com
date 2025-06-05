@@ -1,0 +1,207 @@
+/* Base styles */
+.testimonialsFrame {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 20px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 32px;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.testmonialsContainer {
+  width: 100%;
+  max-width: 1160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+}
+
+.testimonials {
+  width: 100%;
+  position: relative;
+  letter-spacing: 0.01em;
+  line-height: 48px;
+  font-weight: 600;
+}
+
+/* Centered Content Section */
+.clientTestimonials {
+  width: 100%;
+  max-width: 704px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  gap: 12px;
+}
+
+.container {
+  width: 100%;
+  height: 315px; /* Fixed height for all testimonials */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.ideoGraphicsHas {
+  flex: 1; /* Take remaining space */
+  overflow-y: auto; /* Enable scrolling for long quotes */
+  position: relative;
+  letter-spacing: 0.25px;
+  line-height: 22px;
+  font-size: 16px;
+  /* Hide scrollbar visually */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.clientDetailContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Vertical alignment */
+  gap: 20px; /* Space between image and text */
+  width: 100%;
+}
+
+.clientImg {
+  width: 120px;
+  backdrop-filter: blur(24px);
+  border-radius: 100px;
+  background-color: #fff;
+  border: 10px solid rgba(115, 171, 216, 0.5);
+  box-sizing: border-box;
+  height: 120px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.clientImgJpg {
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+}
+
+.rightClientDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left-align text content */
+  gap: 4px;
+}
+
+.visalSuresh {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.xspineTech,
+.kochi {
+  letter-spacing: 0.5px;
+  line-height: 14px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.btnPrevBtnNext {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center buttons */
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.btnPrevBtnNext button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnPrevBtnNext button:hover {
+  background: #f9f9f9 !important;
+  transform: scale(1.05);
+}
+
+/* Optional: Add hover effect to images */
+.btnPrevBtnNext button:hover img {
+  filter: brightness(0.8); /* Subtle image darkening on hover */
+}
+
+/* If you need to override existing button styles */
+.btnPrevBtnNext button:active,
+.btnPrevBtnNext button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.ideoGraphicsHas::-webkit-scrollbar {
+  display: none;
+}
+
+.clientDetailContainer {
+  margin-top: auto; /* Push client details to bottom */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .testimonialsFrame {
+    padding: 40px 20px;
+  }
+
+  .testmonialsContainer {
+    gap: 20px;
+  }
+
+  .testimonials {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .ideoGraphicsHas {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .clientImg {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    /* existing styles remain */
+  }
+
+  .visalSuresh {
+    font-size: 16px;
+  }
+  .container {
+    height: 340px;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .clientImg {
+    width: 80px;
+    height: 80px;
+    border-width: 6px;
+  }
+
+  .visalSuresh {
+    font-size: 14px;
+  }
+}

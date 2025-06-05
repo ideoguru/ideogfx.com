@@ -1,0 +1,294 @@
+/* HomePageInsights.module.css */
+.insightsFrame {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 56px 20px;
+  box-sizing: border-box;
+  gap: 40px;
+  text-align: left;
+  font-size: 32px;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.insightsTitle {
+  width: 100%;
+  max-width: 1200px;
+  text-align: left;
+  letter-spacing: 0.01em;
+  line-height: 48px;
+  font-weight: 600;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.insightsViewContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow-x: visible;
+}
+
+.insightsContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  width: calc(100% + 100px);
+  margin-left: -50px;
+  padding: 0 50px;
+  overflow: visible;
+}
+
+.cardsWrapper {
+  display: flex;
+  gap: 10px; /* Updated gap */
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  width: calc(100% + 140px);
+  padding-right: 140px;
+}
+
+.cardsWrapper::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Updated Card Styles */
+.cardVersion1,
+.cardVersion2,
+.cardVersion3,
+.cardVersion4 {
+  flex: 0 0 480px; /* Fixed width */
+  height: 500px; /* Fixed height */
+  scroll-snap-align: start;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Added border */
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px; /* Added padding */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.cardVersion1 {
+  background-image: url("/Insights-1.png");
+}
+.cardVersion2 {
+  background-image: url("/Insights-2.png");
+}
+.cardVersion3 {
+  background-image: url("/Insights-3.png");
+}
+.cardVersion4 {
+  background-image: url("/insight4.png");
+}
+
+/* Updated Text Overlay Styles */
+.text {
+  backdrop-filter: blur(40px);
+  border-radius: 16px;
+  background-color: rgba(247, 248, 250, 0.75);
+  width: 100%; /* Full width of card */
+  min-height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px; /* Added padding */
+  box-sizing: border-box;
+}
+
+.textInner {
+  width: 100%;
+}
+
+.howToConductAUxAuditToIWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.howToConduct {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  font-weight: 600;
+  font-family: "Open Sans";
+  color: #151515;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-pack: center;
+  width: 100%;
+  margin: 0;
+}
+
+/* Navigation Buttons */
+.btnPrev,
+.btnNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  padding: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.btnPrev:hover,
+.btnNext:hover {
+  opacity: 0.9;
+}
+
+.btnPrev {
+  left: 50px;
+}
+
+.btnNext {
+  right: 20px;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.arrowIcon {
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* CTA Styles */
+.insightsCta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.btn {
+  backdrop-filter: blur(41.85px);
+  border-radius: 2322.58px;
+  background: linear-gradient(
+    99.58deg,
+    rgba(115, 171, 216, 0.75),
+    rgba(187, 186, 225, 0.75)
+  );
+  border: 1px solid #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.getStarted {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .cardsWrapper {
+    width: calc(100% + 80px);
+    padding-right: 100px;
+  }
+
+  .cardVersion1,
+  .cardVersion2,
+  .cardVersion3,
+  .cardVersion4 {
+    flex: 0 0 400px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 992px) {
+  .cardVersion1,
+  .cardVersion2,
+  .cardVersion3,
+  .cardVersion4 {
+    flex: 0 0 340px;
+    height: 400px;
+  }
+
+  .text {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .insightsFrame {
+    padding: 40px 20px;
+  }
+
+  .cardVersion1,
+  .cardVersion2,
+  .cardVersion3,
+  .cardVersion4 {
+    flex: 0 0 300px;
+    height: 380px;
+  }
+
+  .howToConduct {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .btnPrev,
+  .btnNext {
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardVersion1,
+  .cardVersion2,
+  .cardVersion3,
+  .cardVersion4 {
+    flex: 0 0 280px;
+    height: 360px;
+    padding: 16px;
+  }
+
+  .text {
+    padding: 12px;
+  }
+
+  .howToConduct {
+    font-size: 14px;
+    line-height: 20px;
+    -webkit-line-clamp: 4;
+  }
+
+  .btn {
+    padding: 12px 24px;
+  }
+
+  .getStarted {
+    font-size: 16px;
+  }
+}

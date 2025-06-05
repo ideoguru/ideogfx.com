@@ -1,0 +1,170 @@
+/* Base styles */
+/* .getStartedFrame {
+    width: 100%;
+    position: relative;
+    height: 244px;
+    text-align: center;
+    font-size: 16px;
+    color: #151515;
+    font-family: 'Open Sans';
+  } */
+
+.topSectiondescription {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0px;
+}
+
+.withEveryStep {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.25px;
+  line-height: 22px;
+  text-align: center; /* Center text */
+  max-width: 800px; /* Limit text width for better readability */
+}
+
+.ctagetStarted {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center button horizontally */
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+}
+
+.getStartedParent {
+  backdrop-filter: blur(41.85px);
+  border-radius: 2322.58px;
+  background: linear-gradient(
+    99.58deg,
+    rgba(115, 171, 216, 0.75),
+    rgba(187, 186, 225, 0.75)
+  );
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 2px; /* Added for consistent spacing */
+}
+
+.getStartedParent:hover {
+  background: linear-gradient(
+    99.58deg,
+    rgba(115, 171, 216, 1),
+    rgba(187, 186, 225, 1)
+  );
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.getStarted {
+  position: relative;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+/* .solararrowRightUpLinearIcon {
+  width: 24px;
+  position: relative;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+} */
+
+.solararrowRightUpLinearIcon {
+  transition: transform 0.3s ease;
+}
+
+.getStartedParent:hover .solararrowRightUpLinearIcon {
+  transform: translateX(2px) translateY(-2px);
+}
+
+/* Media Queries for Responsiveness */
+.getStartedFrame {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #151515;
+  font-family: "Open Sans";
+  background: transparent;
+}
+
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  backdrop-filter: blur(40px);
+  border-radius: 12px;
+  background-color: rgba(247, 248, 250, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 24px;
+}
+
+/* Keep existing styles for other elements, modify responsive section: */
+
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .getStartedFrame {
+    padding: 60px 0;
+  }
+
+  .container {
+    width: 95%;
+    padding: 32px 16px;
+  }
+
+  .withEveryStep {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 10px;
+  }
+
+  .getStartedParent {
+    padding: 12px;
+  }
+
+  .getStarted {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .getStartedFrame {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 24px 12px;
+  }
+
+  .getStartedParent {
+    /* flex-direction: column; */
+    gap: 8px;
+  }
+}

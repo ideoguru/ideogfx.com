@@ -1,0 +1,220 @@
+/* WhtWeDo_whtWeDo.module.css */
+.whatWeDoFrame {
+  /* Existing styles */
+  width: 100%;
+  padding: 56px 20px;
+  background-image: url("../../public/whatWeDoBg.png");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #f7f8fa;
+  /* Modified background properties */
+
+  background-size: 120% 55%; /* Force width to 100%, height to 55% of container */
+  background-position: center 100%;
+  min-height: 55vh; /* Match container height to image height percentage */
+}
+
+.whatWeDoContainer {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.headingSubheading {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.heading {
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 600;
+  color: #151515;
+  margin-bottom: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.subheading {
+  font-size: 16px;
+  line-height: 22px;
+  color: #151515;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+}
+
+.servicesMenuFrame {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.servicesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.serviceTab {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 100px;
+  border: 1px solid #eaebf0;
+  background: #ffffff;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.serviceTab.active,
+.serviceTab:hover {
+  background: #eaebf0;
+  border-color: #eaebf0;
+}
+
+.serviceText {
+  font-size: 16px;
+  font-weight: 600;
+  color: #151515;
+  white-space: nowrap;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Updated Arrow Styles */
+.arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  background: #ffffff;
+  border: 1px solid #eaebf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.serviceTab.active .arrow {
+  background: #d38ab2;
+  border-color: #d38ab2;
+}
+
+.arrowIcon {
+  filter: none; /* Black arrow by default */
+}
+
+.serviceTab.active .arrowIcon {
+  filter: brightness(0) invert(1); /* White arrow when active */
+}
+
+.descriptionContainer {
+  display: flex;
+  gap: 24px;
+  background: rgba(234, 235, 240, 0.25);
+  backdrop-filter: blur(160px);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.leftColumnCard {
+  flex: 1;
+  min-height: 400px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+.textCard {
+  background: rgba(247, 248, 250, 0.4);
+  backdrop-filter: blur(40px);
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+}
+
+.serviceTitle {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 16px;
+  color: #151515;
+  font-family: "Poppins", sans-serif;
+}
+
+.serviceContent {
+  font-size: 16px;
+  line-height: 22px;
+  color: #151515;
+  margin-bottom: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.rightColumnDescription {
+  flex: 1;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+.detailItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.detailBullet {
+  width: 6px;
+  height: 6px;
+  background: #d38ab2;
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.detailText {
+  font-size: 16px;
+  line-height: 22px;
+  color: #151515;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media (max-width: 1024px) {
+  .descriptionContainer {
+    flex-direction: column;
+  }
+
+  .leftColumnCard {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .serviceTab {
+    padding: 8px 16px;
+  }
+
+  .serviceText {
+    font-size: 14px;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .serviceTitle {
+    font-size: 20px;
+  }
+
+  .detailText {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,153 @@
+"use client";
+
+import type { NextPage } from "next";
+import Image from "next/image";
+import { useState } from "react";
+import styles from "../../styles/HomePageCaseStudy.module.css";
+import Link from "next/link";
+
+const caseStudies = [
+  {
+    title: "Order Management System : Offline to Online Transformation",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Urna sit non et tellus. Tristique nunc nisi neque rhoncus nam viverra orci. Eleifend viverra viverra mi rhoncus elementum. Nisl id egestas proin cras porttitor.",
+    mainImage: "/Case_Studies_Card.png", // Main card image
+    card1: {
+      title:
+        "Personalised Business Accounting : Offline to Online Transformation",
+      image: "/Rectangle_81.png",
+    },
+    card2: {
+      title: "The UX Edge: Transforming User Experience into Business Value",
+      image: "/Rectangle-final.png",
+    },
+  },
+  {
+    title: "Another Case Study Title",
+    description:
+      "This is another example description for a case study. It demonstrates how we transformed a business.",
+    mainImage: "/case_study2.png", // Main card image
+    card1: {
+      title: "Card 1 Title for Another Case Study",
+      image: "/Rectangle_81.png",
+    },
+    card2: {
+      title: "Card 2 Title for Another Case Study",
+      image: "/Rectangle_1_small.png",
+    },
+  },
+  {
+    title: "Another Case Study Title",
+    description:
+      "This is another example description for a case study. It demonstrates how we transformed a business.",
+    mainImage: "/case_study3.png", // Main card image
+    card1: {
+      title: "Card 1 Title for Another Case Study",
+      image: "/Rectangle_1_small.png",
+    },
+    card2: {
+      title: "Card 2 Title for Another Case Study",
+      image: "/Rectangle_81.png",
+    },
+  },
+];
+
+const CaseStudiesFrame: NextPage = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % caseStudies.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? caseStudies.length - 1 : prevIndex - 1
+    );
+  };
+
+  const currentCaseStudy = caseStudies[currentIndex];
+
+  return (
+    <div className={styles.caseStudiesFrame}>
+      <div className={styles.caseStudiesTitles}>
+        <div className={styles.caseStudiesWrapper}>
+          <div className={styles.caseStudies}>Case Studies</div>
+        </div>
+      </div>
+      <div
+        className={styles.caseStudiesCard}
+        style={{
+          backgroundImage: `url(${currentCaseStudy.mainImage})`,
+        }}
+      >
+        <div className={styles.caseStudiesContainer}>
+          <div className={styles.leftColumnText}>
+            <div className={styles.orderManagementSystemOfflParent}>
+              <div className={styles.orderManagementSystem}>
+                {currentCaseStudy.title}
+              </div>
+              <div className={styles.loremIpsumDolor}>
+                {currentCaseStudy.description}
+              </div>
+            </div>
+            <div className={styles.instanceParent}>
+              <div className={styles.arrowButton} onClick={handlePrev}>
+                <Image
+                  width={32}
+                  height={32}
+                  alt="Previous"
+                  src="/iconamoon_arrow-left-2-bold.svg"
+                />
+              </div><div className={`${styles.arrowButton} ${styles.mirrored}`} onClick={handleNext}>
+                <Image
+                  width={32}
+                  height={32}
+                  alt="Next"
+                  src="/iconamoon_arrow-left-2-bold.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div className={styles.rightColumnCards}>
+            <div
+              className={styles.card1}
+              style={{
+                backgroundImage: `url(${currentCaseStudy.card1.image})`,
+              }}
+            >
+              <div className={styles.personalisedBusinessAccounti}>
+                {currentCaseStudy.card1.title}
+              </div>
+            </div>
+            <div
+              className={styles.card2}
+              style={{
+                backgroundImage: `url(${currentCaseStudy.card2.image})`,
+              }}
+            >
+              <div className={styles.personalisedBusinessAccounti}>
+                {currentCaseStudy.card2.title}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.caseStudiesCtaFrame}>
+        <Link href="/Resources">
+          <div className={styles.caseStudiesButton}>
+            <div className={styles.getStarted}>Learn More</div>
+            <Image
+              className={styles.solararrowRightUpLinearIcon}
+              width={24}
+              height={24}
+              alt="Learn More"
+              src="/solar_arrow-right-up-linear.svg"
+            />
+          </div>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default CaseStudiesFrame;

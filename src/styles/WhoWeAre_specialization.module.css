@@ -1,0 +1,171 @@
+.ourSpecification {
+  width: 100%;
+  position: relative;
+  height: 1000px; /* Fixed height for desktop */
+  background-image: url("../../public/whoWeAreBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: center;
+  font-size: 32px;
+  color: #151515;
+  font-family: Sans-serif;
+}
+
+.container {
+  position: absolute;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1160px; /* Limit container width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+}
+
+.ourSpecialization {
+  width: 100%;
+  position: relative;
+  letter-spacing: 0.01em;
+  line-height: 48px;
+  font-weight: 600;
+  font-size: 32px; /* Default font size */
+}
+
+.descriptionContent {
+  width: 100%;
+  position: relative;
+  height: 654px; /* Fixed height for desktop */
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 654px;
+  height: 654px;
+}
+
+.digitalPenEllipseChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(200px);
+  border-radius: 50%;
+  background: linear-gradient(
+    -33.21deg,
+    rgba(211, 138, 178, 0.6),
+    rgba(211, 138, 178, 0) 90.07%
+  );
+  width: 100%;
+  height: 100%;
+}
+
+.freepikEnhance635771Icon {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 379px;
+  height: 542px;
+  object-fit: contain;
+}
+
+.descriptionContainer {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  backdrop-filter: blur(160px);
+  border-radius: 200px;
+  background-color: rgba(247, 248, 250, 0.1);
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  width: 868px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 80px;
+}
+
+.weSpecializeIn {
+  width: 100%;
+  position: relative;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  font-weight: 600;
+  font-size: 18px; /* Default font size */
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 20px; /* Add padding for smaller screens */
+  }
+
+  .descriptionContainer {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 24px 40px; /* Adjust padding for smaller screens */
+  }
+
+  .weSpecializeIn {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ourSpecification {
+    height: 500px; 
+    padding-bottom: 40px; /* Add padding at the bottom */
+  }
+  .descriptionContainer{
+    top: 0;
+  }
+  .bgImage {
+    width: auto;
+  }
+  .container {
+    position: inherit;
+    top: 0;
+    left:0;
+    transform:none;
+    margin-top: 40px;
+   
+  }
+  .descriptionContent {
+    height: auto; 
+  }
+  
+
+}
+
+@media (max-width: 480px) {
+  .ourSpecification {
+    padding-bottom: 20px; /* Adjust padding for mobile */
+  }
+
+  .descriptionContainer {
+    width: 100%; /* Adjust width for mobile */
+    height: 440px;
+    padding:20 32px;
+    border-radius: 50px; /* Adjust border radius for mobile */
+  }
+
+  .weSpecializeIn {
+    font-size: 14px; /* Adjust font size for mobile */
+    line-height: 24px;
+  }
+
+}
