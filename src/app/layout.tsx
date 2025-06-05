@@ -43,22 +43,20 @@ export default function RootLayout({
         <meta name="author" content="IdeoGFX" /> */}
 
         {/* Open Graph meta tags for social media sharing */}
-        <meta property="og:title" content="IdeoGFX" />
-        <meta property="og:description" content="Your site description here" />
+        <meta property="og:title" content="Best UI/UX Designers in Kochi | Web & App Experts" />
+        <meta property="og:description" content="Top UI/UX design company in Kochi offering modern web, mobile, and branding solutions. We create user-focused experiences for startups and enterprises." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ideogfx-com.web.app" />
-        <meta
-          property="og:image"
-          content="https://ideogfx-com.web.app/logo.png"
-        />
+        <meta property="og:url" content="https://ideogfx.com" />
+        <meta property="og:image" content="https://ideogfx.com/logo.png"/>
+        <meta property="og:site_name" content="IdeoGFX" />
 
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="IdeoGFX" />
-        <meta name="twitter:description" content="Your site description here" />
+        <meta name="twitter:title" content="Best UI/UX Designers in Kochi | Web & App Experts" />
+        <meta name="twitter:description" content="Top UI/UX design company in Kochi offering modern web, mobile, and branding solutions. We create user-focused experiences for startups and enterprises." />
         <meta
           name="twitter:image"
-          content="https://ideogfx-com.web.app/logo.png"
+          content="https://ideogfx.com/logo.png"
         />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=G-135QK8T9VD`}
