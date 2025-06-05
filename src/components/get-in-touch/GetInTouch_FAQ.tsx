@@ -10,40 +10,37 @@ const FAQSection = () => {
   const faqItems = [
     {
       id: 1,
-      question:
-        "1. How long does it take to get a response after I contact you?",
+      question: "1. How long does it take to get a response after I contact you?",
       answer:
-        "We offer comprehensive digital design solutions including UI/UX design, web development, branding, and motion graphics.",
+        "We're excited to hear about your project! You can typically expect a response from our team within 24-48 business hours. We'll be in touch soon to discuss your design needs.",
       icon: "/Group.svg",
     },
     {
       id: 2,
-      question:
-        "2. What details should I include in my message to get an accurate quote?",
+      question: "2. What details should I include in my message to get an accurate quote?",
       answer:
-        "Project timelines vary based on complexity, but most projects range between 4-8 weeks from concept to delivery.",
+        "To help us provide an accurate quote for your UI/UX design project, please tell us about your product or service, your target audience, any existing branding or design assets, the scope of work (e.g., website redesign, new app UI, specific features), and any initial ideas or inspiration you have. The more context you can provide, the better we can tailor our proposal!",
       icon: "/Detail_Icon.svg",
     },
     {
       id: 3,
       question: "3. Do you work with startups and small businesses?",
       answer:
-        "We offer both fixed-price and hourly-rate models depending on project requirements. Contact us for a detailed quote.",
+        "Yes, definitely! We love partnering with startups and small businesses to create intuitive and engaging user experiences that help them succeed and make a strong impact in the market.",
       icon: "/Suitecase_Icon.svg",
     },
     {
       id: 4,
       question: "4. Can I schedule a call or meeting to discuss my project?",
       answer:
-        "Yes, we provide maintenance packages and ongoing support for all our delivered projects.",
+        "Absolutely! We find that a call or meeting is a great way to dive deeper into your UI/UX project goals. Please suggest a few times that work for you, or we can send over our availability to connect.",
       icon: "/Calender_Icon.svg",
     },
     {
       id: 5,
-      question:
-        "5. I’m not sure exactly what I need. Can you help me figure it out?",
+      question: "5. I'm not sure exactly what I need. Can you help me figure it out?",
       answer:
-        "Yes, we provide maintenance packages and ongoing support for all our delivered projects.",
+        "That's perfectly fine and very common! We can definitely help. We can start with a discovery session to understand your business objectives and user needs. From there, we can help define the scope and recommend the best UI/UX design solutions to achieve your vision.",
       icon: "/Shake_Hand_Icon.svg",
     },
   ];

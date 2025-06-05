@@ -212,13 +212,12 @@ const GetInTouchForm: NextPage = () => {
             <p className={styles.contactText}>
               Address: Ideo Graphics
               <br />
-              5H1, BCG Residency Towers,
+              5H1, BCG Residency Towers
               <br />
-              Seaport - Airport Rd, Vallathol Padl,
+              Seaport-Airport Road, Opp. CSEZ
               <br />
-              Opp. CSEZ, Seaport-Airport Road,
-              <br />
-              Kakkanad, Kochi, Kerala - 682037
+              Kakkanad, Kochi,  Kerala - 682037
+             
             </p>
             <h2 className={styles.sectionTitle}>Phone: +91 8921700822</h2>
             <h2 className={styles.sectionTitle}>Email: info@ideogfx.com</h2>
